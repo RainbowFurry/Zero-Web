@@ -1,0 +1,45 @@
+﻿@model  Zero_Web.Models.User
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<div class="Zero Login">
+
+    <h2>Zero Login</h2>
+    <img src="~/Content/images/icons/icon-144x144.png" />
+
+    <div class="Zero InternLogin">
+        @using (Html.BeginForm())
+        {
+            <div class="field">
+                @Html.NameFor(model => model.Email)
+                @Html.EditorFor(model => model.Email)
+                @Html.ValidationMessageFor(model => model.Email)
+            </div>
+            <div class="field">
+                @Html.NameFor(model => model.Password)
+                @Html.EditorFor(model => model.Password)
+                @Html.ValidationMessageFor(model => model.Password)
+            </div>
+            <input type="submit" value="Login">
+            @Html.ActionLink("Forgot your Password?", "ForgotPassword", "Authentification")
+        }
+    </div>
+    <p>Noch kein Kont? @Html.ActionLink("Register", "Registration", "Authentification")</p>
+
+    <div class="Zero ExternLogin">
+        <a href="@Url.Action("MS_SignIn", "Authentification")" class="button Microsoft"><img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" /><p>Microsoft</p></a>
+        <a href="@Url.Action("Google_SignIn", "Authentification")" class="button Google"><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" /><p>Google</p></a>
+        <a href="@Url.Action("Facebook_SignIn", "Authentification")" class="button Facebook"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/F_icon.svg" /><p>Facebook</p></a>
+
+        <div class="button Github"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" /><p>Github</p></div>
+        <div class="button PayPal"><img src="https://png2.kisspng.com/sh/60d40d8e8bf080d04ad56157cc4fb294/L0KzQYm3WME4N6ZmjZH0aYP2gLBuTfxwb5CyiNNEcHHvPcfsgCRwel5sitN5aHnmg373kv9lfZR5RdV4bYD4hLb5Tflkd594RadrN0ezRYG4UPYzaWk3Rqo7OUG3SIG9UcU0PGY3Tqk7MUC5QoK1kP5o/kisspng-logo-paypal-vector-graphics-product-computer-icons-5b7705010f2a82.8291480615345267210621.png" /><p>PayPal</p></div>
+        <div class="button Gitlab"><img src="https://upload.wikimedia.org/wikipedia/commons/1/18/GitLab_Logo.svg" /><p>Gitlab</p></div>
+        <div class="button BitBucket"><img src="https://cdn.worldvectorlogo.com/logos/bitbucket-icon.svg" /><p>BitBucket</p></div>
+    </div>
+
+</div>
+
+<link href="~/Content/css/Authentification/Login.css" rel="stylesheet">
+<link href="~/Content/css/Authentification/style.css" rel="stylesheet">

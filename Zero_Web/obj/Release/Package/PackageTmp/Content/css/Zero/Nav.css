@@ -1,0 +1,367 @@
+﻿:root {
+  --MainColor: #ff5e00;
+  --WhiteTheme: #fff;
+  --DarkTheme: #12161b;
+  --TextColor: #9b9b9f;
+}
+/*Scrollbar*/
+::-webkit-scrollbar {
+  background-color: #222;
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #333;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 40px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--MainColor);
+  border-radius: 40px;
+}
+::-moz-selection {
+  /* Code for Firefox */
+  background: var(--MainColor);
+}
+::selection {
+  background: var(--MainColor);
+}
+body {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  /*overflow-x: hidden;*/
+  overflow-x: visible !important;
+}
+.body-content {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+.container {
+  margin-right: 0px !important;
+  margin-left: 0px !important;
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Proxima Nova Regular'), local('ProximaNova-Regular'), url(https://fonts.gstatic.com/l/font?kit=FwZc7-Am2FI_-VOxaLDvvq27omO-&skey=96867d716c89840e&v=v12) format('truetype');
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Proxima Nova Bold'), local('ProximaNova-Bold'), url(https://fonts.gstatic.com/l/font?kit=FwZD7-Am2FI_-VOxaLDvvq2zGUau84_D&skey=470ea9b7edd795d7&v=v12) format('truetype');
+}
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0px 0.5px #333;
+}
+.NavMenu {
+  width: 100%;
+  min-width: 1920px;
+  min-height: 75px;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #ffffff;
+}
+a {
+  text-decoration: none;
+}
+div {
+  -webkit-text-size-adjust: none;
+}
+.anima-full-width-a {
+  width: 100%;
+}
+.anima-full-height-a {
+  height: 100%;
+}
+div {
+  -webkit-text-size-adjust: none;
+}
+.NavMenu .gruppe23050 {
+  background-color: rgba(255, 255, 255, 0);
+  top: 18px;
+  height: 39px;
+  width: 97%;
+  position: relative;
+  margin: 0;
+  left: 35px;
+  transform: rotate(0);
+  opacity: 1;
+}
+.NavMenu .gruppe23050 .gruppe22410 {
+  background-color: rgba(255, 255, 255, 0);
+  right: 0;
+  top: 5px;
+  height: calc(100% - 9px);
+  width: 1592px;
+  position: absolute;
+  margin: 0;
+  transform: rotate(0);
+  opacity: 1;
+}
+.NavMenu .gruppe23050 .gruppe22410 .iconfeathersettings0 {
+  background-color: rgba(255, 255, 255, 0);
+  right: 0px;
+  top: 0;
+  height: 100%;
+  width: 30px;
+  position: absolute;
+  margin: 0;
+  transform: rotate(0);
+  opacity: 1;
+  transition: all 1s ease;
+}
+.NavMenu .gruppe23050 .gruppe22410 .iconfeathersettings0 {
+  pointer-events: auto;
+}
+.NavMenu .gruppe23050 .gruppe22410 .iconfeathersettings0:hover {
+  transform: rotate(360deg);
+}
+.NavMenu .gruppe23050 .gruppe22410 .iconfeathersettings0 .pfad7500 {
+  background-color: rgba(255, 255, 255, 0);
+  top: calc(50% - 5px);
+  height: 11px;
+  width: 11px;
+  position: absolute;
+  margin: 0;
+  left: calc(50% - 5px);
+  transform: rotate(0);
+}
+.NavMenu .gruppe23050 .gruppe22410 .iconfeathersettings0 .pfad7511 {
+  background-color: rgba(255, 255, 255, 0);
+  top: -1px;
+  height: calc(100% + 2px);
+  width: calc(100% + 2px);
+  position: absolute;
+  margin: 0;
+  left: -1px;
+  transform: rotate(0);
+}
+.NavMenu .gruppe23050 .gruppe22410 .bewerbungsvorgang1 {
+  background-color: rgba(255, 255, 255, 0);
+  top: -3px;
+  height: calc(100% - 5px);
+  width: 210px;
+  position: absolute;
+  margin: 0;
+  left: calc(33.32% - 5%);
+  transform: rotate(0);
+  opacity: 1;
+  transition: all 0.2s ease;
+  font-family: 'Proxima Nova', Helvetica, Arial, serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 22px;
+  color: #12161b;
+  text-align: left;
+  line-height: 35px;
+}
+.NavMenu .gruppe23050 .gruppe22410 .bewerbungsvorgang1 {
+  pointer-events: auto;
+}
+.NavMenu .gruppe23050 .gruppe22410 .bewerbungsvorgang1:hover {
+  transform: scale(0.95);
+}
+.NavMenu .gruppe23050 .gruppe22410 .ttigkeitsbereiche2 {
+  background-color: rgba(255, 255, 255, 0);
+  top: -3px;
+  height: calc(100% - 5px);
+  width: 184px;
+  position: absolute;
+  margin: 0;
+  left: 212px;
+  transform: rotate(0);
+  opacity: 1;
+  transition: all 0.2s ease;
+  font-family: 'Proxima Nova', Helvetica, Arial, serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 22px;
+  color: #12161b;
+  text-align: left;
+  line-height: 35px;
+}
+.NavMenu .gruppe23050 .gruppe22410 .ttigkeitsbereiche2 {
+  pointer-events: auto;
+}
+.NavMenu .gruppe23050 .gruppe22410 .ttigkeitsbereiche2:hover {
+  transform: scale(0.95);
+}
+.NavMenu .gruppe23050 .gruppe22410 .bewerben3 {
+  background-color: rgba(255, 255, 255, 0);
+  right: 71px;
+  top: 4px;
+  height: calc(100% - 5px);
+  width: 104px;
+  position: absolute;
+  margin: 0;
+  transform: rotate(0);
+  opacity: 1;
+  transition: all 0.2s ease;
+  font-family: 'Proxima Nova', Helvetica, Arial, serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 22px;
+  color: #ff4600;
+  text-align: left;
+  line-height: 22px;
+}
+.NavMenu .gruppe23050 .gruppe22410 .bewerben3 {
+  pointer-events: auto;
+}
+.NavMenu .gruppe23050 .gruppe22410 .bewerben3:hover {
+  transform: scale(0.95);
+}
+.NavMenu .gruppe23050 .gruppe22410 .qualifikationen4 {
+  background-color: rgba(255, 255, 255, 0);
+  top: -3px;
+  height: calc(100% - 5px);
+  width: 154px;
+  position: absolute;
+  margin: 0;
+  left: 0;
+  transform: rotate(0);
+  opacity: 1;
+  transition: all 0.2s ease;
+  font-family: 'Proxima Nova', Helvetica, Arial, serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 22px;
+  color: #12161b;
+  text-align: right;
+  line-height: 35px;
+}
+.NavMenu .gruppe23050 .gruppe22410 .qualifikationen4 {
+  pointer-events: auto;
+}
+.NavMenu .gruppe23050 .gruppe22410 .qualifikationen4:hover {
+  transform: scale(0.95);
+}
+.NavMenu .gruppe23050 .zeroworks1 {
+  background-color: rgba(255, 255, 255, 0);
+  top: 2px;
+  height: 100%;
+  width: 290px;
+  position: absolute;
+  margin: 0;
+  left: 0;
+  transform: rotate(0);
+  opacity: 1;
+  font-family: 'Proxima Nova', Helvetica, Arial, serif;
+  font-size: 35px;
+  color: #ff0000;
+  text-align: left;
+  line-height: 35px;
+}
+.NavMenu .gruppe23050 .zeroworks1 .span0 {
+  font-family: 'Proxima Nova', Helvetica, Arial, serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 35px;
+  color: #ff0000;
+}
+.NavMenu .gruppe23050 .zeroworks1 .span1 {
+  font-family: 'Proxima Nova', Helvetica, Arial, serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 17px;
+  color: #ff0000;
+}
+.anima-animate-appear {
+  opacity: 0;
+  display: block;
+  -webkit-animation: anima-reveal 0.3s ease-in-out 1 normal forwards;
+  -moz-animation: anima-reveal 0.3s ease-in 1 normal forwards;
+  -o-animation: anima-reveal 0.3s ease-in-out 1 normal forwards;
+  animation: anima-reveal 0.3s ease-in-out 1 normal forwards;
+}
+.anima-animate-disappear {
+  opacity: 1;
+  display: block;
+  -webkit-animation: anima-reveal 0.3s ease-in-out 1 reverse forwards;
+  -moz-animation: anima-reveal 0.3s ease-in 1 normal forwards;
+  -o-animation: anima-reveal 0.3s ease-in-out 1 reverse forwards;
+  animation: anima-reveal 0.3s ease-in-out 1 reverse forwards;
+}
+.anima-animate-nodelay {
+  -webkit-animation-delay: 0;
+  -moz-animation-delay: 0;
+  -o-animation-delay: 0;
+  animation-delay: 0;
+}
+@-webkit-keyframes anima-reveal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes anima-reveal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes anima-reveal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes anima-reveal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.anima-component-wrapper,
+.anima-component-wrapper * {
+  pointer-events: none;
+}
+.anima-component-wrapper a *,
+.anima-component-wrapper a,
+.anima-component-wrapper input,
+.anima-component-wrapper video,
+.anima-component-wrapper iframe,
+.anima-listeners-active,
+.anima-listeners-active * {
+  pointer-events: auto;
+}
+.anima-hidden,
+.anima-hidden * {
+  visibility: hidden;
+  pointer-events: none;
+}
+.anima-smart-layers-pointers,
+.anima-smart-layers-pointers * {
+  pointer-events: auto;
+  visibility: visible;
+}
+.anima-component-wrapper.anima-not-ready,
+.anima-component-wrapper.anima-not-ready * {
+  visibility: hidden !important;
+}
+.anima-listeners-active-click,
+.anima-listeners-active-click * {
+  cursor: pointer;
+}
+.anima-word-break {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-all;
+  word-break: break-word;
+}

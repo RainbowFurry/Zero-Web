@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    @* Manifest *@
+    <link rel="manifest" href="/manifest.json">
+    @* FontAwesome Icons *@
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="~/Content/font-awesome-4.7.0/css/font-awesome.min.css">
+    @* Material Icons *@
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    @* ToolTip CSS *@
+    <link href="~/Content/css/Zero/ZeroTooltip.css" rel="stylesheet">
+
+    @* Using Resource Files in HTML *@
+    @using ZeroResources = Zero.Web.Resources.ProjektResources;
+    <title>@ViewBag.Title - @ZeroResources.ProgrammName</title>
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body contextmenu="return false">
+
+    @* Secure File share between Client/Server *@
+    @Html.AntiForgeryToken()
+
+    @* Code CopyRight *@
+    @{
+        Html.RenderPartial("CopyRight");
+    }
+
+    @{
+        Html.RenderPartial("NoScript");
+    }
+
+    @{
+        Html.RenderPartial("Nav");
+    }
+
+    <div class="container body-content">
+        @RenderBody()
+
+        <!--GEHT NICHT-->
+        @*@if (Roles.IsUserInRole("Developer"))
+            {
+                <p>Your Role: Developer</p>
+            }
+            else
+            {
+                <p>Your Role: Not set</p>
+            }
+
+            @if (User.Identity.IsAuthenticated)
+            {
+                <p>Angemeldet</p>
+                <p>@User.Identity.Name</p>
+            }
+            else
+            {
+                <p>Abgemeldet</p>
+            }*@
+    </div>
+
+    @{
+        Html.RenderPartial("Footer");
+    }
+
+    @{
+        Html.RenderPartial("ContextMenu");
+    }
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+
+    @* Register Installation ServiceWorker *@
+    <script async>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker
+                .register('/serviceworker.js')
+                .then(function () { console.log('Service Worker Registered'); });
+        }
+    </script>
+
+    <!--
+        @* ShortCuts *@
+    <script type="text/javascript" src="~/Scripts/shortcut.js"></script>
+    <script type="text/javascript" src="~/Scripts/Zero/ShortCuts.js"></script>
+    @* DeviceInfo *@
+    <script type="text/javascript" src="~/Scripts/Zero/DeviceInfo.js"></script>
+    @* Cookie Permission Request *@
+    <script type="text/javascript" src="~/Scripts/Zero/CookieRequest.js"></script>
+    @* Request all Browser Permissions *@
+    <script type="text/javascript" src="~/Scripts/Zero/DevicePermissionRequest.js"></script>
+    @* Alert Window *@
+    <script type="text/javascript" src="~/Scripts/Zero/AlertWindowConfig.js"></script>
+    <script type="text/javascript" src="~/Scripts/Zero/AlertWindow.js"></script>
+    <link href="~/Content/css/Zero/AlertWindow.css" rel="stylesheet">
+    @* Cookie Handler *@
+    <script type="text/javascript" src="~/Scripts/Zero/Cookie.js"></script>
+    @* Barcode Integration *@
+    <script type="text/javascript" src="~/Scripts/qrcode.js"></script>
+    <script type="text/javascript" src="~/Scripts/Zero/Barcode.js"></script>
+    -->
+
+    @* Zero Style *@
+    <link href="~/Content/css/Zero/Zero.css" rel="stylesheet">
+
+</body>
+</html>

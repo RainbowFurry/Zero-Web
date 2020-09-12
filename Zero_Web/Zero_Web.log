@@ -1,0 +1,56 @@
+2020-06-26 12:29:23,427 [5] ERROR Zero_Web.Controllers.HomeController - Error
+2020-06-26 12:29:23,436 [5] FATAL Zero_Web.Controllers.HomeController - Fatal Error
+2020-06-26 12:29:23,436 [5] INFO Zero_Web.Controllers.HomeController - info
+2020-06-26 12:29:23,437 [5] DEBUG Zero_Web.Controllers.HomeController - debug
+2020-06-26 12:29:23,437 [5] WARN Zero_Web.Controllers.HomeController - warn
+2020-06-26 12:29:25,902 [7] ERROR Zero_Web.Controllers.HomeController - Error
+2020-06-26 12:29:25,902 [7] FATAL Zero_Web.Controllers.HomeController - Fatal Error
+2020-06-26 12:29:25,903 [7] INFO Zero_Web.Controllers.HomeController - info
+2020-06-26 12:29:25,903 [7] DEBUG Zero_Web.Controllers.HomeController - debug
+2020-06-26 12:29:25,903 [7] WARN Zero_Web.Controllers.HomeController - warn
+2020-06-26 12:29:54,548 [6] ERROR Zero_Web.Controllers.HomeController - Error
+2020-06-26 12:29:54,562 [6] FATAL Zero_Web.Controllers.HomeController - Fatal Error
+2020-06-26 12:29:54,562 [6] INFO Zero_Web.Controllers.HomeController - info
+2020-06-26 12:29:54,563 [6] DEBUG Zero_Web.Controllers.HomeController - debug
+2020-06-26 12:29:54,563 [6] WARN Zero_Web.Controllers.HomeController - warn
+2020-06-26 12:29:56,527 [6] ERROR Zero_Web.Controllers.HomeController - Error
+2020-06-26 12:29:56,527 [6] FATAL Zero_Web.Controllers.HomeController - Fatal Error
+2020-06-26 12:29:56,528 [6] INFO Zero_Web.Controllers.HomeController - info
+2020-06-26 12:29:56,528 [6] DEBUG Zero_Web.Controllers.HomeController - debug
+2020-06-26 12:29:56,528 [6] WARN Zero_Web.Controllers.HomeController - warn
+2020-06-26 13:36:06,054 [6] ERROR Zero_Web.Controllers.HomeController - Error
+2020-06-26 13:36:06,067 [6] FATAL Zero_Web.Controllers.HomeController - Fatal Error
+2020-06-26 13:36:06,067 [6] INFO Zero_Web.Controllers.HomeController - info
+2020-06-26 13:36:06,067 [6] DEBUG Zero_Web.Controllers.HomeController - debug
+2020-06-26 13:36:06,068 [6] WARN Zero_Web.Controllers.HomeController - warn
+2020-06-26 13:36:08,624 [6] ERROR Zero_Web.Controllers.HomeController - Error
+2020-06-26 13:36:08,624 [6] FATAL Zero_Web.Controllers.HomeController - Fatal Error
+2020-06-26 13:36:08,624 [6] INFO Zero_Web.Controllers.HomeController - info
+2020-06-26 13:36:08,624 [6] DEBUG Zero_Web.Controllers.HomeController - debug
+2020-06-26 13:36:08,624 [6] WARN Zero_Web.Controllers.HomeController - warn
+2020-06-26 13:55:44,368 [5] ERROR Zero_Web.Controllers.HomeController - Error
+2020-06-26 13:55:44,375 [5] FATAL Zero_Web.Controllers.HomeController - Fatal Error
+2020-06-26 13:55:44,375 [5] INFO Zero_Web.Controllers.HomeController - info
+2020-06-26 13:55:44,375 [5] DEBUG Zero_Web.Controllers.HomeController - debug
+2020-06-26 13:55:44,375 [5] WARN Zero_Web.Controllers.HomeController - warn
+2020-06-26 13:55:46,879 [7] ERROR Zero_Web.Controllers.HomeController - Error
+2020-06-26 13:55:46,879 [7] FATAL Zero_Web.Controllers.HomeController - Fatal Error
+2020-06-26 13:55:46,879 [7] INFO Zero_Web.Controllers.HomeController - info
+2020-06-26 13:55:46,879 [7] DEBUG Zero_Web.Controllers.HomeController - debug
+2020-06-26 13:55:46,879 [7] WARN Zero_Web.Controllers.HomeController - warn
+2020-06-26 13:56:49,955 [6] ERROR Zero_Web.Controllers.HomeController - Error
+2020-06-26 13:56:49,955 [6] FATAL Zero_Web.Controllers.HomeController - Fatal Error
+2020-06-26 13:56:49,955 [6] INFO Zero_Web.Controllers.HomeController - info
+2020-06-26 13:56:49,956 [6] DEBUG Zero_Web.Controllers.HomeController - debug
+2020-06-26 13:56:49,956 [6] WARN Zero_Web.Controllers.HomeController - warn
+2020-06-26 13:56:50,052 [5] ERROR Zero_Web.Controllers.HomeController - Error
+2020-06-26 13:56:50,052 [5] FATAL Zero_Web.Controllers.HomeController - Fatal Error
+2020-06-26 13:56:50,052 [5] INFO Zero_Web.Controllers.HomeController - info
+2020-06-26 13:56:50,052 [5] DEBUG Zero_Web.Controllers.HomeController - debug
+2020-06-26 13:56:50,053 [5] WARN Zero_Web.Controllers.HomeController - warn
+2020-07-01 14:03:37,447 [6] INFO Zero_Web.Content.csharp.Zero.LogManager - Audio: Device Name = NVIDIA High Definition Audio - Device Id = HDAUDIO\FUNC_01&VEN_10DE&DEV_0083&SUBSYS_14583794&REV_1001\5&24082FB3&0&0001 - Status = OK
+2020-07-01 14:03:37,455 [6] INFO Zero_Web.Content.csharp.Zero.LogManager - Audio: Device Name = USB-Audiogerät - Device Id = USB\VID_0D8C&PID_000C&MI_00\7&306AAC8A&0&0000 - Status = OK
+2020-07-01 14:03:37,456 [6] INFO Zero_Web.Content.csharp.Zero.LogManager - Audio: Device Name = Realtek High Definition Audio - Device Id = HDAUDIO\FUNC_01&VEN_10EC&DEV_0887&SUBSYS_104386C7&REV_1003\5&3417B221&0&0001 - Status = OK
+2020-07-01 14:03:37,457 [6] INFO Zero_Web.Content.csharp.Zero.LogManager - Audio: Device Name = Sound BlasterX AE-5 - Device Id = HDAUDIO\FUNC_01&VEN_1102&DEV_0011&SUBSYS_11020051&REV_1009\7&A306553&0&0101 - Status = OK
+2020-07-01 14:03:37,457 [6] INFO Zero_Web.Content.csharp.Zero.LogManager - Audio: Device Name = NVIDIA Virtual Audio Device (Wave Extensible) (WDM) - Device Id = ROOT\UNNAMED_DEVICE\0000 - Status = OK
+2020-07-01 14:03:37,472 [6] INFO Zero_Web.Content.csharp.Zero.LogManager - Video: Device Name = NVIDIA GeForce GTX 1070 Ti - Device Id = VideoController1 - Status = OK

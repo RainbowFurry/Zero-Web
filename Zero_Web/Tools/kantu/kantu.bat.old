@@ -1,0 +1,115 @@
+﻿::@ECHO off
+SETLOCAL
+set "backupPath="
+
+::Commanline
+::kantu.bat 9 c:\kantuV5 C:\Users\Administrator\Downloads\kantuChrome
+
+SETLOCAL ENABLEDELAYEDEXPANSION
+::Init Variables
+SET iteration=1
+
+::Anzupassende Pfade
+SET chromeProfile=Profile 1
+::SET chromeProfile=Profile 2
+SET chromePath=C:/"Program Files (x86)"/Google/Chrome/Application/chrome.exe  --profile-directory="%chromeProfile%"
+::SET chromePath=D:\Develop\FireFox_portable\FirefoxPortableESR\FirefoxPortable.exe
+::SET logPath=C:\Users\mhaas\Downloads\kantuChrome\
+::SET filePath=c:\Develop\Web_TMS_HEAD2\WebTMS\Head\WebTMS\Tools\kantu\autorun\
+SET serverUrl=http://zs12.zoller-d.com/ZollerWebTMS_Jenkins/
+::SET serverUrl=http://localhost:60861
+
+::iteration bestimmen
+IF %1.==. ECHO es muss angegeben werden, um welche Iteration es sich handelt- %0 Autorun Iteration & GOTO EndBat
+SET iteration=%1
+
+If %2.==. ECHO es muss der Kantu-Basispfad angegeben werden
+SET filePath=%2\test\
+SET kantuBasePath=%2
+SET backupPath=%kantuBasePath%\Logs\
+SET logoutAutorun=%2\Logout.html
+
+IF %3.==. ECHO es muss das DownloadVerzeichnis von dem Chromeprofil %chromeProfile% angegeben werden
+SET logPath=%3\
+
+ECHO suche Dateien in %filePath%*
+
+FOR /D %%G IN (%filePath%*) DO (
+   SET suite=%%~nG
+   ECHO gefunden !suite!
+   MOVE %filePath%\!suite! %kantuBasePath%\macros
+   CALL :selectStart
+)
+
+GOTO EndBat
+
+:selectStart
+   ECHO -----------------------------!suite!----------------------------------------
+   call :startTest "log.txt" 300
+   GOTO EndBat
+ECHO !suite! ausgefuehrt
+exit /b
+
+:startTest
+::timeout /t 1 /nobreak>NUL
+ping 127.0.0.1 -n 1>NUL
+ECHO START %chromePath% "file:///%kantuBasePath%\autorun.html?direct=1&closeBrowser=1&closeKantu=0&savelog=log.txt&storage=xfile&folder=!suite!&cmd_var1=%serverUrl%"
+START %chromePath% "file:///%kantuBasePath%\autorun.html?direct=1&closeBrowser=1&closeKantu=0&savelog=log.txt&storage=xfile&folder=!suite!&cmd_var1=%serverUrl%"
+
+SET MAXTIME=%~2
+
+::maxtime bestimmen
+IF %4.==. (ECHO keine Maximaldauer angegeben - Default 300s & GOTO SkipMaxtime)
+SET MAXTIME=%4
+ECHO Maximaldauer auf %MAXTIME% gesetzt
+
+:SkipMaxtime
+SET DURATION=0
+GOTO CheckForFile %~1
+:: Wait until log is there
+echo warte maximal %~2 auf  die Datei %logPath%%~1 
+:CheckForFile
+::real test >   
+IF %DURATION% GTR %MAXTIME% call :EndChrome "save" & GOTO EndBat 
+IF EXIST %logPath%%~1 call :EndChrome "save" & GOTO EndBat
+
+ECHO warte auf %logPath%%~1 ...%DURATION%s vergangen
+::timeout /t 19 /nobreak>NUL
+ping 127.0.0.1 -n 19>NUL
+SET /A DURATION=DURATION+20
+GOTO CheckForFile %~1
+
+::save all files and close chrome
+:EndChrome
+::taskkill /F /IM firefox.exe /T
+taskkill /F /IM chrome.exe /T
+mkdir %backupPath%Test-%iteration%
+mkdir %backupPath%Test-%iteration%\!suite!
+ECHO %backupPath%Test-%iteration%\!suite! erstellt
+move %logPath%*.* %backupPath%Test-%iteration%\!suite!\
+ECHO analysiere Logs
+::kein log > Test konnte nicht ausgeführt werden
+::IF NOT EXIST %backupPath%Test-%iteration%\!suite!\log.txt ( SET isSuccess=0 )
+SET isSuccess=0
+for /f "tokens=3" %%f in ( 'find /c /i "Status=OK" "%backupPath%Test-%iteration%\!suite!\log.txt"' ) DO (
+   SET isSuccess=%%f
+)
+ECHO Ueberpruefe das Test-Log %backupPath%Test-%iteration%\!suite!\log.txt
+::remove testfolder
+rd %kantuBasePath%\macros /s /q && md %kantuBasePath%\macros
+CALL :checkSuccess %isSuccess%
+GOTO Endbat
+
+:checkSuccess
+
+IF %~1==1 (
+   ECHO -------------------------------Erfolg 
+) ELSE (
+   ECHO -------------------------------Error erkannt 
+   MOVE %backupPath%Test-%iteration%\!suite! %backupPath%Test-%iteration%\FEHLER_!suite! 
+)
+exit /b
+
+:EndBat
+
+ENDLOCAL

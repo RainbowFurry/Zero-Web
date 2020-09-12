@@ -1,0 +1,8 @@
+C:\Users\DarkS\source\repos\Zero_Web\Zero_Web\bin\Docs.dll.config
+C:\Users\DarkS\source\repos\Zero_Web\Zero_Web\bin\Docs.dll
+C:\Users\DarkS\source\repos\Zero_Web\Zero_Web\bin\Docs.pdb
+C:\Users\DarkS\source\repos\Zero_Web\Zero_Web\Areas\Docs\obj\Debug\Docs.csprojAssemblyReference.cache
+C:\Users\DarkS\source\repos\Zero_Web\Zero_Web\Areas\Docs\obj\Debug\Docs.csproj.CoreCompileInputs.cache
+C:\Users\DarkS\source\repos\Zero_Web\Zero_Web\Areas\Docs\obj\Debug\Docs.csproj.CopyComplete
+C:\Users\DarkS\source\repos\Zero_Web\Zero_Web\Areas\Docs\obj\Debug\Docs.dll
+C:\Users\DarkS\source\repos\Zero_Web\Zero_Web\Areas\Docs\obj\Debug\Docs.pdb

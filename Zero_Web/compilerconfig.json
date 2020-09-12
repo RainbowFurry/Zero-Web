@@ -1,0 +1,78 @@
+﻿[
+  {
+    "outputFile": "Content/css/Zero/ContextMenu.css",
+    "inputFile": "Content/css/Zero/ContextMenu.less"
+  },
+  {
+    "outputFile": "Content/css/Zero/Zero.css",
+    "inputFile": "Content/css/Zero/Zero.less"
+  },
+  {
+    "outputFile": "Content/css/Zero/ZeroTooltip.css",
+    "inputFile": "Content/css/Zero/ZeroTooltip.less"
+  },
+  {
+    "outputFile": "Content/css/Zero/BrowserNotification.css",
+    "inputFile": "Content/css/Zero/BrowserNotification.less"
+  },
+  {
+    "outputFile": "Content/css/Zero/SplashScreen.css",
+    "inputFile": "Content/css/Zero/SplashScreen.less"
+  },
+  {
+    "outputFile": "Content/css/Zero/BrowserToast.css",
+    "inputFile": "Content/css/Zero/BrowserToast.less"
+  },
+  {
+    "outputFile": "Content/css/Zero/AlertWindow.css",
+    "inputFile": "Content/css/Zero/AlertWindow.less"
+  },
+  {
+    "outputFile": "Content/css/Zero/Footer.css",
+    "inputFile": "Content/css/Zero/Footer.less"
+  },
+  {
+    "outputFile": "Content/css/Zero/Socials.css",
+    "inputFile": "Content/css/Zero/Socials.less"
+  },
+  {
+    "outputFile": "Content/css/Zero/Nav.css",
+    "inputFile": "Content/css/Zero/Nav.less"
+  },
+  {
+    "outputFile": "Content/css/Login/Login.css",
+    "inputFile": "Content/css/Login/Login.less"
+  },
+  {
+    "outputFile": "Content/css/Login/Registration.css",
+    "inputFile": "Content/css/Login/Registration.less"
+  },
+  {
+    "outputFile": "Content/css/Login/style.css",
+    "inputFile": "Content/css/Login/style.less"
+  },
+  {
+    "outputFile": "Content/css/Home/Bereichsauswahl.css",
+    "inputFile": "Content/css/Home/Bereichsauswahl.less"
+  },
+  {
+    "outputFile": "Content/css/Home/Qualifikation.css",
+    "inputFile": "Content/css/Home/Qualifikation.less"
+  },
+  {
+    "outputFile": "Content/css/Home/Taetigkeiten.css",
+    "inputFile": "Content/css/Home/Taetigkeiten.less"
+  },
+  {
+    "outputFile": "Content/css/Home/Index.css",
+    "inputFile": "Content/css/Home/Index.less"
+  },
+  {
+    "outputFile": "Content/css/Home/BewerbungsFormular.css",
+    "inputFile": "Content/css/Home/BewerbungsFormular.less"
+  },
+  {
+    "outputFile": "Content/css/Home/BewerbungAbgeschlossen.css",
+    "inputFile": "Content/css/Home/BewerbungAbgeschlossen.less"
+  }
+]

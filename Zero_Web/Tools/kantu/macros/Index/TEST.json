@@ -1,0 +1,41 @@
+{
+  "Name": "TEST",
+  "CreationDate": "2020-8-20",
+  "Commands": [
+    {
+      "Command": "open",
+      "Target": "https://localhost:44338/",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=/html/body/nav/div/div/div/div/a[3]/div",
+      "Value": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "3000",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=/html/body/nav/div/div/div/div/a/div",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=/html/body/nav/div/div/div/div/a[2]/div",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=/html/body/div/div/div/div[3]/div[2]/a/div",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=1d4126f7-6154-4d13-bc83-f19ee6105af8",
+      "Value": ""
+    }
+  ]
+}

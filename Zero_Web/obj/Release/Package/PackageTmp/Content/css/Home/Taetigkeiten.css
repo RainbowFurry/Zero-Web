@@ -1,0 +1,1864 @@
+﻿@font-face {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Proxima Nova Regular'), local('ProximaNova-Regular'), url(https://fonts.gstatic.com/l/font?kit=FwZc7-Am2FI_-VOxaLDvvq27omO-&skey=96867d716c89840e&v=v12) format('truetype');
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Proxima Nova Bold'), local('ProximaNova-Bold'), url(https://fonts.gstatic.com/l/font?kit=FwZD7-Am2FI_-VOxaLDvvq2zGUau84_D&skey=470ea9b7edd795d7&v=v12) format('truetype');
+}
+.managementmarketingorganisation3 {
+  cursor: pointer;
+}
+.grafikdesign2 {
+  cursor: pointer;
+}
+.softwareentwicklung1 {
+  cursor: pointer;
+}
+.ttigkeitsbereiche {
+  width: 100%;
+  min-width: 1920px;
+  height: 100vh;
+  min-height: 1169px;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #ffffff;
+}
+a {
+  text-decoration: none;
+}
+div {
+  -webkit-text-size-adjust: none;
+}
+.anima-full-width-a {
+  width: 100%;
+}
+.anima-full-height-a {
+  height: 100%;
+}
+div {
+  -webkit-text-size-adjust: none;
+}
+.anima-animate-enter {
+  opacity: 0;
+  transform: translate(0, -35px);
+  display: block;
+  -webkit-animation: anima-animate-enter-frames 1s ease 1 normal forwards;
+  -moz-animation: anima-animate-enter-frames 1s ease 1 normal forwards;
+  -o-animation: anima-animate-enter-frames 1s ease 1 normal forwards;
+  animation: anima-animate-enter-frames 1s ease 1 normal forwards;
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  -o-animation-delay: 0s;
+  animation-delay: 0s;
+}
+@-webkit-keyframes anima-animate-enter-frames {
+  0% {
+    opacity: 0;
+    transform: translate(0, -35px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+@-moz-keyframes anima-animate-enter-frames {
+  0% {
+    opacity: 0;
+    transform: translate(0, -35px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+@-o-keyframes anima-animate-enter-frames {
+  0% {
+    opacity: 0;
+    transform: translate(0, -35px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+@keyframes anima-animate-enter-frames {
+  0% {
+    opacity: 0;
+    transform: translate(0, -35px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+.anima-animate-enter1 {
+  opacity: 0;
+  transform: translate(0, -35px);
+  display: block;
+  -webkit-animation: anima-animate-enter1-frames 1s ease 1 normal forwards;
+  -moz-animation: anima-animate-enter1-frames 1s ease 1 normal forwards;
+  -o-animation: anima-animate-enter1-frames 1s ease 1 normal forwards;
+  animation: anima-animate-enter1-frames 1s ease 1 normal forwards;
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  -o-animation-delay: 0s;
+  animation-delay: 0s;
+}
+@-webkit-keyframes anima-animate-enter1-frames {
+  0% {
+    opacity: 0;
+    transform: translate(0, -35px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+@-moz-keyframes anima-animate-enter1-frames {
+  0% {
+    opacity: 0;
+    transform: translate(0, -35px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+@-o-keyframes anima-animate-enter1-frames {
+  0% {
+    opacity: 0;
+    transform: translate(0, -35px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+@keyframes anima-animate-enter1-frames {
+  0% {
+    opacity: 0;
+    transform: translate(0, -35px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+.anima-animate-enter2 {
+  opacity: 0;
+  transform: translate(0, -35px);
+  display: block;
+  -webkit-animation: anima-animate-enter2-frames 1s ease 1 normal forwards;
+  -moz-animation: anima-animate-enter2-frames 1s ease 1 normal forwards;
+  -o-animation: anima-animate-enter2-frames 1s ease 1 normal forwards;
+  animation: anima-animate-enter2-frames 1s ease 1 normal forwards;
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  -o-animation-delay: 0s;
+  animation-delay: 0s;
+}
+@-webkit-keyframes anima-animate-enter2-frames {
+  0% {
+    opacity: 0;
+    transform: translate(0, -35px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+@-moz-keyframes anima-animate-enter2-frames {
+  0% {
+    opacity: 0;
+    transform: translate(0, -35px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+@-o-keyframes anima-animate-enter2-frames {
+  0% {
+    opacity: 0;
+    transform: translate(0, -35px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+@keyframes anima-animate-enter2-frames {
+  0% {
+    opacity: 0;
+    transform: translate(0, -35px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+.anima-animate-enter3 {
+  opacity: 0;
+  transform: translate(-25px, 0);
+  display: block;
+  -webkit-animation: anima-animate-enter3-frames 0.8s ease 1 normal forwards;
+  -moz-animation: anima-animate-enter3-frames 0.8s ease 1 normal forwards;
+  -o-animation: anima-animate-enter3-frames 0.8s ease 1 normal forwards;
+  animation: anima-animate-enter3-frames 0.8s ease 1 normal forwards;
+  -webkit-animation-delay: 0.55s;
+  -moz-animation-delay: 0.55s;
+  -o-animation-delay: 0.55s;
+  animation-delay: 0.55s;
+}
+@-webkit-keyframes anima-animate-enter3-frames {
+  0% {
+    opacity: 0;
+    transform: translate(-25px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+@-moz-keyframes anima-animate-enter3-frames {
+  0% {
+    opacity: 0;
+    transform: translate(-25px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+@-o-keyframes anima-animate-enter3-frames {
+  0% {
+    opacity: 0;
+    transform: translate(-25px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+@keyframes anima-animate-enter3-frames {
+  0% {
+    opacity: 0;
+    transform: translate(-25px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+.ttigkeitsbereiche .rechteck21060 {
+  background-color: rgba(255, 255, 255, 0);
+  top: 130px;
+  height: 2px;
+  box-sizing: border-box;
+  width: 1920px;
+  position: absolute;
+  margin: 0;
+  left: 0;
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #000000;
+  transform: rotate(0);
+  opacity: 0.3;
+}
+.ttigkeitsbereiche .softwareentwicklung1 {
+  background-color: rgba(255, 255, 255, 0);
+  top: 80px;
+  height: auto;
+  width: auto;
+  position: absolute;
+  margin: 0;
+  left: 130px;
+  transform: rotate(0);
+  opacity: 1;
+  font-family: 'Proxima Nova', Helvetica, Arial, serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 35px;
+  color: #000000;
+  text-align: left;
+  line-height: 28px;
+}
+.ttigkeitsbereiche .softwareentwicklung1 {
+  opacity: 0;
+  transform: translate(0, -35px);
+}
+.ttigkeitsbereiche .grafikdesign2 {
+  background-color: rgba(255, 255, 255, 0);
+  top: 80px;
+  height: auto;
+  width: auto;
+  position: absolute;
+  margin: 0;
+  left: 526px;
+  transform: rotate(0);
+  opacity: 1;
+  font-family: 'Proxima Nova', Helvetica, Arial, serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 35px;
+  color: #12161b;
+  text-align: left;
+  line-height: 28px;
+}
+.ttigkeitsbereiche .grafikdesign2 {
+  opacity: 0;
+  transform: translate(0, -35px);
+}
+.ttigkeitsbereiche .managementmarketingorganisation3 {
+  background-color: rgba(255, 255, 255, 0);
+  top: 80px;
+  height: auto;
+  width: auto;
+  position: absolute;
+  margin: 0;
+  left: 792px;
+  transform: rotate(0);
+  opacity: 1;
+  font-family: 'Proxima Nova', Helvetica, Arial, serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 35px;
+  color: #ff4600;
+  text-align: left;
+  line-height: 28px;
+}
+.ttigkeitsbereiche .managementmarketingorganisation3 {
+  opacity: 0;
+  transform: translate(0, -35px);
+}
+.ttigkeitsbereiche .rechteck21054 {
+  background-color: rgba(255, 255, 255, 0);
+  top: 129px;
+  height: 3px;
+  box-sizing: border-box;
+  width: 655px;
+  position: absolute;
+  margin: 0;
+  left: 792px;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #ff4600;
+  transform: rotate(0);
+  opacity: 1;
+}
+.ttigkeitsbereiche .gruppe22945 {
+  background-color: rgba(255, 255, 255, 0);
+  top: 202px;
+  height: 867px;
+  width: 1660px;
+  position: absolute;
+  margin: 0;
+  left: 130px;
+  transform: rotate(0);
+  opacity: 1;
+}
+.ttigkeitsbereiche .gruppe22945 {
+  opacity: 0;
+  transform: translate(-25px, 0);
+}
+.ttigkeitsbereiche .gruppe22945 .rechteck20660 {
+  background-color: rgba(255, 255, 255, 0);
+  top: 75px;
+  height: 71px;
+  box-sizing: border-box;
+  width: 210px;
+  position: absolute;
+  margin: 0;
+  left: 0;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #12161b;
+  transform: rotate(0);
+  opacity: 0.1;
+}
+.ttigkeitsbereiche .gruppe22945 .rechteck19701 {
+  background-color: rgba(255, 255, 255, 0);
+  top: 75px;
+  height: 71px;
+  box-sizing: border-box;
+  width: 3px;
+  position: absolute;
+  margin: 0;
+  left: 0;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #12161b;
+  transform: rotate(0);
+  opacity: 1;
+}
+.ttigkeitsbereiche .gruppe22945 .mangement2 {
+  background-color: rgba(255, 255, 255, 0);
+  top: 98px;
+  height: 27px;
+  width: 117px;
+  position: absolute;
+  margin: 0;
+  left: 20px;
+  transform: rotate(0);
+  opacity: 1;
+  font-family: 'Proxima Nova', Helvetica, Arial, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  color: #12161b;
+  text-align: left;
+  line-height: 25px;
+}
+.ttigkeitsbereiche .gruppe22945 .coding1 {
+  background-color: rgba(255, 255, 255, 0);
+  top: 88px;
+  height: 27px;
+  width: 117px;
+  position: absolute;
+  margin: 0;
+  left: 20px;
+  transform: rotate(0);
+  opacity: 1;
+  font-family: 'Proxima Nova', Helvetica, Arial, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  color: #12161b;
+  text-align: left;
+  line-height: 25px;
+  white-space: nowrap;
+}
+.ttigkeitsbereiche .gruppe22945 .rechteck19703 {
+  background-color: rgba(255, 255, 255, 0);
+  top: 75px;
+  height: 106px;
+  box-sizing: border-box;
+  width: 695px;
+  position: absolute;
+  margin: 0;
+  left: 240px;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #12161b;
+  transform: rotate(0);
+  opacity: 0.1;
+}
+.ttigkeitsbereiche .gruppe22945 .steuerunginternerablufeorganisationundpersonalstrukturierung4 {
+  background-color: rgba(255, 255, 255, 0);
+  top: 90px;
+  height: 65px;
+  width: 637px;
+  position: absolute;
+  margin: 0;
+  left: calc(25.85% - 164px);
+  transform: rotate(0);
+  opacity: 1;
+  font-family: 'Proxima Nova', Helvetica, Arial, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  color: #12161b;
+  text-align: left;
+  line-height: 35px;
+}
+.ttigkeitsbereiche .gruppe22945 .ttigkeit5 {
+  background-color: rgba(255, 255, 255, 0);
+  top: -1px;
+  height: 29px;
+  width: 90px;
+  position: absolute;
+  margin: 0;
+  left: 0;
+  transform: rotate(0);
+  opacity: 1;
+  font-family: 'Proxima Nova', Helvetica, Arial, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+  color: #12161b;
+  text-align: left;
+  line-height: 28px;
+}
+.ttigkeitsbereiche .gruppe22945 .beschreibung6 {
+  background-color: rgba(255, 255, 255, 0);
+  top: -1px;
+  height: 29px;
+  width: 148px;
+  position: absolute;
+  margin: 0;
+  left: 240px;
+  transform: rotate(0);
+  opacity: 1;
+  font-family: 'Proxima Nova', Helvetica, Arial, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+  color: #12161b;
+  text-align: left;
+  line-height: 28px;
+}
+.ttigkeitsbereiche .gruppe22945 .rechteck20907 {
+  background-color: rgba(255, 255, 255, 0);
+  top: 42px;
+  height: 3px;
+  box-sizing: border-box;
+  width: 210px;
+  position: absolute;
+  margin: 0;
+  left: 0;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #12161b;
+  transform: rotate(0);
+  opacity: 1;
+}
+.ttigkeitsbereiche .gruppe22945 .rechteck20918 {
+  background-color: rgba(255, 255, 255, 0);
+  top: 42px;
+  height: 3px;
+  box-sizing: border-box;
+  width: 695px;
+  position: absolute;
+  margin: 0;
+  left: 240px;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #12161b;
+  transform: rotate(0);
+  opacity: 1;
+}
+.ttigkeitsbereiche .gruppe22945 .rechteck20929 {
+  background-color: rgba(255, 255, 255, 0);
+  right: 0;
+  top: 42px;
+  height: 3px;
+  box-sizing: border-box;
+  width: 695px;
+  position: absolute;
+  margin: 0;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #12161b;
+  transform: rotate(0);
+  opacity: 1;
+}
+.ttigkeitsbereiche .gruppe22945 .optimalevoraussetzungen10 {
+  background-color: rgba(255, 255, 255, 0);
+  right: calc(29.82% - 85px);
+  top: -1px;
+  height: 29px;
+  width: 287px;
+  position: absolute;
+  margin: 0;
+  transform: rotate(0);
+  opacity: 1;
+  font-family: 'Proxima Nova', Helvetica, Arial, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+  color: #12161b;
+  text-align: left;
+  line-height: 28px;
+}
+.ttigkeitsbereiche .gruppe22945 .rechteck206711 {
+  background-color: rgba(255, 255, 255, 0);
+  top: calc(26.51% - 19px);
+  height: 71px;
+  box-sizing: border-box;
+  width: 210px;
+  position: absolute;
+  margin: 0;
+  left: 0;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #12161b;
+  transform: rotate(0);
+  opacity: 0.1;
+}
+.ttigkeitsbereiche .gruppe22945 .rechteck206812 {
+  background-color: rgba(255, 255, 255, 0);
+  top: calc(26.44% - 18px);
+  height: 69px;
+  box-sizing: border-box;
+  width: 3px;
+  position: absolute;
+  margin: 0;
+  left: 0;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #12161b;
+  transform: rotate(0);
+  opacity: 1;
+}
+.ttigkeitsbereiche .gruppe22945 .rechteck209413 {
+  background-color: rgba(255, 255, 255, 0);
+  top: calc(27.76% - 30px);
+  height: 107px;
+  box-sizing: border-box;
+  width: 695px;
+  position: absolute;
+  margin: 0;
+  left: 240px;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #12161b;
+  transform: rotate(0);
+  opacity: 0.1;
+}
+.ttigkeitsbereiche .gruppe22945 .marketingundvertriebvonzerowerbekampagnenentwickelnselfmarketingsystemoptimieren14 {
+  background-color: rgba(255, 255, 255, 0);
+  top: calc(28.19% - 19px);
+  height: 69px;
+  width: 637px;
+  position: absolute;
+  margin: 0;
+  left: calc(25.85% - 164px);
+  transform: rotate(0);
+  opacity: 1;
+  font-family: 'Proxima Nova', Helvetica, Arial, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  color: #12161b;
+  text-align: left;
+  line-height: 35px;
+}
+.ttigkeitsbereiche .gruppe22945 .rechteck209615 {
+  background-color: rgba(255, 255, 255, 0);
+  top: calc(44.35% - 31px);
+  height: 71px;
+  box-sizing: border-box;
+  width: 210px;
+  position: absolute;
+  margin: 0;
+  left: 0;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #12161b;
+  transform: rotate(0);
+  opacity: 0.1;
+}
+.ttigkeitsbereiche .gruppe22945 .rechteck209716 {
+  background-color: rgba(255, 255, 255, 0);
+  top: calc(44.35% - 31px);
+  height: 71px;
+  box-sizing: border-box;
+  width: 3px;
+  position: absolute;
+  margin: 0;
+  left: 0;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #12161b;
+  transform: rotate(0);
+  opacity: 1;
+}
+.ttigkeitsbereiche .gruppe22945 .rechteck209817 {
+  background-color: rgba(255, 255, 255, 0);
+  top: calc(46.39% - 49px);
+  height: 106px;
+  box-sizing: border-box;
+  width: 695px;
+  position: absolute;
+  margin: 0;
+  left: 240px;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #12161b;
+  transform: rotate(0);
+  opacity: 0.1;
+}
+.ttigkeitsbereiche .gruppe22945 .strategienentwicklungzumerreichenvonnutzernbersocialmediaanalysevonchartsundtrends18 {
+  background-color: rgba(255, 255, 255, 0);
+  top: calc(47.73% - 46px);
+  height: 99px;
+  width: 637px;
+  position: absolute;
+  margin: 0;
+  left: calc(25.85% - 164px);
+  transform: rotate(0);
+  opacity: 1;
+  font-family: 'Proxima Nova', Helvetica, Arial, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  color: #12161b;
+  text-align: left;
+  line-height: 35px;
+}
+.ttigkeitsbereiche .gruppe22945 .rechteck207019 {
+  background-color: rgba(255, 255, 255, 0);
+  bottom: calc(38.57% - 27px);
+  height: 71px;
+  box-sizing: border-box;
+  width: 210px;
+  position: absolute;
+  margin: 0;
+  left: 0;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #12161b;
+  transform: rotate(0);
+  opacity: 0.1;
+}
+.ttigkeitsbereiche .gruppe22945 .rechteck207120 {
+  background-color: rgba(255, 255, 255, 0);
+  bottom: calc(38.57% - 27px);
+  height: 71px;
+  box-sizing: border-box;
+  width: 3px;
+  position: absolute;
+  margin: 0;
+  left: 0;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #12161b;
+  transform: rotate(0);
+  opacity: 1;
+}
+.ttigkeitsbereiche .gruppe22945 .vertrieb21 {
+  background-color: rgba(255, 255, 255, 0);
+  bottom: calc(39.19% - 10px);
+  height: 27px;
+  width: 79px;
+  position: absolute;
+  margin: 0;
+  left: 20px;
+  transform: rotate(0);
+  opacity: 1;
+  font-family: 'Proxima Nova', Helvetica, Arial, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  color: #12161b;
+  text-align: left;
+  line-height: 25px;
+}
+.ttigkeitsbereiche .gruppe22945 .coding3 {
+  background-color: rgba(255, 255, 255, 0);
+  bottom: calc(39.19% - 10px);
+  height: 27px;
+  width: 79px;
+  position: absolute;
+  margin: 0;
+  left: 20px;
+  transform: rotate(0);
+  opacity: 1;
+  font-family: 'Proxima Nova', Helvetica, Arial, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  color: #12161b;
+  text-align: left;
+  line-height: 25px;
+  white-space: nowrap;
+}
+.ttigkeitsbereiche .gruppe22945 .rechteck207222 {
+  background-color: rgba(255, 255, 255, 0);
+  bottom: calc(35.74% - 38px);
+  height: 106px;
+  box-sizing: border-box;
+  width: 695px;
+  position: absolute;
+  margin: 0;
+  left: 240px;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #12161b;
+  transform: rotate(0);
+  opacity: 0.1;
+}
+.ttigkeitsbereiche .gruppe22945 .entwicklenundanpassenvonumsatzmodelleninkombinationmitmarketingundsocialmedia23 {
+  background-color: rgba(255, 255, 255, 0);
+  bottom: calc(36.89% - 24px);
+  height: 68px;
+  width: 637px;
+  position: absolute;
+  margin: 0;
+  left: calc(25.85% - 164px);
+  transform: rotate(0);
+  opacity: 1;
+  font-family: 'Proxima Nova', Helvetica, Arial, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  color: #12161b;
+  text-align: left;
+  line-height: 35px;
+}
+.ttigkeitsbereiche .gruppe22945 .rechteck210124 {
+  background-color: rgba(255, 255, 255, 0);
+  bottom: calc(21.48% - 15px);
+  height: 71px;
+  box-sizing: border-box;
+  width: 210px;
+  position: absolute;
+  margin: 0;
+  left: 0;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #12161b;
+  transform: rotate(0);
+  opacity: 0.1;
+}
+.ttigkeitsbereiche .gruppe22945 .rechteck210225 {
+  background-color: rgba(255, 255, 255, 0);
+  bottom: calc(21.48% - 15px);
+  height: 71px;
+  box-sizing: border-box;
+  width: 3px;
+  position: absolute;
+  margin: 0;
+  left: 0;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #12161b;
+  transform: rotate(0);
+  opacity: 1;
+}
+.ttigkeitsbereiche .gruppe22945 .zeroplanung26 {
+  background-color: rgba(255, 255, 255, 0);
+  bottom: calc(23.04% - 6px);
+  height: 27px;
+  width: 125px;
+  position: absolute;
+  margin: 0;
+  left: 20px;
+  transform: rotate(0);
+  opacity: 1;
+  font-family: 'Proxima Nova', Helvetica, Arial, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  color: #12161b;
+  text-align: left;
+  line-height: 25px;
+}
+.ttigkeitsbereiche .gruppe22945 .coding4 {
+  background-color: rgba(255, 255, 255, 0);
+  bottom: calc(24.04% - 6px);
+  height: 27px;
+  width: 125px;
+  position: absolute;
+  margin: 0;
+  left: 20px;
+  transform: rotate(0);
+  opacity: 1;
+  font-family: 'Proxima Nova', Helvetica, Arial, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  color: #12161b;
+  text-align: left;
+  line-height: 25px;
+}
+.ttigkeitsbereiche .gruppe22945 .rechteck210327 {
+  background-color: rgba(255, 255, 255, 0);
+  bottom: calc(17.87% - 19px);
+  height: 106px;
+  box-sizing: border-box;
+  width: 695px;
+  position: absolute;
+  margin: 0;
+  left: 240px;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #12161b;
+  transform: rotate(0);
+  opacity: 0.1;
+}
+.ttigkeitsbereiche .gruppe22945 .planungderprogrammteilevonzeroundderwebseitesowiediechronologischeumstzung28 {
+  background-color: rgba(255, 255, 255, 0);
+  bottom: calc(20.09% - 13px);
+  height: 65px;
+  width: 610px;
+  position: absolute;
+  margin: 0;
+  left: calc(25.19% - 153px);
+  transform: rotate(0);
+  opacity: 1;
+  font-family: 'Proxima Nova', Helvetica, Arial, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  color: #12161b;
+  text-align: left;
+  line-height: 35px;
+}
+.ttigkeitsbereiche .gruppe22945 .strukturierungsfhigkeitfhrungscharakter29 {
+  background-color: rgba(255, 255, 255, 0);
+  right: calc(23.14% - 86px);
+  top: 90px;
+  height: 65px;
+  width: 374px;
+  position: absolute;
+  margin: 0;
+  transform: rotate(0);
+  opacity: 1;
+  font-family: 'Proxima Nova', Helvetica, Arial, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  color: #12161b;
+  text-align: left;
+  line-height: 35px;
+}
+.ttigkeitsbereiche .gruppe22945 .monetarisierungskenntnisseonlinevertrieb30 {
+  background-color: rgba(255, 255, 255, 0);
+  right: calc(22.29% - 86px);
+  bottom: calc(36.89% - 24px);
+  height: 68px;
+  width: 388px;
+  position: absolute;
+  margin: 0;
+  transform: rotate(0);
+  opacity: 1;
+  font-family: 'Proxima Nova', Helvetica, Arial, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  color: #12161b;
+  text-align: left;
+  line-height: 35px;
+}
+.ttigkeitsbereiche .gruppe22945 .rechteck209331 {
+  background-color: rgba(255, 255, 255, 0);
+  right: calc(20.58% - 92px);
+  top: 75px;
+  height: 106px;
+  box-sizing: border-box;
+  width: 445px;
+  position: absolute;
+  margin: 0;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #12161b;
+  transform: rotate(0);
+  opacity: 0.1;
+}
+.ttigkeitsbereiche .gruppe22945 .rechteck209532 {
+  background-color: rgba(255, 255, 255, 0);
+  right: calc(20.58% - 92px);
+  top: calc(27.73% - 29px);
+  height: 106px;
+  box-sizing: border-box;
+  width: 445px;
+  position: absolute;
+  margin: 0;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #12161b;
+  transform: rotate(0);
+  opacity: 0.1;
+}
+.ttigkeitsbereiche .gruppe22945 .branchenfachwissensocialmarketingerfahrung33 {
+  background-color: rgba(255, 255, 255, 0);
+  right: calc(21.74% - 86px);
+  top: calc(28.19% - 19px);
+  height: 69px;
+  width: 397px;
+  position: absolute;
+  margin: 0;
+  transform: rotate(0);
+  opacity: 1;
+  font-family: 'Proxima Nova', Helvetica, Arial, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  color: #12161b;
+  text-align: left;
+  line-height: 35px;
+}
+.ttigkeitsbereiche .gruppe22945 .rechteck209934 {
+  background-color: rgba(255, 255, 255, 0);
+  right: calc(20.58% - 92px);
+  top: calc(46.39% - 49px);
+  height: 106px;
+  box-sizing: border-box;
+  width: 445px;
+  position: absolute;
+  margin: 0;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #12161b;
+  transform: rotate(0);
+  opacity: 0.1;
+}
+.ttigkeitsbereiche .gruppe22945 .socialmediafachwissendarstellungundanalysevondatenindiagrammen35 {
+  background-color: rgba(255, 255, 255, 0);
+  right: calc(21.74% - 86px);
+  top: calc(45.88% - 30px);
+  height: 68px;
+  width: 397px;
+  position: absolute;
+  margin: 0;
+  transform: rotate(0);
+  opacity: 1;
+  font-family: 'Proxima Nova', Helvetica, Arial, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  color: #12161b;
+  text-align: left;
+  line-height: 35px;
+}
+.ttigkeitsbereiche .gruppe22945 .rechteck210036 {
+  background-color: rgba(255, 255, 255, 0);
+  right: calc(20.58% - 92px);
+  bottom: calc(35.74% - 38px);
+  height: 106px;
+  box-sizing: border-box;
+  width: 445px;
+  position: absolute;
+  margin: 0;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #12161b;
+  transform: rotate(0);
+  opacity: 0.1;
+}
+.ttigkeitsbereiche .gruppe22945 .rechteck210437 {
+  background-color: rgba(255, 255, 255, 0);
+  right: calc(20.58% - 92px);
+  bottom: calc(17.87% - 19px);
+  height: 106px;
+  box-sizing: border-box;
+  width: 445px;
+  position: absolute;
+  margin: 0;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #12161b;
+  transform: rotate(0);
+  opacity: 0.1;
+}
+.ttigkeitsbereiche .gruppe22945 .designkenntnisseunternehmerischesinteresse38 {
+  background-color: rgba(255, 255, 255, 0);
+  right: calc(21.74% - 86px);
+  bottom: calc(19.68% - 13px);
+  height: 66px;
+  width: 397px;
+  position: absolute;
+  margin: 0;
+  transform: rotate(0);
+  opacity: 1;
+  font-family: 'Proxima Nova', Helvetica, Arial, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  color: #12161b;
+  text-align: left;
+  line-height: 28px;
+}
+.ttigkeitsbereiche .gruppe22945 .gruppe228039 {
+  background-color: rgba(255, 255, 255, 0);
+  right: 0;
+  bottom: calc(38.57% - 27px);
+  height: 71px;
+  width: 220px;
+  position: absolute;
+  margin: 0;
+  transform: rotate(0);
+  opacity: 1;
+  transition: all 0.2s ease;
+}
+.ttigkeitsbereiche .gruppe22945 .gruppe228039 {
+  pointer-events: auto;
+}
+.ttigkeitsbereiche .gruppe22945 .gruppe228039:hover {
+  transform: scale(0.95);
+}
+.ttigkeitsbereiche .gruppe22945 .gruppe228039 .rechteck19700 {
+  background-color: rgba(255, 255, 255, 0);
+  top: 0;
+  height: 100%;
+  box-sizing: border-box;
+  width: 100%;
+  position: absolute;
+  margin: 0;
+  left: 0;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #12161b;
+  transform: rotate(0);
+  opacity: 1;
+}
+.ttigkeitsbereiche .gruppe22945 .gruppe228039 .bewerben1 {
+  background-color: rgba(255, 255, 255, 0);
+  top: calc(48.86% - 13px);
+  height: 29px;
+  width: 110px;
+  position: absolute;
+  margin: 0;
+  left: calc(50% - 55px);
+  transform: rotate(0);
+  opacity: 1;
+  font-family: 'Proxima Nova', Helvetica, Arial, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+  color: #12161b;
+  text-align: center;
+  line-height: 28px;
+}
+.ttigkeitsbereiche .gruppe22945 .gruppe228140 {
+  background-color: rgba(255, 255, 255, 0);
+  right: 0;
+  bottom: calc(21.48% - 15px);
+  height: 71px;
+  width: 220px;
+  position: absolute;
+  margin: 0;
+  transform: rotate(0);
+  opacity: 1;
+  transition: all 0.2s ease;
+}
+.ttigkeitsbereiche .gruppe22945 .gruppe228140 {
+  pointer-events: auto;
+}
+.ttigkeitsbereiche .gruppe22945 .gruppe228140:hover {
+  transform: scale(0.95);
+}
+.ttigkeitsbereiche .gruppe22945 .gruppe228140 .rechteck197001 {
+  background-color: rgba(255, 255, 255, 0);
+  top: 0;
+  height: 100%;
+  box-sizing: border-box;
+  width: 100%;
+  position: absolute;
+  margin: 0;
+  left: 0;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #12161b;
+  transform: rotate(0);
+  opacity: 1;
+}
+.ttigkeitsbereiche .gruppe22945 .gruppe228140 .bewerben11 {
+  background-color: rgba(255, 255, 255, 0);
+  top: calc(48.86% - 13px);
+  height: 29px;
+  width: 110px;
+  position: absolute;
+  margin: 0;
+  left: calc(50% - 55px);
+  transform: rotate(0);
+  opacity: 1;
+  font-family: 'Proxima Nova', Helvetica, Arial, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+  color: #12161b;
+  text-align: center;
+  line-height: 28px;
+}
+.ttigkeitsbereiche .gruppe22945 .gruppe228241 {
+  background-color: rgba(255, 255, 255, 0);
+  right: 0;
+  top: calc(44.35% - 31px);
+  height: 71px;
+  width: 220px;
+  position: absolute;
+  margin: 0;
+  transform: rotate(0);
+  opacity: 1;
+  transition: all 0.2s ease;
+}
+.ttigkeitsbereiche .gruppe22945 .gruppe228241 {
+  pointer-events: auto;
+}
+.ttigkeitsbereiche .gruppe22945 .gruppe228241:hover {
+  transform: scale(0.95);
+}
+.ttigkeitsbereiche .gruppe22945 .gruppe228241 .rechteck197002 {
+  background-color: rgba(255, 255, 255, 0);
+  top: 0;
+  height: 100%;
+  box-sizing: border-box;
+  width: 100%;
+  position: absolute;
+  margin: 0;
+  left: 0;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #12161b;
+  transform: rotate(0);
+  opacity: 1;
+}
+.ttigkeitsbereiche .gruppe22945 .gruppe228241 .bewerben12 {
+  background-color: rgba(255, 255, 255, 0);
+  top: calc(48.86% - 13px);
+  height: 29px;
+  width: 110px;
+  position: absolute;
+  margin: 0;
+  left: calc(50% - 55px);
+  transform: rotate(0);
+  opacity: 1;
+  font-family: 'Proxima Nova', Helvetica, Arial, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+  color: #12161b;
+  text-align: center;
+  line-height: 28px;
+}
+.ttigkeitsbereiche .gruppe22945 .gruppe228342 {
+  background-color: rgba(255, 255, 255, 0);
+  right: 0;
+  top: calc(26.51% - 19px);
+  height: 71px;
+  width: 220px;
+  position: absolute;
+  margin: 0;
+  transform: rotate(0);
+  opacity: 1;
+  transition: all 0.2s ease;
+}
+.ttigkeitsbereiche .gruppe22945 .gruppe228342 {
+  pointer-events: auto;
+}
+.ttigkeitsbereiche .gruppe22945 .gruppe228342:hover {
+  transform: scale(0.95);
+}
+.ttigkeitsbereiche .gruppe22945 .gruppe228342 .rechteck197003 {
+  background-color: rgba(255, 255, 255, 0);
+  top: 0;
+  height: 100%;
+  box-sizing: border-box;
+  width: 100%;
+  position: absolute;
+  margin: 0;
+  left: 0;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #12161b;
+  transform: rotate(0);
+  opacity: 1;
+}
+.ttigkeitsbereiche .gruppe22945 .gruppe228342 .bewerben13 {
+  background-color: rgba(255, 255, 255, 0);
+  top: calc(48.86% - 13px);
+  height: 29px;
+  width: 110px;
+  position: absolute;
+  margin: 0;
+  left: calc(50% - 55px);
+  transform: rotate(0);
+  opacity: 1;
+  font-family: 'Proxima Nova', Helvetica, Arial, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+  color: #12161b;
+  text-align: center;
+  line-height: 28px;
+}
+.ttigkeitsbereiche .gruppe22945 .gruppe228443 {
+  background-color: rgba(255, 255, 255, 0);
+  right: 0;
+  top: 75px;
+  height: 71px;
+  width: 220px;
+  position: absolute;
+  margin: 0;
+  transform: rotate(0);
+  opacity: 1;
+  transition: all 0.2s ease;
+}
+.ttigkeitsbereiche .gruppe22945 .gruppe228443 {
+  pointer-events: auto;
+}
+.ttigkeitsbereiche .gruppe22945 .gruppe228443:hover {
+  transform: scale(0.95);
+}
+.ttigkeitsbereiche .gruppe22945 .gruppe228443 .rechteck197004 {
+  background-color: rgba(255, 255, 255, 0);
+  top: 0;
+  height: 100%;
+  box-sizing: border-box;
+  width: 100%;
+  position: absolute;
+  margin: 0;
+  left: 0;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #12161b;
+  transform: rotate(0);
+  opacity: 1;
+}
+.ttigkeitsbereiche .gruppe22945 .gruppe228443 .bewerben14 {
+  background-color: rgba(255, 255, 255, 0);
+  top: calc(48.86% - 13px);
+  height: 29px;
+  width: 110px;
+  position: absolute;
+  margin: 0;
+  left: calc(50% - 55px);
+  transform: rotate(0);
+  opacity: 1;
+  font-family: 'Proxima Nova', Helvetica, Arial, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+  color: #12161b;
+  text-align: center;
+  line-height: 28px;
+}
+.ttigkeitsbereiche .gruppe22945 .socialmediamarketing44 {
+  background-color: rgba(255, 255, 255, 0);
+  top: calc(44.37% - 22px);
+  height: 52px;
+  width: 170px;
+  position: absolute;
+  margin: 0;
+  left: 20px;
+  transform: rotate(0);
+  opacity: 1;
+  font-family: 'Proxima Nova', Helvetica, Arial, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  color: #12161b;
+  text-align: left;
+  line-height: 25px;
+}
+.ttigkeitsbereiche .gruppe22945 .marketing45 {
+  background-color: rgba(255, 255, 255, 0);
+  top: calc(27.67% - 7px);
+  height: 27px;
+  width: 98px;
+  position: absolute;
+  margin: 0;
+  left: 20px;
+  transform: rotate(0);
+  opacity: 1;
+  font-family: 'Proxima Nova', Helvetica, Arial, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  color: #12161b;
+  text-align: left;
+  line-height: 25px;
+}
+.ttigkeitsbereiche .gruppe22945 .coding2 {
+  background-color: rgba(255, 255, 255, 0);
+  top: calc(26.67% - 7px);
+  height: 27px;
+  width: 98px;
+  position: absolute;
+  margin: 0;
+  left: 20px;
+  transform: rotate(0);
+  opacity: 1;
+  font-family: 'Proxima Nova', Helvetica, Arial, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  color: #12161b;
+  text-align: left;
+  line-height: 25px;
+  white-space: nowrap;
+}
+.ttigkeitsbereiche .gruppe22945 .rechteck207946 {
+  background-color: rgba(255, 255, 255, 0);
+  bottom: 35px;
+  height: 71px;
+  box-sizing: border-box;
+  width: 210px;
+  position: absolute;
+  margin: 0;
+  left: 0;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #12161b;
+  transform: rotate(0);
+  opacity: 0.1;
+}
+.ttigkeitsbereiche .gruppe22945 .rechteck208047 {
+  background-color: rgba(255, 255, 255, 0);
+  bottom: 35px;
+  height: 71px;
+  box-sizing: border-box;
+  width: 3px;
+  position: absolute;
+  margin: 0;
+  left: 0;
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #12161b;
+  transform: rotate(0);
+  opacity: 1;
+}
+.ttigkeitsbereiche .gruppe22945 .interneorg48 {
+  background-color: rgba(255, 255, 255, 0);
+  bottom: 58px;
+  height: 29px;
+  width: 128px;
+  position: absolute;
+  margin: 0;
+  left: 20px;
+  transform: rotate(0);
+  opacity: 1;
+  font-family: 'Proxima Nova', Helvetica, Arial, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+  color: #12161b;
+  text-align: left;
+  line-height: 28px;
+}
+.ttigkeitsbereiche .gruppe22945 .rechteck210749 {
+  background-color: rgba(255, 255, 255, 0);
+  bottom: 0;
+  height: 106px;
+  box-sizing: border-box;
+  width: 695px;
+  position: absolute;
+  margin: 0;
+  left: 240px;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #12161b;
+  transform: rotate(0);
+  opacity: 0.1;
+}
+.ttigkeitsbereiche .gruppe22945 .planungsumsetzunginnerhalbdesunternehmensplanungundoptimierunginternerablufe50 {
+  background-color: rgba(255, 255, 255, 0);
+  bottom: 24px;
+  height: 67px;
+  width: 623px;
+  position: absolute;
+  margin: 0;
+  left: calc(25.51% - 158px);
+  transform: rotate(0);
+  opacity: 1;
+  font-family: 'Proxima Nova', Helvetica, Arial, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  color: #12161b;
+  text-align: left;
+  line-height: 35px;
+}
+.ttigkeitsbereiche .gruppe22945 .software {
+  background-color: rgba(255, 255, 255, 0);
+  bottom: 24px;
+  height: 67px;
+  position: absolute;
+  margin: 0;
+  left: 0;
+  transform: rotate(0);
+  opacity: 1;
+  font-family: 'Proxima Nova', Helvetica, Arial, serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 22px;
+  color: #12161b;
+  text-align: left;
+  line-height: 35px;
+}
+.ttigkeitsbereiche .gruppe22945 .rechteck210851 {
+  background-color: rgba(255, 255, 255, 0);
+  right: calc(20.58% - 92px);
+  bottom: 0;
+  height: 106px;
+  box-sizing: border-box;
+  width: 445px;
+  position: absolute;
+  margin: 0;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #12161b;
+  transform: rotate(0);
+  opacity: 0.1;
+}
+.ttigkeitsbereiche .gruppe22945 .schwachstellenselbststndingerkennenundoptimierungsvorschlgeentwickeln52 {
+  background-color: rgba(255, 255, 255, 0);
+  right: calc(21.74% - 86px);
+  bottom: 20px;
+  height: 68px;
+  width: 397px;
+  position: absolute;
+  margin: 0;
+  transform: rotate(0);
+  opacity: 1;
+  font-family: 'Proxima Nova', Helvetica, Arial, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  color: #12161b;
+  text-align: left;
+  line-height: 28px;
+}
+.ttigkeitsbereiche .gruppe22945 .gruppe229353 {
+  background-color: rgba(255, 255, 255, 0);
+  right: 0;
+  bottom: 35px;
+  height: 71px;
+  width: 220px;
+  position: absolute;
+  margin: 0;
+  transform: rotate(0);
+  opacity: 1;
+  transition: all 0.2s ease;
+}
+.ttigkeitsbereiche .gruppe22945 .gruppe229353 {
+  pointer-events: auto;
+}
+.ttigkeitsbereiche .gruppe22945 .gruppe229353:hover {
+  transform: scale(0.95);
+}
+.ttigkeitsbereiche .gruppe22945 .gruppe229353 .rechteck197005 {
+  background-color: rgba(255, 255, 255, 0);
+  top: 0;
+  height: 100%;
+  box-sizing: border-box;
+  width: 100%;
+  position: absolute;
+  margin: 0;
+  left: 0;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #12161b;
+  transform: rotate(0);
+  opacity: 1;
+}
+.ttigkeitsbereiche .gruppe22945 .gruppe229353 .bewerben15 {
+  background-color: rgba(255, 255, 255, 0);
+  top: calc(48.86% - 13px);
+  height: 29px;
+  width: 110px;
+  position: absolute;
+  margin: 0;
+  left: calc(50% - 55px);
+  transform: rotate(0);
+  opacity: 1;
+  font-family: 'Proxima Nova', Helvetica, Arial, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+  color: #12161b;
+  text-align: center;
+  line-height: 28px;
+}
+.anima-animate-appear {
+  opacity: 0;
+  display: block;
+  -webkit-animation: anima-reveal 0.3s ease-in-out 1 normal forwards;
+  -moz-animation: anima-reveal 0.3s ease-in 1 normal forwards;
+  -o-animation: anima-reveal 0.3s ease-in-out 1 normal forwards;
+  animation: anima-reveal 0.3s ease-in-out 1 normal forwards;
+}
+.anima-animate-disappear {
+  opacity: 1;
+  display: block;
+  -webkit-animation: anima-reveal 0.3s ease-in-out 1 reverse forwards;
+  -moz-animation: anima-reveal 0.3s ease-in 1 normal forwards;
+  -o-animation: anima-reveal 0.3s ease-in-out 1 reverse forwards;
+  animation: anima-reveal 0.3s ease-in-out 1 reverse forwards;
+}
+.anima-animate-nodelay {
+  -webkit-animation-delay: 0;
+  -moz-animation-delay: 0;
+  -o-animation-delay: 0;
+  animation-delay: 0;
+}
+@-webkit-keyframes anima-reveal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes anima-reveal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes anima-reveal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes anima-reveal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.anima-component-wrapper,
+.anima-component-wrapper * {
+  pointer-events: none;
+}
+.anima-component-wrapper a *,
+.anima-component-wrapper a,
+.anima-component-wrapper input,
+.anima-component-wrapper video,
+.anima-component-wrapper iframe,
+.anima-listeners-active,
+.anima-listeners-active * {
+  pointer-events: auto;
+}
+.anima-hidden,
+.anima-hidden * {
+  visibility: hidden;
+  pointer-events: none;
+}
+.anima-smart-layers-pointers,
+.anima-smart-layers-pointers * {
+  pointer-events: auto;
+  visibility: visible;
+}
+.anima-component-wrapper.anima-not-ready,
+.anima-component-wrapper.anima-not-ready * {
+  visibility: hidden !important;
+}
+.anima-listeners-active-click,
+.anima-listeners-active-click * {
+  cursor: pointer;
+}
+.anima-word-break {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-all;
+  word-break: break-word;
+}
+.bewerben62 {
+  background-color: rgba(255, 255, 255, 0);
+  top: calc(48.86% - 13px);
+  height: 29px;
+  width: 110px;
+  position: absolute;
+  margin: 0;
+  left: calc(50% - 41%);
+  transform: rotate(0);
+  opacity: 1;
+  font-family: 'Proxima Nova', Helvetica, Arial, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+  color: #12161b;
+  text-align: center;
+  line-height: 28px;
+  white-space: nowrap;
+}
+.otherAreaBox {
+  background-color: rgba(255, 255, 255, 0);
+  top: 0;
+  height: 100%;
+  box-sizing: border-box;
+  width: 100%;
+  position: absolute;
+  margin: 0;
+  left: 0;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #12161b;
+  transform: rotate(0);
+  opacity: 1;
+}
+.otherArea {
+  background-color: rgba(255, 255, 255, 0);
+  left: 40%;
+  top: calc(26.51% - -32%);
+  height: 71px;
+  width: 19%;
+  position: absolute;
+  margin: 0;
+  transform: rotate(0);
+  opacity: 1;
+  transition: all 0.2s ease;
+}
+.description {
+  width: 85.4% !important;
+  background-color: rgba(255, 255, 255, 0);
+  top: 42px;
+  height: 3px;
+  box-sizing: border-box;
+  position: absolute;
+  margin: 0;
+  left: 240px;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #12161b;
+  transform: rotate(0);
+  opacity: 1;
+}
+.graphic {
+  background-color: rgba(255, 255, 255, 0);
+  top: 40%;
+  height: 67px;
+  position: absolute;
+  margin: 0;
+  left: 0;
+  transform: rotate(0);
+  opacity: 1;
+  font-family: 'Proxima Nova', Helvetica, Arial, serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 22px;
+  color: #12161b;
+  text-align: left;
+  line-height: 35px;
+}
+.box1 {
+  background-color: rgba(255, 255, 255, 0);
+  top: calc(27.76% - 30px);
+  height: 8%;
+  box-sizing: border-box;
+  width: 70%;
+  position: absolute;
+  margin: 0;
+  left: 240px;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #12161b;
+  transform: rotate(0);
+  opacity: 0.1;
+}
+.box2 {
+  background-color: rgba(255, 255, 255, 0);
+  top: 75px;
+  height: 8%;
+  box-sizing: border-box;
+  width: 70%;
+  position: absolute;
+  margin: 0;
+  left: 240px;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #12161b;
+  transform: rotate(0);
+  opacity: 0.1;
+}
+.text1 {
+  background-color: rgba(255, 255, 255, 0);
+  top: 90px;
+  height: 65px;
+  width: 60%;
+  position: absolute;
+  margin: 0;
+  left: calc(25.85% - 164px);
+  transform: rotate(0);
+  opacity: 1;
+  font-family: 'Proxima Nova', Helvetica, Arial, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  color: #12161b;
+  text-align: left;
+  line-height: 35px;
+}
+.text2 {
+  background-color: rgba(255, 255, 255, 0);
+  top: calc(28.19% - 19px);
+  height: 36%;
+  width: 60%;
+  position: absolute;
+  margin: 0;
+  left: calc(25.85% - 164px);
+  transform: rotate(0);
+  opacity: 1;
+  font-family: 'Proxima Nova', Helvetica, Arial, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  color: #12161b;
+  text-align: left;
+  line-height: 35px;
+}
+.text3 {
+  background-color: rgba(255, 255, 255, 0);
+  top: 98px;
+  height: 27px;
+  width: 117px;
+  position: absolute;
+  margin: 0;
+  left: 20px;
+  transform: rotate(0);
+  opacity: 1;
+  font-family: 'Proxima Nova', Helvetica, Arial, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  color: #12161b;
+  text-align: left;
+  line-height: 25px;
+  white-space: nowrap;
+}
+.text4 {
+  background-color: rgba(255, 255, 255, 0);
+  top: calc(27.67% - 7px);
+  height: 27px;
+  width: 98px;
+  position: absolute;
+  margin: 0;
+  left: 20px;
+  transform: rotate(0);
+  opacity: 1;
+  font-family: 'Proxima Nova', Helvetica, Arial, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  color: #12161b;
+  text-align: left;
+  line-height: 25px;
+  white-space: nowrap;
+}

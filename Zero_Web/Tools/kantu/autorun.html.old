@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="" />
+<title>01login</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">01login</td></tr>
+</thead><tbody>
+
+      <tr>
+        <td>deleteAllCookies</td>
+        <td></td>
+        <td></td>
+      </tr>
+    
+
+      <tr>
+        <td>echo</td>
+        <td>öffne: ${!cmd_var1}</td>
+        <td></td>
+      </tr>
+    
+
+      <tr>
+        <td>open</td>
+        <td>${!cmd_var1}</td>
+        <td></td>
+      </tr>
+    
+
+      <tr>
+        <td>assertElementPresent</td>
+        <td>xpath=/html/body/div[2]/div[2]/form/div</td>
+        <td></td>
+      </tr>
+    
+
+      <tr>
+        <td>click</td>
+        <td>/html/body/div[2]/div[2]/form/div</td>
+        <td></td>
+      </tr>
+    
+
+      <tr>
+        <td>type</td>
+        <td>id=Username</td>
+        <td>install</td>
+      </tr>
+    
+
+      <tr>
+        <td>type</td>
+        <td>id=Password</td>
+        <td>install</td>
+      </tr>
+    
+
+      <tr>
+        <td>click</td>
+        <td>/html/body/div[2]/div[2]/form/div</td>
+        <td></td>
+      </tr>
+    
+
+      <tr>
+        <td>clickAndWait</td>
+        <td>/html/body/div[2]/div[2]/form/div/button</td>
+        <td></td>
+      </tr>
+    
+
+      <tr>
+        <td>captureEntirePageScreenshot</td>
+        <td>login</td>
+        <td></td>
+      </tr>
+    
+
+      <tr>
+        <td>localStorageExport</td>
+        <td>login.png</td>
+        <td></td>
+      </tr>
+    
+</tbody></table>
+<script>
+(function() {
+  var isExtensionLoaded = function () {
+    const $root = document.documentElement
+    return !!$root && !!$root.getAttribute('data-kantu')
+  }
+  var increaseCountInUrl = function (max) {
+    var url   = new URL(window.location.href)
+    var count = 1 + (url.searchParams.get('reload') || 0)
+
+    url.searchParams.set('reload', count)
+    var nextUrl = url.toString()
+
+    var shouldStop = count > max
+    return [shouldStop, !shouldStop ? nextUrl : null]
+  }
+  var run = function () {
+    try {
+      var evt = new CustomEvent('kantuSaveAndRunMacro', { detail: { html: document.documentElement.outerHTML, storageMode: 'xfile' } })
+
+      window.dispatchEvent(evt)
+      setInterval(() => window.dispatchEvent(evt), 1000);
+
+      if (window.location.protocol === 'file:') {
+        var onInvokeSuccess = function () {
+          clearTimeout(timer)
+          clearTimeout(reloadTimer)
+          window.removeEventListener('kantuInvokeSuccess', onInvokeSuccess)
+        }
+        var timer = setTimeout(function () {
+          alert('Error #203: It seems you need to turn on *Allow access to file URLs* for Kantu in your browser extension settings.')
+        }, 8000)
+
+        window.addEventListener('kantuInvokeSuccess', onInvokeSuccess)
+      }
+    } catch (e) {
+      alert('Kantu Bookmarklet error: ' + e.toString());
+    }
+  }
+  var reloadTimer = null
+  var main = function () {
+    if (isExtensionLoaded())  return run()
+
+    var MAX_TRY   = 3
+    var INTERVAL  = 1000
+    var tuple     = increaseCountInUrl(MAX_TRY)
+
+    if (tuple[0]) {
+      return alert('Error #204: It seems Kantu is not installed yet - or you need to turn on *Allow access to file URLs* for Kantu in your browser extension settings.')
+    } else {
+      reloadTimer = setTimeout(function () {
+        window.location.href = tuple[1]
+      }, INTERVAL)
+    }
+  }
+
+  main()
+})();
+</script>
+</body>
+</html>
+  
