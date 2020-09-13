@@ -1,8 +1,4 @@
-﻿using System;
-using System.Configuration;
-using System.Globalization;
-using System.Threading.Tasks;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Protocols.OpenIdConnect;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.Owin;
@@ -13,6 +9,10 @@ using Microsoft.Owin.Security.Google;
 using Microsoft.Owin.Security.Notifications;
 using Microsoft.Owin.Security.OpenIdConnect;
 using Owin;
+using System;
+using System.Configuration;
+using System.Globalization;
+using System.Threading.Tasks;
 
 [assembly: OwinStartup(typeof(Zero_Web.App_Start.Startup))]
 
@@ -26,8 +26,9 @@ namespace Zero_Web.App_Start
         /// <param name="app"></param>
         public void Configuration(IAppBuilder app)
         {
-            MSConfiguration(app);
-            GoogleAuthConfigure(app);
+            //MSConfiguration(app);
+            //GoogleAuthConfigure(app);
+
             //FacebookAuthConfigure(app);
             // Weitere Informationen zum Konfigurieren Ihrer Anwendung finden Sie unter https://go.microsoft.com/fwlink/?LinkID=316888.
         }
@@ -90,10 +91,11 @@ namespace Zero_Web.App_Start
         {
             app.SetDefaultSignInAsAuthenticationType(CookieAuthenticationDefaults.AuthenticationType);
 
-            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions() {
-            ClientId = ConfigurationManager.AppSettings["Google_ClientId"],
-            ClientSecret = ConfigurationManager.AppSettings["Google_ClientSecret"],
-            //CallbackPath = new PathString("/Login/Google_SignIn"),
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = ConfigurationManager.AppSettings["Google_ClientId"],
+                ClientSecret = ConfigurationManager.AppSettings["Google_ClientSecret"],
+                //CallbackPath = new PathString("/Login/Google_SignIn"),
             });
         }
         #endregion
