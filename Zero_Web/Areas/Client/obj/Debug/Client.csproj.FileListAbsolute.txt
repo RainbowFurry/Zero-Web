@@ -1,8 +1,0 @@
-C:\Users\DarkS\source\repos\Zero_Web\Zero_Web\bin\Client.dll.config
-C:\Users\DarkS\source\repos\Zero_Web\Zero_Web\bin\Client.dll
-C:\Users\DarkS\source\repos\Zero_Web\Zero_Web\bin\Client.pdb
-C:\Users\DarkS\source\repos\Zero_Web\Zero_Web\Areas\Client\obj\Debug\Client.csprojAssemblyReference.cache
-C:\Users\DarkS\source\repos\Zero_Web\Zero_Web\Areas\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
-C:\Users\DarkS\source\repos\Zero_Web\Zero_Web\Areas\Client\obj\Debug\Client.csproj.CopyComplete
-C:\Users\DarkS\source\repos\Zero_Web\Zero_Web\Areas\Client\obj\Debug\Client.dll
-C:\Users\DarkS\source\repos\Zero_Web\Zero_Web\Areas\Client\obj\Debug\Client.pdb

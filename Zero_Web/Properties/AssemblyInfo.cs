@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Allgemeine Informationen zu einer Assembly werden über die folgenden
 // Attribute gesteuert. Ändern Sie diese Attributwerte, um die Informationen zu ändern,
 // die mit einer Assembly verknüpft sind.
-[assembly: AssemblyTitle("Zero_Web")]
+[assembly: AssemblyTitle("Zero Web")]
 [assembly: AssemblyDescription("ZeroWorks Webside")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("ZeroWorks")]
-[assembly: AssemblyProduct("Zero_Web")]
+[assembly: AssemblyProduct("Zero Web")]
 [assembly: AssemblyCopyright("Copyright ©  2020 ZeroWorks (Jason Hoffmann)")]
 [assembly: AssemblyTrademark("ZeroWorks")]
 [assembly: AssemblyCulture("")]
