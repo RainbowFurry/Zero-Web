@@ -1,0 +1,47 @@
+﻿<head>
+    <link href="~/Content/css/Store/Charts.css" rel="stylesheet">
+</head>
+
+@{
+    ViewBag.Title = "ZeroWorks - Store";
+}
+
+<!-- Top Bar -->
+<div class="ChartsFilter">
+    <div class="ChartList">
+        <p class="Chart Global">Globale Trends</p>
+        <p class="Chart Local">Lokale Trends</p>
+        <p class="Chart TopGames">Top-Games</p>
+        <p class="Chart Top">Erfolgreichste</p>
+        <p class="Chart Best">Bestseller</p>
+        <p class="Chart Reply">Von Kuratoren bewertet</p>
+    </div>
+</div>
+
+<!-- Charts Content -->
+<div class="ChartsContent">
+    <div class="ChartItemList">
+        @{
+
+            for (int i = 1; i < 13; i++)
+            {
+                <div class="ChartsItem">
+                    <div class="ChartImage">
+                        <img class="ChartItemImage" src="~/Content/images/Zero/ChartsIcon.svg" />
+                        <img class="ChartItemImageBlur" src="~/Content/images/Zero/ChartsBlur.svg" />
+                    </div>
+                    <div class="ChartInfo">
+                        @if(i < 9){
+                        <p class="Position">#@i</p>
+                        }else{
+                        <p class="Position medium">#@i</p>
+                        }
+                        <b class="ChartName">Outlast</b>
+                        <p class="ChartCompany">Red Barrels</p>
+                    </div>
+                </div>
+            }
+
+        }
+    </div>
+</div>

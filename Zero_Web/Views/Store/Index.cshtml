@@ -1,0 +1,38 @@
+﻿<head>
+    <link href="~/Content/css/Store/Index.css" rel="stylesheet">
+</head>
+
+@{
+    ViewBag.Title = "ZeroWorks - Store";
+}
+
+<body>
+    <div class="TopGame container-fluid">
+        <img class="TopGameImage img-fluid" src="~/Content/images/Zero/TopGame.svg" />
+        <img class="TopGameBlurrImage img-fluid" src="~/Content/images/Zero/TopImageBlure.svg" />
+        <img class="TopGameBlurrImage2 img-fluid" src="~/Content/images/Zero/TopGameBlurr.svg" />
+        <div class="GameDescription">
+            <p>Gesponsorter Inhalt</p>
+            <h1><b>The Last Of Us 2</b></h1>
+            <p id="description">"Atmosphärisch, gigantisch und mit einer hinreißenden Story"</p>
+            <button class="BuyTopGame">Kaufen</button>
+            <div class="AddToWishCard">
+                <img src="~/Content/images/Zero/Add.svg" />
+                <p>Auf die Wunschliste</p>
+            </div>
+        </div>
+    </div>
+
+    @{
+        @Html.Partial("/Views/Store/Part/ProductList.cshtml")
+
+        @Html.Partial("/Views/Store/Part/ProductScrollList.cshtml")
+
+        @Html.Partial("/Views/Store/Part/ProductDescription.cshtml")
+
+        @Html.Partial("/Views/Store/Part/ProductListLarge.cshtml")
+
+        @Html.Partial("/Views/Store/Alert/Opinion.cshtml")
+    }
+
+</body>

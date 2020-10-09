@@ -1,0 +1,66 @@
+﻿/* Top Bar */
+.ChartsFilter {
+  position: sticky;
+  top: 8.3vh;
+  z-index: 998;
+  box-shadow: 0px 0.5px #333;
+  background-color: #12161B;
+  height: 8.3vh;
+  padding-top: 2.6vh;
+  width: 99.6vw;
+  border-bottom: solid 1px var(--MainColor);
+}
+p.Chart {
+  float: left;
+  opacity: 1;
+}
+.ChartList {
+  padding-left: 9vw;
+}
+p.Chart.Global {
+  color: var(--MainColor);
+  border-bottom: solid 3px var(--MainColor);
+  padding: 0px 0px 2.6vh 0px;
+  border-radius: 3%;
+}
+/* Content */
+img.ChartItemImageBlur {
+  margin-left: -18.5vw;
+}
+.ChartsContent {
+  background-color: #1D1D1D;
+  width: 99.6vw;
+}
+p.Position {
+  font-size: 111px;
+  opacity: 1;
+}
+p.ChartCompany {
+  font-size: 20px;
+  opacity: 1;
+  margin-top: -0.7vh;
+}
+b.ChartName {
+  font-size: 30px;
+  opacity: 1;
+  color: #fff;
+}
+.ChartsContent {
+  float: left;
+}
+.ChartsItem {
+  float: left;
+  padding-right: 4vw;
+}
+.ChartItemList {
+  padding-left: 7vw;
+  padding-top: 10vh;
+}
+.ChartInfo {
+  margin-top: -34vh;
+  padding-left: 6.5vw;
+  padding-bottom: 16vh;
+}
+p.Position.medium {
+  margin-left: -2vw;
+}

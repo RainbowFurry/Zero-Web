@@ -15,6 +15,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     @* ToolTip CSS *@
     <link href="~/Content/css/Zero/ZeroTooltip.css" rel="stylesheet">
+    @* Main Rules *@
+    <link href="~/Content/css/Zero/Zero.css" rel="stylesheet">
 
     @* Using Resource Files in HTML *@
     @using ZeroResources = Zero.Web.Resources.ProjektResources;
@@ -29,6 +31,11 @@
     @* Secure File share between Client/Server *@
     @Html.AntiForgeryToken()
 
+    @* SplashScreen *@
+    @{
+        Html.RenderPartial("SplashScreen");
+    }
+
     @* Code CopyRight *@
     @{
         Html.RenderPartial("CopyRight");
@@ -42,7 +49,7 @@
         Html.RenderPartial("Nav");
     }
 
-    <div class="container body-content">
+    <div class="container-fluid body-content">
         @RenderBody()
 
         <!--GEHT NICHT-->
@@ -108,7 +115,6 @@
     <script type="text/javascript" src="~/Scripts/qrcode.js"></script>
     <script type="text/javascript" src="~/Scripts/Zero/Barcode.js"></script>
     -->
-
     @* Zero Style *@
     <link href="~/Content/css/Zero/Zero.css" rel="stylesheet">
 

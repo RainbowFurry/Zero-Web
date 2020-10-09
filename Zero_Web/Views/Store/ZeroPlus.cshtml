@@ -1,0 +1,31 @@
+﻿<head>
+    <link href="~/Content/css/Store/ZeroPlus.css" rel="stylesheet">
+</head>
+
+@{
+    ViewBag.Title = "ZeroWorks - Store";
+}
+
+<div class="ZeroPlus">
+
+    <div class="Zero">
+        <img class="ZeroPlusImage" src="~/Content/images/Zero/ZeroPlus.svg" />
+        <img class="ZeroPlusBlurrImage" src="~/Content/images/Zero/ZeroPlusBlur.svg" />
+        <div class="ZeroPlusDescription">
+            <p class="Sponsored">Gesponsorter Inhalt</p>
+            <b>Zero +</b>
+            <p id="description">Alles in einem Abo<br>Apps | Spiele | Musik | Filme</p>
+            <button class="GetZeroPlus">Kostenlos nutzen</button>
+        </div>
+    </div>
+
+    <div class="ZeroPlusContent">
+        @Html.Partial("/Views/Store/Part/ProductList.cshtml")
+    </div>
+
+    <div class="ZeroPlusBottom">
+        <img class="BottomImage" src="~/Content/images/Zero/ZeroPlusBottom.svg" />
+    </div>
+
+</div>
+

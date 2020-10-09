@@ -1,0 +1,78 @@
+﻿/* Sale Top Image */
+img.TopGameBlurrImage {
+  margin-top: -64.3vh;
+  width: 99.6vw;
+}
+img.TopGameImage {
+  width: 99.6vw;
+  height: 600px;
+}
+img.TopGameBlurrImage2 {
+  margin-top: -68.7vh;
+}
+.GameDescription {
+  margin-top: -58vh;
+  padding-left: 11vw;
+}
+.BuyTopGame {
+  background-color: #00FF80;
+  border-radius: 100em;
+  height: 4.5vh;
+  width: 15vw;
+  border-width: 0;
+  color: #fff;
+}
+.AddToWishCard {
+  padding-left: 16vw;
+  margin-top: -4.5vh;
+  padding-bottom: 6.7vh;
+}
+.AddToWishCard p {
+  padding-left: 3vw;
+  font-size: 18px;
+  width: 7vw;
+  margin-top: -4.5vh;
+}
+p.BrandNew {
+  font-size: 30px;
+  color: var(--MainColor);
+  opacity: 1;
+}
+b.SaleName {
+  opacity: 1;
+  color: #fff;
+  font-size: 60px;
+}
+p.SaleDescription {
+  color: #fff;
+  opacity: 1;
+  font-size: 60px;
+  padding-bottom: 3vh;
+}
+.TopImage {
+  padding-bottom: 5.2vh;
+}
+p.Sponsored {
+  padding-left: 16vw;
+  margin-top: -3.4vh;
+}
+/* Sale Filter Bar */
+.FilterNav {
+  background-color: #1D1D1D;
+  width: 99.6vw;
+  padding-left: 11vw;
+  height: 8.3vh;
+  padding-top: 2.5vh;
+  border-bottom: solid 1px var(--MainColor);
+  position: sticky;
+  top: 8.3vh;
+  z-index: 998;
+}
+p.FilterItem {
+  float: left;
+  cursor: pointer;
+}
+p.FilterItem.Action {
+  opacity: 1;
+}
+/* Sale Content */

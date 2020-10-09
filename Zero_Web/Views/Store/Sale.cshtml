@@ -1,0 +1,63 @@
+﻿<head>
+    <link href="~/Content/css/Store/Sale.css" rel="stylesheet">
+</head>
+
+@{
+    ViewBag.Title = "ZeroWorks - Store";
+}
+
+<div class="Sale">
+
+    <!-- Top Image -->
+    <div class="TopImage">
+        <img class="TopGameImage" src="~/Content/images/Zero/TopGame.svg" />
+        <img class="TopGameBlurrImage" src="~/Content/images/Zero/TopImageBlure.svg" />
+        <img class="TopGameBlurrImage2" src="~/Content/images/Zero/TopGameBlurr.svg" />
+        <div class="GameDescription">
+            <p class="BrandNew">Brandneu erschienen</p>
+            <p class="Sponsored">Gesponsorter Inhalt</p>
+            <b class="SaleName">The Last Of Us 2</b>
+            <p class="SaleDescription">"Atmosphärisch, gigantisch und mit einer hinreißenden Story"</p>
+            <button class="BuyTopGame">19,99€</button>
+            <div class="AddToWishCard">
+                <img src="~/Content/images/Zero/Add.svg" />
+                <p>Auf die Wunschliste</p>
+            </div>
+            <!--FEHLT-->
+        </div>
+    </div>
+
+    <!-- Filter Bar -->
+    <div class="FilterNav">
+        <p class="FilterItem Action">Action</p>
+        <p class="FilterItem">Shooter</p>
+        <p class="FilterItem">Abenteuer</p>
+        <p class="FilterItem">Strategy</p>
+        <p class="FilterItem">Survival</p>
+        <p class="FilterItem">Open World</p>
+        <p class="FilterItem">Rollen-Spiel</p>
+        <p class="FilterItem">Horror</p>
+        <p class="FilterItem">FREE</p>
+        <p class="FilterItem">FREE</p>
+        <p class="FilterItem">FREE</p>
+    </div>
+
+    <!-- Sale Content -->
+    <div class="SaleContent">
+
+        @{
+            @Html.Partial("/Views/Store/Part/ProductList.cshtml")
+            @Html.Partial("/Views/Store/Part/ProductList.cshtml")
+            @Html.Partial("/Views/Store/Part/ProductList.cshtml")
+            @Html.Partial("/Views/Store/Part/ProductScrollList.cshtml")
+            @Html.Partial("/Views/Store/Part/ProductScrollList.cshtml")
+            @Html.Partial("/Views/Store/Part/ProductDescription.cshtml")
+            @Html.Partial("/Views/Store/Part/ProductScrollList.cshtml")
+            @Html.Partial("/Views/Store/Part/ProductScrollList.cshtml")
+            @Html.Partial("/Views/Store/Part/ProductList.cshtml")
+            @Html.Partial("/Views/Store/Part/ProductDescription.cshtml")
+        }
+
+    </div>
+
+</div>

@@ -1,0 +1,42 @@
+﻿<head>
+    <link href="~/Content/css/Store/Part/ProductList.css" rel="stylesheet">
+</head>
+
+<div class="ProductList container-fluid">
+
+    <div class="ListTopic container-fluid">
+        <b class="ListName">Angesagt und für dich empfohlen</b>
+        <p class="ListInfo">(Gesponsert)</p>
+    </div>
+
+    <div class="List row">
+        @{
+            bool sale = true;
+
+            for (int i = 0; i < 5; i++)
+            {
+                if (!sale)
+                {
+                    <div class="Item col">
+                        <img class="ProductIcon img-fluid" src="~/Content/images/Zero/ExampleProduct.svg" />
+                        <p class="ProductName">Minecraft Story Mode</p>
+                        <p class="Price">9,99€</p>
+                    </div>
+                }
+                else
+                {
+                    <div class="Item col">
+                        <img class="ProductIcon img-fluid" src="~/Content/images/Zero/ExampleProduct.svg" />
+                        <p class="ProductName">Minecraft Story Mode</p>
+                        <div class="PriceGroup">
+                            <s class="OldPrice">13,99€</s>
+                            <p class="NewPrice">6,99€</p>
+                            <p class="Discount">-50%</p>
+                        </div>
+                    </div>
+                }
+            }
+        }
+    </div>
+
+</div>

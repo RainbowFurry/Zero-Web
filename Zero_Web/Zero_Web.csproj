@@ -259,15 +259,18 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.cs" />
+    <Compile Include="Content\csharp\Zero\CookieManager.cs" />
     <Compile Include="Content\csharp\Zero\HashPassword.cs" />
     <Compile Include="Content\csharp\Zero\LogManager.cs" />
     <Compile Include="Content\csharp\Zero\MailManager.cs" />
     <Compile Include="Content\csharp\Zero\RoleManagement.cs" />
     <Compile Include="Content\csharp\Zero\SendApplyEmail.cs" />
+    <Compile Include="Content\csharp\Zero\SessionManager.cs" />
     <Compile Include="Content\csharp\Zero\UserTagGenerator.cs" />
     <Compile Include="Content\css\Guidelines\Class1.cs" />
     <Compile Include="Controllers\CompanyController.cs" />
     <Compile Include="Controllers\CookiesController.cs" />
+    <Compile Include="Controllers\CSIController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\GuidelinesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -276,6 +279,7 @@
     <Compile Include="Controllers\PaymentsController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\SetupController.cs" />
+    <Compile Include="Controllers\StoreController.cs" />
     <Compile Include="database\MongoDBManager.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -289,6 +293,7 @@
     <Compile Include="Models\Accounts\Roles.cs" />
     <Compile Include="Models\Accounts\Settings.cs" />
     <Compile Include="Models\Accounts\User.cs" />
+    <Compile Include="Models\Store\StoreItem.cs" />
     <Compile Include="Payments\BitCoin.cs" />
     <Compile Include="Payments\DirectPay.cs" />
     <Compile Include="Payments\MasterCard.cs" />
@@ -360,12 +365,99 @@
     <Content Include="Content\css\Authentification\style.min.css">
       <DependentUpon>style.css</DependentUpon>
     </Content>
+    <Content Include="Content\css\CSI\Index.css">
+      <DependentUpon>Index.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\CSI\Index.min.css">
+      <DependentUpon>Index.css</DependentUpon>
+    </Content>
     <Content Include="Content\css\Home\Index.css">
       <DependentUpon>Index.less</DependentUpon>
     </Content>
     <Content Include="Content\css\Home\Index.min.css">
       <DependentUpon>Index.css</DependentUpon>
     </Content>
+    <Content Include="Content\css\Store\Alert\Opinion.css">
+      <DependentUpon>Opinion.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Store\Alert\Opinion.min.css">
+      <DependentUpon>Opinion.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Store\Charts.css">
+      <DependentUpon>Charts.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Store\Charts.min.css">
+      <DependentUpon>Charts.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Store\Index.css">
+      <DependentUpon>Index.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Store\Index.min.css">
+      <DependentUpon>Index.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Store\Part\ProductDescription.css">
+      <DependentUpon>ProductDescription.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Store\Part\ProductDescription.min.css">
+      <DependentUpon>ProductDescription.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Store\Part\ProductList.css">
+      <DependentUpon>ProductList.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Store\Part\ProductList.min.css">
+      <DependentUpon>ProductList.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Store\Part\ProductListLarge.css">
+      <DependentUpon>ProductListLarge.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Store\Part\ProductListLarge.min.css">
+      <DependentUpon>ProductListLarge.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Store\Part\ProductScrollList.css">
+      <DependentUpon>ProductScrollList.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Store\Part\ProductScrollList.min.css">
+      <DependentUpon>ProductScrollList.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Store\Sale.css">
+      <DependentUpon>Sale.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Store\Sale.min.css">
+      <DependentUpon>Sale.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Store\ZeroPlus.css">
+      <DependentUpon>ZeroPlus.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Store\ZeroPlus.min.css">
+      <DependentUpon>ZeroPlus.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Zero\Nav.css">
+      <DependentUpon>Nav.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Zero\Nav.min.css">
+      <DependentUpon>Nav.css</DependentUpon>
+    </Content>
+    <Content Include="Content\images\Zero\Add.svg" />
+    <Content Include="Content\images\Zero\AlertBackground.svg" />
+    <Content Include="Content\images\Zero\AlertBackgroundBlur.svg" />
+    <Content Include="Content\images\Zero\ChartsBlur.svg" />
+    <Content Include="Content\images\Zero\ChartsIcon.svg" />
+    <Content Include="Content\images\Zero\Controller.svg" />
+    <Content Include="Content\images\Zero\Dislike.svg" />
+    <Content Include="Content\images\Zero\DropDown.svg" />
+    <Content Include="Content\images\Zero\ExampleProduct.svg" />
+    <Content Include="Content\images\Zero\Like.svg" />
+    <Content Include="Content\images\Zero\Menu.svg" />
+    <Content Include="Content\images\Zero\ProductDescription.svg" />
+    <Content Include="Content\images\Zero\ProductListLarge.svg" />
+    <Content Include="Content\images\Zero\Seach.svg" />
+    <Content Include="Content\images\Zero\Store.svg" />
+    <Content Include="Content\images\Zero\TopGame.svg" />
+    <Content Include="Content\images\Zero\TopGameBlurr.svg" />
+    <Content Include="Content\images\Zero\TopImageBlure.svg" />
+    <Content Include="Content\images\Zero\ZeroPlus.svg" />
+    <Content Include="Content\images\Zero\ZeroPlusBlur.svg" />
+    <Content Include="Content\images\Zero\ZeroPlusBottom.svg" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\css\Zero\AlertWindow.css">
       <DependentUpon>AlertWindow.less</DependentUpon>
@@ -390,12 +482,6 @@
     </Content>
     <Content Include="Content\css\Zero\Footer.min.css">
       <DependentUpon>Footer.css</DependentUpon>
-    </Content>
-    <Content Include="Content\css\Zero\Nav.css">
-      <DependentUpon>Nav.less</DependentUpon>
-    </Content>
-    <Content Include="Content\css\Zero\Nav.min.css">
-      <DependentUpon>Nav.css</DependentUpon>
     </Content>
     <Content Include="Content\css\Zero\Socials.css">
       <DependentUpon>Socials.less</DependentUpon>
@@ -514,6 +600,16 @@
     <Content Include="Content\css\Product\WhyZero.less" />
     <Content Include="Content\css\Product\style.less" />
     <Content Include="Content\css\Home\Index.less" />
+    <Content Include="Content\css\Store\Index.less" />
+    <Content Include="Content\css\Store\Part\ProductDescription.less" />
+    <Content Include="Content\css\Store\Part\ProductList.less" />
+    <Content Include="Content\css\Store\Part\ProductScrollList.less" />
+    <Content Include="Content\css\Store\Part\ProductListLarge.less" />
+    <Content Include="Content\css\Store\Alert\Opinion.less" />
+    <Content Include="Content\css\Store\Charts.less" />
+    <Content Include="Content\css\Store\Sale.less" />
+    <Content Include="Content\css\Store\ZeroPlus.less" />
+    <Content Include="Content\css\CSI\Index.less" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
@@ -590,13 +686,25 @@
     <Content Include="Views\Product\Status.cshtml" />
     <Content Include="Views\Authentification\ConfirmRegistration.cshtml" />
     <Content Include="Tools\kantu\kantu.ps1" />
+    <Content Include="Views\CSI\Index.cshtml" />
+    <Content Include="Views\CSI\EditStoreItem.cshtml" />
+    <Content Include="Views\Store\Index.cshtml" />
+    <Content Include="Views\Store\Charts.cshtml" />
+    <Content Include="Views\Store\ZeroPlus.cshtml" />
+    <Content Include="Views\Store\Sale.cshtml" />
+    <Content Include="Views\Store\Free.cshtml" />
+    <Content Include="Views\Store\Part\ProductList.cshtml" />
+    <Content Include="Views\Store\Part\ProductDescription.cshtml" />
+    <Content Include="Views\Store\Part\ProductView.cshtml" />
+    <Content Include="Views\Store\Part\ProductScrollList.cshtml" />
+    <Content Include="Views\Store\Part\ProductListLarge.cshtml" />
+    <Content Include="Views\Store\Alert\Opinion.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\" />
     <Folder Include="Content\audios\" />
     <Folder Include="Content\documents\" />
-    <Folder Include="Content\images\Zero\" />
     <Folder Include="Content\videos\" />
     <Folder Include="lib\" />
     <Folder Include="Tools\kantu\datasources\" />

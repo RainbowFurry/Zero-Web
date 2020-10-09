@@ -1,0 +1,43 @@
+﻿<head>
+    <link href="~/Content/css/Store/Part/ProductScrollList.css" rel="stylesheet">
+</head>
+
+<div class="ProductScrollList">
+
+    <div class="ListSide">
+        <b class="Description">Multiplayer Actionspiele, die auch deine Freunde Spielen</b>
+        <p class="ViewAll">Alle ansehen</p>
+        <img class="Arrow" src="~/Content/images/Zero/DropDown.svg" />
+    </div>
+
+    <div class="List">
+        @{
+            bool sale = true;
+
+            for (int i = 0; i < 4; i++)
+            {
+                if (!sale)
+                {
+                    <div class="ScrollItem">
+                        <img class="ProductIcon" src="~/Content/images/Zero/ExampleProduct.svg" />
+                        <p class="ProductName">Minecraft Story Mode</p>
+                        <p class="Price">9,99€</p>
+                    </div>
+                }
+                else
+                {
+                    <div class="ScrollItem">
+                        <img class="ProductIcon" src="~/Content/images/Zero/ExampleProduct.svg" />
+                        <p class="ProductName">Minecraft Story Mode</p>
+                        <div class="PriceGroup">
+                            <s class="OldPrice">13,99€</s>
+                            <p class="NewPrice">6,99€</p>
+                            <p class="Discount">-50%</p>
+                        </div>
+                    </div>
+                }
+            }
+        }
+    </div>
+
+</div>

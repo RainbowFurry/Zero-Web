@@ -74,5 +74,45 @@
   {
     "outputFile": "Content/css/Home/BewerbungAbgeschlossen.css",
     "inputFile": "Content/css/Home/BewerbungAbgeschlossen.less"
+  },
+  {
+    "outputFile": "Content/css/Store/Index.css",
+    "inputFile": "Content/css/Store/Index.less"
+  },
+  {
+    "outputFile": "Content/css/Store/Part/ProductList.css",
+    "inputFile": "Content/css/Store/Part/ProductList.less"
+  },
+  {
+    "outputFile": "Content/css/Store/Part/ProductDescription.css",
+    "inputFile": "Content/css/Store/Part/ProductDescription.less"
+  },
+  {
+    "outputFile": "Content/css/Store/Part/ProductScrollList.css",
+    "inputFile": "Content/css/Store/Part/ProductScrollList.less"
+  },
+  {
+    "outputFile": "Content/css/Store/Part/ProductListLarge.css",
+    "inputFile": "Content/css/Store/Part/ProductListLarge.less"
+  },
+  {
+    "outputFile": "Content/css/Store/Alert/Opinion.css",
+    "inputFile": "Content/css/Store/Alert/Opinion.less"
+  },
+  {
+    "outputFile": "Content/css/Store/Charts.css",
+    "inputFile": "Content/css/Store/Charts.less"
+  },
+  {
+    "outputFile": "Content/css/Store/Sale.css",
+    "inputFile": "Content/css/Store/Sale.less"
+  },
+  {
+    "outputFile": "Content/css/Store/ZeroPlus.css",
+    "inputFile": "Content/css/Store/ZeroPlus.less"
+  },
+  {
+    "outputFile": "Content/css/CSI/Index.css",
+    "inputFile": "Content/css/CSI/Index.less"
   }
 ]

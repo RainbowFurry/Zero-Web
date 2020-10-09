@@ -1,0 +1,118 @@
+﻿@model  Zero_Web.Models.Store.StoreItem
+
+<head>
+    <link href="~/Content/css/CSI/Index.css" rel="stylesheet">
+</head>
+
+@{
+    ViewBag.Title = "ZeroWorks - Home";
+}
+
+@using (Html.BeginForm())
+{
+
+    @*@Html.NameFor(model => model.NickName)
+        @Html.EditorFor(model => model.NickName)
+        @Html.ValidationMessageFor(model => model.NickName)*@
+
+<div class="CreateItem">
+
+    <div class="Entry">
+        <p>@Html.NameFor(model => model.Name)</p>
+        @Html.EditorFor(model => model.Name)
+    </div>
+
+    <div class="Entry">
+        <p>@Html.NameFor(model => model.Icon)</p>
+        @Html.TextAreaFor(model => model.Icon)
+    </div>
+
+    <div class="Entry">
+        <p>@Html.NameFor(model => model.PreviewIcons)</p>
+        @Html.TextAreaFor(model => model.PreviewIcons)
+    </div>
+
+    <div class="Entry">
+        <p>@Html.NameFor(model => model.Author)</p>
+        @Html.EditorFor(model => model.Author)
+    </div>
+
+    <div class="Entry">
+        <p>@Html.NameFor(model => model.Price)</p>
+        @Html.EditorFor(model => model.Price)
+    </div>
+
+    <div class="Entry">
+        <p>@Html.NameFor(model => model.Version)</p>
+        @Html.EditorFor(model => model.Version)
+    </div>
+
+    @{
+        //TestTime
+        //Discount
+    }
+
+    <div class="Entry">
+        <p>@Html.NameFor(model => model.LongDescription)</p>
+        @Html.TextAreaFor(model => model.LongDescription)
+    </div>
+
+    <div class="Entry">
+        <p>@Html.NameFor(model => model.ShortDescription)</p>
+        @Html.TextAreaFor(model => model.ShortDescription)
+    </div>
+
+    <div class="Entry">
+        <p>@Html.NameFor(model => model.TargetCompanyUrl)</p>
+        @Html.EditorFor(model => model.TargetCompanyUrl)
+    </div>
+
+    <div class="Category">
+        <div class="Entry">
+            <p>@Html.NameFor(model => model.SystemEnviromentMinimal)</p>
+            @Html.EditorFor(model => model.SystemEnviromentMinimal)
+        </div>
+    </div>
+
+    <div class="Category">
+        <div class="Entry">
+            <p>@Html.NameFor(model => model.SystemEnviromentMaximal)</p>
+            @Html.EditorFor(model => model.SystemEnviromentMaximal)
+        </div>
+    </div>
+
+    <div class="Category">
+        <div class="Entry">
+            <p>@Html.NameFor(model => model.DownloadLink)</p>
+            @Html.EditorFor(model => model.DownloadLink)
+        </div>
+    </div>
+
+    <div class="Category">
+        <div class="Entry">
+            <p>@Html.NameFor(model => model.Category)</p>
+            @Html.EnumDropDownListFor(model => model.Category)
+        </div>
+    </div>
+
+    <div class="Category">
+        <div class="Entry">
+            <p>@Html.NameFor(model => model.Genre)</p>
+            @Html.EnumDropDownListFor(model => model.Genre)
+        </div>
+    </div>
+
+    <div class="Entry">
+        <p>@Html.NameFor(model => model.PlayerType)</p>
+        @Html.EnumDropDownListFor(model => model.PlayerType)
+    </div>
+
+    <div class="Entry">
+        <p>@Html.NameFor(model => model.Addons)</p>
+        @Html.EditorFor(model => model.Addons)
+    </div>
+
+    <input class="Create" type="submit" value="Create Store Item">
+
+</div>
+}

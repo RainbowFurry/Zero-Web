@@ -1,9 +1,107 @@
-﻿<nav>
+﻿<head>
+    <link href="~/Content/css/Zero/Nav.css" rel="stylesheet">
+</head>
 
-    <a href="@Url.Action("Index", "Client", new { area = "Client" })">Client</a>
-    <a href="@Url.Action("Index", "Home", new { area = "RestAPI" })">RestAPI</a>
-    <a href="@Url.Action("Index", "Docs", new { area = "Docs" })">Docs</a>
+<nav>
+
+    <div class="navbar navbar-fixed navbar-fixed-top">
+
+        <img class="Logo" src="~/Content/images/Zero/Controller.svg" />
+
+        <div class="LeftNavSide container-lg">
+            <!--
+            <a href="Url.Action("Index", "Client", new { area = "Client" })">Client</a>
+            <a href="Url.Action("Index", "Home", new { area = "RestAPI" })">RestAPI</a>
+            <a href="Url.Action("Index", "Docs", new { area = "Docs" })">Docs</a>-->
+            <a class="Store nav-link" href="@Url.Action("Index", "Store")">Startseite</a>
+            <a class="Charts nav-link" href="@Url.Action("Charts", "Store")">Trends</a>
+            <a class="ZeroPlus nav-link" href="@Url.Action("ZeroPlus", "Store")">Zero +</a>
+            <a class="Sale nav-link" href="@Url.Action("Sale", "Store")">Im Angebot</a>
+            <a class="Free nav-link" href="@Url.Action("Free", "Store")">Kostenlos</a>
+            <a class="nav-link" onclick="showFilterDropdown()">Filter<img class="DropDownIcon" src="~/Content/images/Zero/DropDown.svg" /></a>
+        </div>
+
+        <div class="RightNavSide container-sm right">
+            <div class="Search my-sm-2">
+                <img class="SearchIcon" src="~/Content/images/Zero/Seach.svg" />
+                <input class="SearchBar" placeholder="Search something" />
+            </div>
+            <div class="ShoppingCard my-sm-1">
+                <p class="ShoppingCardAmmount">0</p>
+                <img src="~/Content/images/Zero/Store.svg" />
+            </div>
+            <img class="MenuIcon my-sm-0" src="~/Content/images/Zero/Menu.svg" />
+        </div>
+    </div>
 
 </nav>
 
-<link href="~/Content/css/Zero/Nav.css" rel="stylesheet">
+<div id="FilterNav" class="container-fluid">
+
+    <div class="Filter Price_Filter container-fluid">
+        <p class="FilterHeading">Preis</p>
+        <p><input type="checkbox" />Kostenlos</p>
+        <p><input type="checkbox" />unter 10€</p>
+        <p><input type="checkbox" />Reduziert</p>
+        <p class="FilterHeading">Preisspanne</p>
+        <input type="number" min="0" max="10000" step="0.1">
+    </div>
+
+    <div class="Filter Sort_Filter container-fluid">
+        <p class="FilterHeading">Abstufend auflisten nach</p>
+        <p><input type="checkbox" />Nutzerreviews</p>
+        <p><input type="checkbox" />Kuratorenreviews</p>
+        <p><input type="checkbox" />Downloads</p>
+        <p><input type="checkbox" />Gesamtwertung</p>
+    </div>
+
+    <div class="Filter Genre_Filter container-fluid">
+        <div class="Genre1 container-fluid">
+            <p class="FilterHeading">Genres</p>
+            <p><input type="checkbox" />Action</p>
+            <p><input type="checkbox" />Abenteuer</p>
+            <p><input type="checkbox" />MMO</p>
+            <p><input type="checkbox" />Gelegenheitsspiele</p>
+            <p><input type="checkbox" />Indie</p>
+            <p><input type="checkbox" />RPG</p>
+        </div>
+        <div class="Genre2 container-fluid">
+            <p><input type="checkbox" />Simulation</p>
+            <p><input type="checkbox" />Sport</p>
+            <p><input type="checkbox" />Strategie</p>
+            <p><input type="checkbox" />Story</p>
+            <p><input type="checkbox" />Shooter</p>
+            <p><input type="checkbox" />Battle Royal</p>
+        </div>
+        <div class="Genre3 container-fluid">
+            <p><input type="checkbox" />Rennspiele</p>
+            <p><input type="checkbox" />Jump and Run</p>
+            <p><input type="checkbox" />VR</p>
+            <p><input type="checkbox" />Atmosphäre</p>
+            <p><input type="checkbox" />Singelplayer</p>
+            <p><input type="checkbox" />Multiplayer</p>
+        </div>
+    </div>
+
+    <div class="Filter Date_Filter">
+        <p class="FilterHeading">Veröffentlichungsdatum</p>
+        <p><input type="checkbox" />Brandneue Spiele</p>
+        <p><input type="checkbox" />Gesamter Zeitraum</p>
+        <p class="FilterHeading">Zeitraum festlegen</p>
+        <!--MISSING-->
+    </div>
+
+</div>
+
+<!-- Filter DropDown -->
+<script>
+    function showFilterDropdown() {
+        //console.log("JasonJT");
+        var x = document.getElementById("FilterNav");
+        if (x.className.indexOf(" DropdonwNavShow") == -1) {
+            x.className += " DropdonwNavShow";
+        } else {
+            x.className = x.className.replace(" DropdonwNavShow", "");
+        }
+    }
+</script>
