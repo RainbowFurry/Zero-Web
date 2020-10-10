@@ -340,6 +340,19 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ProjektResources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Resources\Shared\Nav\English.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>English.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Shared\Nav\German.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>German.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Shared\Nav\LanguageHandler.cs">
+      <Generator>ResXFileCodeGenerator</Generator>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Changelog.txt" />
@@ -706,6 +719,7 @@
     <Folder Include="Content\documents\" />
     <Folder Include="Content\videos\" />
     <Folder Include="lib\" />
+    <Folder Include="Resources\Store\" />
     <Folder Include="Tools\kantu\datasources\" />
     <Folder Include="Tools\kantu\images\" />
     <Folder Include="Tools\kantu\logs\" />
@@ -750,6 +764,14 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>ProjektResources.Designer.cs</LastGenOutput>
       <CustomToolNamespace>Zero.Web.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Shared\Nav\English.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>English.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Shared\Nav\German.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>German.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
