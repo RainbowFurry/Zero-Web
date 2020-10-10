@@ -1,7 +1,7 @@
 ﻿img.TopGameBlurrImage {
   /* margin-top: -64.3vh;
     width: 99.6vw;*/
-  position: absolute;
+  position: relative;
 }
 img.TopGameImage {
   /*   width: 99.6vw;
@@ -10,12 +10,11 @@ img.TopGameImage {
   z-index: 1;
 }
 img.TopGameBlurrImage2 {
-  position: absolute;
+  position: relative;
   z-index: 2;
 }
-.GameDescription {
-  margin-top: -52vh;
-  padding-left: 10vw;
+.TopImageContainer {
+  position: absolute;
 }
 .GameDescription h1 {
   color: #fff;
@@ -34,18 +33,9 @@ img.TopGameBlurrImage2 {
   background-color: #00FF80;
   border-radius: 100em;
   height: 4.5vh;
-  width: 15vw;
   border-width: 0;
   color: #fff;
 }
 .AddToWishCard p {
-  padding-left: 3vw;
   font-size: 18px;
-  width: 7vw;
-  margin-top: -4.5vh;
-}
-.AddToWishCard {
-  padding-left: 16vw;
-  margin-top: -4.5vh;
-  padding-bottom: 6.7vh;
 }

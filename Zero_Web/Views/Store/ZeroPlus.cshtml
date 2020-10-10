@@ -6,11 +6,11 @@
     ViewBag.Title = "ZeroWorks - Store";
 }
 
-<div class="ZeroPlus">
+<div class="ZeroPlus container-fluid">
 
-    <div class="Zero">
-        <img class="ZeroPlusImage" src="~/Content/images/Zero/ZeroPlus.svg" />
-        <img class="ZeroPlusBlurrImage" src="~/Content/images/Zero/ZeroPlusBlur.svg" />
+    <div class="Zero container-fluid">
+        <img class="ZeroPlusImage img-fluid w-100" src="~/Content/images/Zero/ZeroPlus.svg" />
+        <img class="ZeroPlusBlurrImage img-fluid w-100" src="~/Content/images/Zero/ZeroPlusBlur.svg" />
         <div class="ZeroPlusDescription">
             <p class="Sponsored">Gesponsorter Inhalt</p>
             <b>Zero +</b>
@@ -19,12 +19,12 @@
         </div>
     </div>
 
-    <div class="ZeroPlusContent">
+    <div class="ZeroPlusContent container-fluid">
         @Html.Partial("/Views/Store/Part/ProductList.cshtml")
     </div>
 
-    <div class="ZeroPlusBottom">
-        <img class="BottomImage" src="~/Content/images/Zero/ZeroPlusBottom.svg" />
+    <div class="ZeroPlusBottom container-fluid">
+        <img class="BottomImage img-fluid w-100" src="~/Content/images/Zero/ZeroPlusBottom.svg" />
     </div>
 
 </div>

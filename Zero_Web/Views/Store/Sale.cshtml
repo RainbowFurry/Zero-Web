@@ -9,10 +9,10 @@
 <div class="Sale">
 
     <!-- Top Image -->
-    <div class="TopImage">
-        <img class="TopGameImage" src="~/Content/images/Zero/TopGame.svg" />
-        <img class="TopGameBlurrImage" src="~/Content/images/Zero/TopImageBlure.svg" />
-        <img class="TopGameBlurrImage2" src="~/Content/images/Zero/TopGameBlurr.svg" />
+    <div class="TopImage container-fluid">
+        <img class="TopGameImage img-fluid w-100" src="~/Content/images/Zero/TopGame.svg" />
+        <img class="TopGameBlurrImage img-fluid w-100" src="~/Content/images/Zero/TopImageBlure.svg" />
+        <img class="TopGameBlurrImage2 img-fluid w-100" src="~/Content/images/Zero/TopGameBlurr.svg" />
         <div class="GameDescription">
             <p class="BrandNew">Brandneu erschienen</p>
             <p class="Sponsored">Gesponsorter Inhalt</p>
@@ -20,7 +20,7 @@
             <p class="SaleDescription">"Atmosphärisch, gigantisch und mit einer hinreißenden Story"</p>
             <button class="BuyTopGame">19,99€</button>
             <div class="AddToWishCard">
-                <img src="~/Content/images/Zero/Add.svg" />
+                <img class="img-fluid" src="~/Content/images/Zero/Add.svg" />
                 <p>Auf die Wunschliste</p>
             </div>
             <!--FEHLT-->
@@ -28,22 +28,24 @@
     </div>
 
     <!-- Filter Bar -->
-    <div class="FilterNav">
-        <p class="FilterItem Action">Action</p>
-        <p class="FilterItem">Shooter</p>
-        <p class="FilterItem">Abenteuer</p>
-        <p class="FilterItem">Strategy</p>
-        <p class="FilterItem">Survival</p>
-        <p class="FilterItem">Open World</p>
-        <p class="FilterItem">Rollen-Spiel</p>
-        <p class="FilterItem">Horror</p>
-        <p class="FilterItem">FREE</p>
-        <p class="FilterItem">FREE</p>
-        <p class="FilterItem">FREE</p>
+    <div class="FilterNav container-fluid">
+        <div class="row">
+            <p class="FilterItem Action col">Action</p>
+            <p class="FilterItem col">Shooter</p>
+            <p class="FilterItem col">Abenteuer</p>
+            <p class="FilterItem col">Strategy</p>
+            <p class="FilterItem col">Survival</p>
+            <p class="FilterItem col">Open World</p>
+            <p class="FilterItem col">Rollen-Spiel</p>
+            <p class="FilterItem col">Horror</p>
+            <p class="FilterItem col">FREE</p>
+            <p class="FilterItem col">FREE</p>
+            <p class="FilterItem col">FREE</p>
+        </div>
     </div>
 
     <!-- Sale Content -->
-    <div class="SaleContent">
+    <div class="SaleContent container-fluid">
 
         @{
             @Html.Partial("/Views/Store/Part/ProductList.cshtml")

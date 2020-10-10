@@ -339,3 +339,5 @@ C:\Users\DarkS\Source\Repos\Zero-Web\Zero_Web\bin\System.Net.Http.Formatting.xml
 C:\Users\DarkS\Source\Repos\Zero-Web\Zero_Web\bin\System.Web.Http.xml
 C:\Users\DarkS\Source\Repos\Zero-Web\Zero_Web\bin\System.Web.Http.WebHost.xml
 C:\Users\DarkS\Source\Repos\Zero-Web\Zero_Web\bin\de\System.Web.Http.WebHost.resources.dll
+C:\Users\DarkS\Source\Repos\Zero-Web\Zero_Web\bin\de\System.Net.Http.Formatting.resources.dll
+C:\Users\DarkS\Source\Repos\Zero-Web\Zero_Web\bin\de\System.Web.Http.resources.dll

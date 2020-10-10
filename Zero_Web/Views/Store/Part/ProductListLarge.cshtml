@@ -2,34 +2,35 @@
     <link href="~/Content/css/Store/Part/ProductListLarge.css" rel="stylesheet">
 </head>
 
-<div class="ProductListLarge">
+<div class="ProductListLarge container-fluid">
 
     <p class="ProductListLargeDescription">Die erfolgreichsten <b>Battle Royale</b> Spiele</p>
 
-    <div class="LargeItem">
-        
-        <img class="AppIconLarge" src="~/Content/images/Zero/ProductListLarge.svg" />
+    <div class="LargeItem row">
 
-        <p class="AppName">Fortnite: Battle Royale</p>
+        @{
+            for (int i = 0; i < 2; i++)
+            {
+                <div class="LargeItem col">
 
-        <div class="BottomPriceBar">
-            <s class="OldPrice">13,99€</s>
-            <p class="NewPrice">6,99€</p>
-            <p class="Discount">-50%</p>
+                    <img class="AppIconLarge img-fluid" src="~/Content/images/Zero/ProductListLarge.svg" />
+
+                    <p class="AppName">Fortnite: Battle Royale</p>
+
+                    <div class="BottomPriceBar col">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <s class="OldPrice col-md-1">13,99€</s>
+                                <p class="NewPrice col-md-1">6,99€</p>
+                                <p class="Discount col-md-1">-50%</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            }
+        };
+
         </div>
+
     </div>
-
-    <div class="LargeItem">
-        
-        <img class="AppIconLarge" src="~/Content/images/Zero/ProductListLarge.svg" />
-
-        <p class="AppName">Fortnite: Battle Royale</p>
-
-        <div class="BottomPriceBar">
-            <s class="OldPrice">13,99€</s>
-            <p class="NewPrice">6,99€</p>
-            <p class="Discount">-50%</p>
-        </div>
-    </div>
-
-</div>

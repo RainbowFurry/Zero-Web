@@ -1,15 +1,12 @@
-﻿.TopGame {
-  padding-bottom: 5.3vh;
-}
-.List {
+﻿.List {
   /* display: grid;
     grid-template-columns: 325px 325px 325px 325px 400px;
     grid-template-rows: 50px 50px;*/
 }
 .Item {
-  float: left;
-  padding-left: 4vw;
-  padding-top: 2vh;
+  /*    float: left;
+    padding-left: 4vw;
+    padding-top: 2vh;*/
 }
 .ProductList b {
   font-size: 25px;
@@ -21,8 +18,6 @@
   color: #fff;
   opacity: 0.8;
   font-size: 20px;
-  padding-top: 2vh;
-  padding-bottom: 1vh;
 }
 .Price {
   color: #fff;
@@ -42,17 +37,6 @@
 .ProductIcon {
   border-radius: 4%;
 }
-.ListTopic {
-  padding-left: 7vw;
-  padding-top: 10vh;
-}
-p.ListInfo {
-  padding-left: 20vw;
-  margin-top: -2.8vh;
-}
-img.ProductIcon {
-  width: 264px;
-}
 p.ProductName {
   color: #fff;
   opacity: 0.8;
@@ -64,16 +48,7 @@ p.ProductName {
   height: auto;
 }
 /* Discount View */
-.OldPrice {
-  float: left;
-  padding-right: 0.5vw;
-}
-.NewPrice {
-  float: left;
-  padding-right: 0.5vw;
-}
 .Discount {
-  float: left;
   background-color: #00FF80;
   border-radius: 5px 5px 5px 5px;
   opacity: 1;
@@ -82,7 +57,6 @@ p.Discount {
   color: #12161B;
   font-size: 20px;
   width: 3vw;
-  padding-left: 0.4vw;
 }
 p.NewPrice {
   color: #fff;

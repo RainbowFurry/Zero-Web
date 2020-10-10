@@ -7,41 +7,48 @@
 }
 
 <!-- Top Bar -->
-<div class="ChartsFilter">
-    <div class="ChartList">
-        <p class="Chart Global">Globale Trends</p>
-        <p class="Chart Local">Lokale Trends</p>
-        <p class="Chart TopGames">Top-Games</p>
-        <p class="Chart Top">Erfolgreichste</p>
-        <p class="Chart Best">Bestseller</p>
-        <p class="Chart Reply">Von Kuratoren bewertet</p>
+<div class="ChartsFilter container-fluid">
+    <div class="ChartList row">
+        <p class="Chart Global col">Globale Trends</p>
+        <p class="Chart Local col">Lokale Trends</p>
+        <p class="Chart TopGames col">Top-Games</p>
+        <p class="Chart Top col">Erfolgreichste</p>
+        <p class="Chart Best col">Bestseller</p>
+        <p class="Chart Reply col">Von Kuratoren bewertet</p>
     </div>
 </div>
 
 <!-- Charts Content -->
-<div class="ChartsContent">
-    <div class="ChartItemList">
-        @{
+<div class="ChartsContent container-fluid">
 
-            for (int i = 1; i < 13; i++)
-            {
-                <div class="ChartsItem">
-                    <div class="ChartImage">
-                        <img class="ChartItemImage" src="~/Content/images/Zero/ChartsIcon.svg" />
-                        <img class="ChartItemImageBlur" src="~/Content/images/Zero/ChartsBlur.svg" />
+    @{
+        for (int a = 0; a < 3; a++)
+        {
+            <div class="ChartItemList row">
+
+                @for (int i = 1; i < 5; i++)
+                {
+                <div class="ChartsItem col">
+                    <div class="ChartImage container-fluid">
+                        <img class="ChartItemImage img-fluid" src="~/Content/images/Zero/ChartsIcon.svg" />
+                        <img class="ChartItemImageBlur img-fluid" src="~/Content/images/Zero/ChartsBlur.svg" />
                     </div>
-                    <div class="ChartInfo">
-                        @if(i < 9){
-                        <p class="Position">#@i</p>
-                        }else{
-                        <p class="Position medium">#@i</p>
+                    <div class="ChartInfo container-fluid">
+                        @if (i < 9)
+                        {
+                            <p class="Position">#@i</p>
+                        }
+                        else
+                        {
+                            <p class="Position medium">#@i</p>
                         }
                         <b class="ChartName">Outlast</b>
                         <p class="ChartCompany">Red Barrels</p>
                     </div>
                 </div>
-            }
-
+                }
+            </div>
         }
-    </div>
+    }
+
 </div>
