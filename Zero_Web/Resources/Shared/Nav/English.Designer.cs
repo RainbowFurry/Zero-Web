@@ -88,6 +88,15 @@ namespace Zero_Web.Resources.Shared.Nav {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Login ähnelt.
+        /// </summary>
+        internal static string Login {
+            get {
+                return ResourceManager.GetString("Login", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Sale ähnelt.
         /// </summary>
         internal static string Sale {

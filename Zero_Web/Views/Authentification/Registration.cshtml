@@ -1,90 +1,66 @@
 ﻿@model  Zero_Web.Models.User
 
+<head>
+    <link href="~/Content/css/Authentification/Registration.css" rel="stylesheet">
+    <link href="~/Content/css/Authentification/style.css" rel="stylesheet">
+</head>
+
 @{
     ViewBag.Title = "Registration";
 }
 
-<!--
-    <div class="Zero Registration">
+<div class="Zero Registration">
 
-        <h2>Zero Registration</h2>
-        <img src="~/Content/images/icons/icon-144x144.png" />
+    <h2>Zero Registration</h2>
+    <img src="~/Content/images/icons/icon-144x144.png" />
 
-        <div>
-            <input type="text" placeholder="Nick Name" required />
-            <input type="text" placeholder="First Name" required />
-            <input type="text" placeholder="Last Name" required />
-            <input type="text" placeholder="Street" required />
-            <input type="text" placeholder="House Number" required />
-            <input type="text" placeholder="City" required />
-            <input type="text" placeholder="PostCode" required />
-            <input type="date" required />
-            <input type="text" placeholder="Email" required />
-            <input type="password" placeholder="Password" required />
-            <input type="password" placeholder="Confirm Password" required />
+    <div>
+        @using (Html.BeginForm())
+        {
+            @Html.NameFor(model => model.NickName)
+            @Html.EditorFor(model => model.NickName)
+            @Html.ValidationMessageFor(model => model.NickName)
 
-            <button type="submit" value="Create">Registrieren</button>
+            @Html.NameFor(model => model.FirstName)
+            @Html.EditorFor(model => model.FirstName)
 
-            <p>Abbrechen und zum @Html.ActionLink("Login", "Login", "Authentification")</p>
+            @Html.NameFor(model => model.LastName)
+            @Html.EditorFor(model => model.LastName)
 
-        </div>
-    </div>-->
+            @Html.NameFor(model => model.Street)
+            @Html.EditorFor(model => model.Street)
 
-    <div class="Zero Registration">
+            @Html.NameFor(model => model.HouseNumber)
+            @Html.EditorFor(model => model.HouseNumber)
 
-        <h2>Zero Registration</h2>
-        <img src="~/Content/images/icons/icon-144x144.png" />
+            @Html.NameFor(model => model.City)
+            @Html.EditorFor(model => model.City)
 
-        <div>
-            @using (Html.BeginForm())
-            {
-                @Html.NameFor(model => model.NickName)
-                @Html.EditorFor(model => model.NickName)
-                @Html.ValidationMessageFor(model => model.NickName)
+            @Html.NameFor(model => model.Postcode)
+            @Html.EditorFor(model => model.Postcode)
 
-                @Html.NameFor(model => model.FirstName)
-                @Html.EditorFor(model => model.FirstName)
+            @Html.NameFor(model => model.Age)
+            @Html.EditorFor(model => model.Age)
 
-                @Html.NameFor(model => model.LastName)
-                @Html.EditorFor(model => model.LastName)
+            @Html.NameFor(model => model.Email)
+            @Html.EditorFor(model => model.Email)
+            @Html.ValidationMessageFor(model => model.Email)
 
-                @Html.NameFor(model => model.Street)
-                @Html.EditorFor(model => model.Street)
+            @Html.NameFor(model => model.PhoneNumber)
+            @Html.EditorFor(model => model.PhoneNumber)
 
-                @Html.NameFor(model => model.HouseNumber)
-                @Html.EditorFor(model => model.HouseNumber)
+            @Html.NameFor(model => model.Password)
+            @Html.EditorFor(model => model.Password)
+            @Html.ValidationMessageFor(model => model.Password)
 
-                @Html.NameFor(model => model.City)
-                @Html.EditorFor(model => model.City)
+            @Html.NameFor(model => model.ConfirmPassword)
+            @Html.EditorFor(model => model.ConfirmPassword)
+            @Html.ValidationMessageFor(model => model.ConfirmPassword)
 
-                @Html.NameFor(model => model.Postcode)
-                @Html.EditorFor(model => model.Postcode)
+            <input type="submit" value="Registrieren">
+        }
 
-                @Html.NameFor(model => model.Age)
-                @Html.EditorFor(model => model.Age)
+        <p>Abbrechen und zum @Html.ActionLink("Login", "Login", "Authentification")</p>
 
-                @Html.NameFor(model => model.Email)
-                @Html.EditorFor(model => model.Email)
-                @Html.ValidationMessageFor(model => model.Email)
-
-                @Html.NameFor(model => model.PhoneNumber)
-                @Html.EditorFor(model => model.PhoneNumber)
-
-                @Html.NameFor(model => model.Password)
-                @Html.EditorFor(model => model.Password)
-                @Html.ValidationMessageFor(model => model.Password)
-
-                @Html.NameFor(model => model.ConfirmPassword)
-                @Html.EditorFor(model => model.ConfirmPassword)
-                @Html.ValidationMessageFor(model => model.ConfirmPassword)
-
-                <input type="submit" value="Registrieren">
-            }
-
-            <p>Abbrechen und zum @Html.ActionLink("Login", "Login", "Authentification")</p>
-
-        </div>
     </div>
-
-<link href="~/Content/css/Authentification/Registration.css" rel="stylesheet">
-<link href="~/Content/css/Authentification/style.css" rel="stylesheet">
+</div>

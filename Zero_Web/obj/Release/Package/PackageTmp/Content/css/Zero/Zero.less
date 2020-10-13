@@ -4,26 +4,32 @@
 @TextColor: var(--TextColor);
 
 :root {
-    --MainColor: #ff5e00; //#0089ff
-    --WhiteTheme: #fff;
-    --DarkTheme: #12161b;
-    --TextColor: #9b9b9f;
+   --MainColor: #FF5E00; //#0089ff//#ff5e00
+   --WhiteTheme: #fff;
+   --DarkTheme: #12161B;
+   --TextColor: #fff; //#9b9b9f
 }
 
 /*Scrollbar*/
 ::-webkit-scrollbar {
+    display: none;
+    visibility: hidden;
     background-color: #222;
     width: 8px;
     height: 8px;
 }
 
 ::-webkit-scrollbar-track {
+    visibility: hidden;
+    display: none;
     background: #333;
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     border-radius: 40px;
 }
 
 ::-webkit-scrollbar-thumb {
+    visibility: hidden;
+    display: none;
     background: @MainColor;
     border-radius: 40px;
 }
@@ -31,6 +37,8 @@
 //When marking Area
 ::-moz-selection { /* Code for Firefox */
     background: @MainColor;
+    visibility: hidden;
+    display: none;
 }
 
 ::selection {
@@ -42,6 +50,7 @@ body {
     padding-bottom: 0px !important;
     /*overflow-x: hidden;*/
     overflow-x: visible !important;
+    background-color: @DarkTheme;
 }
 
 .body-content {
@@ -52,4 +61,30 @@ body {
 .container {
     margin-right: 0px !important;
     margin-left: 0px !important;
+}
+
+.container-fluid {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+}
+
+//Text Decoration
+p {
+   color: var(--TextColor);
+   font-family: "Proxima Nova";
+}
+
+a {
+   color: var(--TextColor);
+   font-family: "Proxima Nova";
+}
+
+h1 {
+   color: var(--TextColor);
+   font-family: "Proxima Nova";
+}
+
+b {
+   color: var(--TextColor);
+   font-family: "Proxima Nova";
 }

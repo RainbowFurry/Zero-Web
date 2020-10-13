@@ -114,5 +114,21 @@
   {
     "outputFile": "Content/css/CSI/Index.css",
     "inputFile": "Content/css/CSI/Index.less"
+  },
+  {
+    "outputFile": "Content/css/Authentification/Login.css",
+    "inputFile": "Content/css/Authentification/Login.less"
+  },
+  {
+    "outputFile": "Content/css/Authentification/style.css",
+    "inputFile": "Content/css/Authentification/style.less"
+  },
+  {
+    "outputFile": "Content/css/Store/Free.css",
+    "inputFile": "Content/css/Store/Free.less"
+  },
+  {
+    "outputFile": "Content/css/Store/Part/TopGameImage.css",
+    "inputFile": "Content/css/Store/Part/TopGameImage.less"
   }
 ]

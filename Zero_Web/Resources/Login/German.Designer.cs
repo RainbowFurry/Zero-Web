@@ -59,5 +59,185 @@ namespace Zero_Web.Resources.Login {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Ich akzeptiere die Nutzungsbedingungen ähnelt.
+        /// </summary>
+        internal static string AcceptTerms {
+            get {
+                return ResourceManager.GetString("AcceptTerms", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Zurück ähnelt.
+        /// </summary>
+        internal static string Back {
+            get {
+                return ResourceManager.GetString("Back", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Email ändern ähnelt.
+        /// </summary>
+        internal static string ConfirmRegister_ChangeMail {
+            get {
+                return ResourceManager.GetString("ConfirmRegister_ChangeMail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Gebe den 6-stelligen Code ein den wir dir gerade gesendet haben ähnelt.
+        /// </summary>
+        internal static string ConfirmRegister_ConfirmText {
+            get {
+                return ResourceManager.GetString("ConfirmRegister_ConfirmText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Lass uns deine Email mit Zero verbinden ähnelt.
+        /// </summary>
+        internal static string ConfirmRegister_Heading {
+            get {
+                return ResourceManager.GetString("ConfirmRegister_Heading", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Email erneut senden ähnelt.
+        /// </summary>
+        internal static string ConfirmRegister_NewMail {
+            get {
+                return ResourceManager.GetString("ConfirmRegister_NewMail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Erstelle einen Zero Account ähnelt.
+        /// </summary>
+        internal static string CreateAccount {
+            get {
+                return ResourceManager.GetString("CreateAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Anmelden ähnelt.
+        /// </summary>
+        internal static string Login {
+            get {
+                return ResourceManager.GetString("Login", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Melde dich bei Zero an ähnelt.
+        /// </summary>
+        internal static string Login_Heading {
+            get {
+                return ResourceManager.GetString("Login_Heading", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die NickName oder Email ähnelt.
+        /// </summary>
+        internal static string Login_Name {
+            get {
+                return ResourceManager.GetString("Login_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Dein Passwort ähnelt.
+        /// </summary>
+        internal static string Login_Password {
+            get {
+                return ResourceManager.GetString("Login_Password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Probleme beim Anmelden? ähnelt.
+        /// </summary>
+        internal static string Problem_Login {
+            get {
+                return ResourceManager.GetString("Problem_Login", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Registrieren ähnelt.
+        /// </summary>
+        internal static string Register {
+            get {
+                return ResourceManager.GetString("Register", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Nur einen Schritt entfernt von Zero ähnelt.
+        /// </summary>
+        internal static string Register_Heading {
+            get {
+                return ResourceManager.GetString("Register_Heading", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Anmelden über ähnelt.
+        /// </summary>
+        internal static string SignIn_with {
+            get {
+                return ResourceManager.GetString("SignIn_with", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Dein Alter ähnelt.
+        /// </summary>
+        internal static string UserAge {
+            get {
+                return ResourceManager.GetString("UserAge", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Passwort bestätigen ähnelt.
+        /// </summary>
+        internal static string UserConfirmPassword {
+            get {
+                return ResourceManager.GetString("UserConfirmPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Deine Email Adresse ähnelt.
+        /// </summary>
+        internal static string UserEmail {
+            get {
+                return ResourceManager.GetString("UserEmail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Dein Name ähnelt.
+        /// </summary>
+        internal static string UserName {
+            get {
+                return ResourceManager.GetString("UserName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Passwort ähnelt.
+        /// </summary>
+        internal static string UserPassword {
+            get {
+                return ResourceManager.GetString("UserPassword", resourceCulture);
+            }
+        }
     }
 }

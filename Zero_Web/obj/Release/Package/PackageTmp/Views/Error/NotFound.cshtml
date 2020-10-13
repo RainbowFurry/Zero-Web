@@ -5,3 +5,5 @@
 
 <h2>NotFound</h2>
 
+@Html.ActionLink("Back to previous page", null, null, null, new { href = Request.UrlReferrer })
+<a href="@Url.Action("Index", "Home")">Startseite</a>

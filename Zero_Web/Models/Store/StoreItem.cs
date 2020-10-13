@@ -6,6 +6,9 @@ namespace Zero_Web.Models.Store
     public class StoreItem
     {
         //VIDEO Presentation?
+        //FSK
+        //Trend Platz
+        //Zeit erscheinung
 
         [BsonId]
         public string ID { get; set; }

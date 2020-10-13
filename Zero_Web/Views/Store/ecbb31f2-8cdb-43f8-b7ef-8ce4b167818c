@@ -1,0 +1,21 @@
+<Chart Width="600" Height="400">
+  <Series>
+    <Series Name="Employee" XValueType="String" YValueType="String" ChartType="Pie" ChartArea="Default">
+      <Points>
+        <DataPoint YValues="2" AxisLabel="Peter" />
+        <DataPoint YValues="6" AxisLabel="Andrew" />
+        <DataPoint YValues="4" AxisLabel="Julie" />
+        <DataPoint YValues="5" AxisLabel="Mary" />
+        <DataPoint YValues="3" AxisLabel="Dave" />
+      </Points>
+    </Series>
+  </Series>
+  <ChartAreas>
+    <ChartArea Name="Default">
+    </ChartArea>
+  </ChartAreas>
+  <Titles>
+    <Title Name="Title1" Text="Chart Title">
+    </Title>
+  </Titles>
+</Chart>

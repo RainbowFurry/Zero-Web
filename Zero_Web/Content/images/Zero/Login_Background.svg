@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rechteck_2218" data-name="Rechteck 2218" width="1920" height="1080" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="-0.03" y1="0.147" x2="0.701" y2="0.149" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ab045e"/>
+      <stop offset="1" stop-color="#f6530b"/>
+    </linearGradient>
+  </defs>
+  <g id="Gruppe_maskieren_9" data-name="Gruppe maskieren 9" clip-path="url(#clip-path)">
+    <path id="Pfad_783" data-name="Pfad 783" d="M1582.983,1.64c207.158,12.974,140.482,50.614,9.981,171.3s65.408,83.173,195.3,76.652,90.446,74.463-64.433,133.064-90.387,138.359,99.695,138.359,170.1,82.916-35.261,137.943c-46.52,12.465-171.887,70.085-30.461,151.737s129.178,182.794-50.9,134.541-211.848,43.031-138.49,85.385,138.49,63.817,138.49,63.817-729.767,118.523-1104.843,78.945-152.424-149.7-35.707-200.378S455.32,885.515,284.835,931.2s-322.452.863-112.248-120.5S356.974,595.467,147.73,595.467s-184.308-115.173,0-164.558,249.128-147.643-26.855-172.837,26.32-57.488,255.816-130.429S1375.825-11.334,1582.983,1.64Z" transform="translate(686.286 -568.489) rotate(45)" fill="url(#linear-gradient)"/>
+  </g>
+</svg>

@@ -126,6 +126,9 @@
   <data name="Free" xml:space="preserve">
     <value>Free</value>
   </data>
+  <data name="Login" xml:space="preserve">
+    <value>Login</value>
+  </data>
   <data name="Sale" xml:space="preserve">
     <value>Sale</value>
   </data>

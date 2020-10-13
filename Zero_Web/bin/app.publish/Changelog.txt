@@ -1,0 +1,24 @@
+﻿############################################################################ v99.1186.0.20157 ############################################################################
+Version 99.1186.0.20157 | Release date: Jun 04, 2020 | Zero-Dateien: 0
+New
+(jth|Apr 15, 2020):TFS 1967: Export punch component
+(jth|Apr 15, 2020):TFS 1968: Export punch tool
+(jth|May 18, 2020):Camera scan input for all textboxes
+(jth|Mar 25, 2020):Remove assigned storage places via context menu
+Improvements
+(jth|May 11, 2020):Icon font extended
+(jth|Apr 09, 2020):Azure deployment extended and optimized
+Fixes
+(jth|Jun 06, 2020):Missing values for referenced object columns in library
+############################################################################ v99.1186.0.20157 ############################################################################
+Version 99.1186.0.20157 | Release date: Jun 04, 2020 | Zero-Dateien: 0
+New
+(jth|Apr 15, 2020):TFS 1967: Export punch component
+(jth|Apr 15, 2020):TFS 1968: Export punch tool
+(jth|May 18, 2020):Camera scan input for all textboxes
+(jth|Mar 25, 2020):Remove assigned storage places via context menu
+Improvements
+(jth|May 11, 2020):Icon font extended
+(jth|Apr 09, 2020):Azure deployment extended and optimized
+Fixes
+(jth|Jun 06, 2020):Missing values for referenced object columns in library

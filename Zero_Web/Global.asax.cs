@@ -2,7 +2,6 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
-using Zero_Web.database;
 
 namespace Zero_Web
 {
@@ -16,8 +15,8 @@ namespace Zero_Web
          BundleConfig.RegisterBundles(BundleTable.Bundles);
 
          //Create MongoDB Connection
-         MongoDBManager db = new MongoDBManager();
-         db.createConnection();
+         //MongoDBManager db = new MongoDBManager();
+         //db.createConnection();
 
       }
    }

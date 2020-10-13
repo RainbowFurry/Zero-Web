@@ -2,354 +2,377 @@
 
 @import url('https://fonts.googleapis.com/css?family=Proxima+Nova:400,700');
 
+@media only screen and (max-width: 1290px) {
 
-nav {
-    position: sticky;
+    .SmalMenuButton {
+        display: block !important;
+    }
+
+    .NavLinks{
+        display: none !important;
+    }
+
+}
+
+@media only screen and (max-width: 720px) {
+
+    .RightNavSide {
+        display: none !important;
+    }
+
+}
+
+@keyframes example {
+
+    0% {
+        background-color: rgba(255, 255, 255, 0.0);
+    }
+
+    100% {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+}
+
+.MenuHover:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px 10px 10px 10px;
+    animation-name: example;
+    animation-duration: 0.7s;
+}
+
+svg:hover {
+
+    rect {
+        fill: var(--MainColor);
+    }
+
+    .MenuIcon {
+        opacity: 1 !important;
+    }
+}
+
+nav.navbar.sticky-top {
     top: 0;
     z-index: 999;
     box-shadow: 0px 0.5px #333;
+    background-color: #12161B;
+    margin-bottom: 0 !important;
 }
 
-.NavMenu {
-    width: 100%;
-    min-width: 1920px;
-    //height: 100vh;
-    min-height: 75px;
-    position: relative;
-    overflow: hidden;
-    margin: 0;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background-color: rgba(255,255,255,1.0)
+div#FilterNav {
+    display: none;
+    visibility: hidden;
+}
+
+.DropdonwNavShow {
+    display: block !important;
+    visibility: visible !important;
+    position: fixed;
+    z-index: 15;
+    box-shadow: 0px 0.5px #333;
+    background-color: #12161B;
 }
 
 a {
-    text-decoration: none
+    text-decoration: none;
+    opacity: 0.7;
+    font-size: 20px;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+p {
+    text-decoration: none;
+    opacity: 0.7;
+    font-size: 20px;
+}
+
+input.SearchBar {
+    opacity: 0.7;
+    background-color: #12161B;
+    border: none;
+    font-size: 20px;
+}
+
+.ShoppingCard {
+    opacity: 0.7;
+}
+
+.ShoppingCardAmmount {
+    font-size: 20px;
+    opacity: 0.7;
 }
 
 div {
     -webkit-text-size-adjust: none
 }
 
-.anima-full-width-a {
-    width: 100%
+.MenuIcon {
+    opacity: 0.7;
 }
 
-.anima-full-height-a {
-    height: 100%
+img.SearchIcon {
+    opacity: 0.7;
 }
 
-div {
-    -webkit-text-size-adjust: none
+//Overwrite Link Hover Effekt
+a:hover, a:focus {
+    color: #fff !important;
+    opacity: 0.7;
+    text-decoration: none !important;
 }
 
-.NavMenu .gruppe23050 {
-    background-color: rgba(255, 255, 255, 0);
-    top: 18px;
-    height: 39px;
-    width: 97%;
+input:focus {
+    outline-offset: unset !important;
+    outline: none !important;
+}
+
+input[type=checkbox] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    content: '';
+    background: unset;
+    border-radius: 20%;
+    border: 2px solid #fff;
+    opacity: 0.7;
+    display: inline-block;
+    vertical-align: middle;
+    width: 16px;
+    height: 16px;
+    padding: 2px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+input[type=checkbox]:checked {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    box-shadow: inset 0px 0px 0px 3px #12161B;
+    content: '';
+    background: #FF5E00 !important;
+    border-radius: 20%;
+    opacity: 1 !important;
+    border: 2px solid var(--MainColor);
+    display: inline-block;
+    vertical-align: middle;
+    width: 16px;
+    height: 16px;
+    padding: 2px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+input[type=checkbox]:focus {
+    outline: 1px solid #ddd;
+}
+
+.FilterHeading {
+    opacity: 1 !important;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+a.Store {
+    border-bottom: solid 3px var(--MainColor);
+    border-radius: 3%;
+}
+
+a.LoginText {
+    color: var(--MainColor);
+}
+
+.NavMenuMarked {
+    color: var(--MainColor);
+    opacity: 1;
+    font-size: 16px;
+}
+
+.IconText {
+    opacity: 0.7;
+    font-size: 16px;
+}
+
+div#NavMenu {
+    width: 25%;
+    background-color: #12161B;
+    position: fixed;
+    z-index: 99;
+    border-radius: 10px 10px 10px 10px;
+    right: 2%;
+    top: 8%;
+}
+
+a.MenuLink {
+    font-size: 18px;
+    opacity: 0.2;
+}
+
+hr.Spacer {
+    opacity: 0.1;
+    height: 2px;
+    background-color: #fff;
+}
+
+div#NavMenu {
+    display: none;
+}
+
+.Show {
+    display: block !important;
+}
+
+.SmalMenuButton {
+    display: none;
     position: relative;
-    margin: 0;
-    left: 35px;
-    transform: rotate(0);
-    opacity: 1;
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+    background: #313539;
+    margin: 0 auto;
+    padding-top: 12px;
+    transition: all 500ms cubic-bezier(1.000, 0.000, 0.645, 0.650);
 }
 
-.NavMenu .gruppe23050 .gruppe22410 {
-    background-color: rgba(255, 255, 255, 0);
-    right: 0;
-    top: 5px;
-    height: calc(100% - 9px);
-    width: 1592px;
+.sr {
     position: absolute;
-    margin: 0;
-    transform: rotate(0);
-    opacity: 1;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }
 
-.NavMenu .gruppe23050 .gruppe22410 .iconfeathersettings0 {
-    background-color: rgba(255,255,255,0.0);
-    right: -0px;
+.menu-bar {
+    display: block;
+    position: relative;
+    background: #fff;
+    width: 26px;
+    height: 2px;
+    border-radius: 1px;
+    transition: all 300ms;
+    margin: 0 auto;
+}
+
+.bar1 {
     top: 0;
-    height: 100%;
-    width: 30px;
-    position: absolute;
-    margin: 0;
-    transform: rotate(0);
-    opacity: 1.0;
-    transition: all 1.0s ease
+    animation: topbar-back 500ms;
+    animation-fill-mode: both;
+    animation-play-state: initial !important;
 }
 
-.NavMenu .gruppe23050 .gruppe22410 .iconfeathersettings0 {
-    pointer-events: auto
-}
-
-.NavMenu .gruppe23050 .gruppe22410 .iconfeathersettings0:hover {
-    transform: rotate(360deg)
-}
-
-.NavMenu .gruppe23050 .gruppe22410 .iconfeathersettings0 .pfad7500 {
-    background-color: rgba(255,255,255,0.0);
-    top: calc(50.00% - 5px);
-    height: 11px;
-    width: 11px;
-    position: absolute;
-    margin: 0;
-    left: calc(50.00% - 5px);
-    transform: rotate(0)
-}
-
-.NavMenu .gruppe23050 .gruppe22410 .iconfeathersettings0 .pfad7511 {
-    background-color: rgba(255,255,255,0.0);
-    top: -1px;
-    height: calc(100.00% + 2px);
-    width: calc(100.00% + 2px);
-    position: absolute;
-    margin: 0;
-    left: -1px;
-    transform: rotate(0)
-}
-
-.NavMenu .gruppe23050 .gruppe22410 .bewerbungsvorgang1 {
-    background-color: rgba(255, 255, 255, 0);
-    top: -3px;
-    height: calc(100% - 5px);
-    width: 210px;
-    position: absolute;
-    margin: 0;
-    left: calc(33.32% - 5%);
-    transform: rotate(0);
+.bar2 {
     opacity: 1;
-    transition: all 0.2s ease;
-    font-family: 'Proxima Nova', Helvetica, Arial, serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 22px;
-    color: #12161b;
-    text-align: left;
-    line-height: 35px;
 }
 
-.NavMenu .gruppe23050 .gruppe22410 .bewerbungsvorgang1 {
-    pointer-events: auto
+.bar3 {
+    bottom: 0;
+    animation: bottombar-back 500ms;
+    animation-fill-mode: both;
+    animation-play-state: initial !important;
 }
 
-.NavMenu .gruppe23050 .gruppe22410 .bewerbungsvorgang1:hover {
-    transform: scale(0.95)
+.menu-bar + .menu-bar {
+    margin-top: 5px;
 }
 
-.NavMenu .gruppe23050 .gruppe22410 .ttigkeitsbereiche2 {
-    background-color: rgba(255,255,255,0.0);
-    top: -3px;
-    height: calc(100.00% - 5px);
-    width: 184px;
-    position: absolute;
-    margin: 0;
-    left: 212px;
-    transform: rotate(0);
-    opacity: 1.0;
-    transition: all .2s ease;
-    font-family: 'Proxima Nova',Helvetica,Arial,serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 22.0px;
-    color: rgba(18,22,27,1.0);
-    text-align: left;
-    line-height: 35.0px
+.toggled .bar1 {
+    top: 25%;
+    animation: topbar-x 500ms;
+    animation-fill-mode: both;
 }
 
-.NavMenu .gruppe23050 .gruppe22410 .ttigkeitsbereiche2 {
-    pointer-events: auto
-}
-
-.NavMenu .gruppe23050 .gruppe22410 .ttigkeitsbereiche2:hover {
-    transform: scale(0.95)
-}
-
-.NavMenu .gruppe23050 .gruppe22410 .bewerben3 {
-    background-color: rgba(255,255,255,0.0);
-    right: 71px;
-    top: 4px;
-    height: calc(100.00% - 5px);
-    width: 104px;
-    position: absolute;
-    margin: 0;
-    transform: rotate(0);
-    opacity: 1.0;
-    transition: all .2s ease;
-    font-family: 'Proxima Nova',Helvetica,Arial,serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 22.0px;
-    color: rgba(255,70,0,1.0);
-    text-align: left;
-    line-height: 22.0px
-}
-
-.NavMenu .gruppe23050 .gruppe22410 .bewerben3 {
-    pointer-events: auto
-}
-
-.NavMenu .gruppe23050 .gruppe22410 .bewerben3:hover {
-    transform: scale(0.95)
-}
-
-.NavMenu .gruppe23050 .gruppe22410 .qualifikationen4 {
-    background-color: rgba(255,255,255,0.0);
-    top: -3px;
-    height: calc(100.00% - 5px);
-    width: 154px;
-    position: absolute;
-    margin: 0;
-    left: 0;
-    transform: rotate(0);
-    opacity: 1.0;
-    transition: all .2s ease;
-    font-family: 'Proxima Nova',Helvetica,Arial,serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 22.0px;
-    color: rgba(18,22,27,1.0);
-    text-align: right;
-    line-height: 35.0px
-}
-
-.NavMenu .gruppe23050 .gruppe22410 .qualifikationen4 {
-    pointer-events: auto
-}
-
-.NavMenu .gruppe23050 .gruppe22410 .qualifikationen4:hover {
-    transform: scale(0.95)
-}
-
-.NavMenu .gruppe23050 .zeroworks1 {
-    background-color: rgba(255,255,255,0.0);
-    top: 2px;
-    height: 100%;
-    width: 290px;
-    position: absolute;
-    margin: 0;
-    left: 0;
-    transform: rotate(0);
-    opacity: 1.0;
-    font-family: 'Proxima Nova',Helvetica,Arial,serif;
-    font-size: 35.0px;
-    color: rgba(255,0,0,1.0);
-    text-align: left;
-    line-height: 35.0px
-}
-
-.NavMenu .gruppe23050 .zeroworks1 .span0 {
-    font-family: 'Proxima Nova',Helvetica,Arial,serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 35.0px;
-    color: rgba(255,0,0,1.0)
-}
-
-.NavMenu .gruppe23050 .zeroworks1 .span1 {
-    font-family: 'Proxima Nova',Helvetica,Arial,serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 17.0px;
-    color: rgba(255,0,0,1.0)
-}
-
-.anima-animate-appear {
+.toggled .bar2 {
     opacity: 0;
-    display: block;
-    -webkit-animation: anima-reveal .3s ease-in-out 1 normal forwards;
-    -moz-animation: anima-reveal .3s ease-in 1 normal forwards;
-    -o-animation: anima-reveal .3s ease-in-out 1 normal forwards;
-    animation: anima-reveal .3s ease-in-out 1 normal forwards
 }
 
-.anima-animate-disappear {
-    opacity: 1;
-    display: block;
-    -webkit-animation: anima-reveal .3s ease-in-out 1 reverse forwards;
-    -moz-animation: anima-reveal .3s ease-in 1 normal forwards;
-    -o-animation: anima-reveal .3s ease-in-out 1 reverse forwards;
-    animation: anima-reveal .3s ease-in-out 1 reverse forwards
+.toggled .bar3 {
+    bottom: 25%;
+    animation: bottombar-x 500ms;
+    animation-fill-mode: both;
 }
 
-.anima-animate-nodelay {
-    -webkit-animation-delay: 0;
-    -moz-animation-delay: 0;
-    -o-animation-delay: 0;
-    animation-delay: 0
-}
-
-@-webkit-keyframes anima-reveal {
+@keyframes topbar-x {
     0% {
-        opacity: 0
+        top: 0;
+        -webkit-transform: rotate(0deg);
+    }
+
+    45% {
+        top: 25%;
+        -webkit-transform: rotate(145deg);
+    }
+
+    75% {
+        -webkit-transform: rotate(130deg);
     }
 
     100% {
-        opacity: 1
+        -webkit-transform: rotate(135deg);
     }
 }
 
-@-moz-keyframes anima-reveal {
+@keyframes topbar-back {
     0% {
-        opacity: 0
+        top: 25%;
+        -webkit-transform: rotate(135deg);
+    }
+
+    45% {
+        -webkit-transform: rotate(-10deg);
+    }
+
+    75% {
+        -webkit-transform: rotate(5deg);
     }
 
     100% {
-        opacity: 1
+        top: 0;
+        -webkit-transform: rotate(0);
     }
 }
 
-@-o-keyframes anima-reveal {
+@keyframes bottombar-x {
     0% {
-        opacity: 0
+        bottom: 0;
+        -webkit-transform: rotate(0deg);
+    }
+
+    45% {
+        bottom: 25%;
+        -webkit-transform: rotate(-145deg);
+    }
+
+    75% {
+        -webkit-transform: rotate(-130deg);
     }
 
     100% {
-        opacity: 1
+        -webkit-transform: rotate(-135deg);
     }
 }
 
-@keyframes anima-reveal {
+@keyframes bottombar-back {
     0% {
-        opacity: 0
+        bottom: 25%;
+        -webkit-transform: rotate(-135deg);
+    }
+
+    45% {
+        -webkit-transform: rotate(10deg);
+    }
+
+    75% {
+        -webkit-transform: rotate(-5deg);
     }
 
     100% {
-        opacity: 1
+        bottom: 0;
+        -webkit-transform: rotate(0);
     }
 }
-
-.anima-component-wrapper, .anima-component-wrapper * {
-    pointer-events: none
-}
-
-.anima-component-wrapper a *, .anima-component-wrapper a, .anima-component-wrapper input, .anima-component-wrapper video, .anima-component-wrapper iframe, .anima-listeners-active, .anima-listeners-active * {
-    pointer-events: auto
-}
-
-.anima-hidden, .anima-hidden * {
-    visibility: hidden;
-    pointer-events: none
-}
-
-.anima-smart-layers-pointers, .anima-smart-layers-pointers * {
-    pointer-events: auto;
-    visibility: visible
-}
-
-.anima-component-wrapper.anima-not-ready, .anima-component-wrapper.anima-not-ready * {
-    visibility: hidden !important
-}
-
-.anima-listeners-active-click, .anima-listeners-active-click * {
-    cursor: pointer
-}
-
-.anima-word-break {
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    word-break: break-all;
-    word-break: break-word
-}
-    

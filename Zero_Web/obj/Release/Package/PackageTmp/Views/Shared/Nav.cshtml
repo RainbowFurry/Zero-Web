@@ -1,26 +1,346 @@
-﻿<nav >
-    <div class="NavMenu">
-            <div class="gruppe11223">
-                <div class="gruppe23050">
-                    <div class="gruppe22410">
-                        <div class="iconfeathersettings0 anima-smart-layers-pointers ">
-                            <img class="pfad7500" src="~/Content/images/Zero/Home/pfad-7501x.png" alt="Image/">
-                            <img class="pfad7511" src="~/Content/images/Zero/Home/pfad-7511x.png" alt="Image/">
-                        </div>
-                        <a href="@Url.Action("Taetigkeiten", "Home")"><div class="ttigkeitsbereiche2 anima-smart-layers-pointers "> Tätigkeitsbereiche</div></a>
-                        <a href="@Url.Action("Bereichsauswahl", "Home")"><div class="bewerben3 anima-smart-layers-pointers "> Bewerben</div></a>
-                        <a href="@Url.Action("Qualifikation", "Home")"><div class="qualifikationen4 anima-smart-layers-pointers "> Qualifikationen</div></a>
-                    </div>
-                    <a href="@Url.Action("Index", "Home")">
-                        <div class="zeroworks1">
-                            <span class="span0">ZEROWORKS</span>
-                            <span class="span1">©</span>
-                        </div>
-                    </a>
-                </div>
+﻿@using Nav = Zero_Web.Resources.Shared.Nav;
+@using NavFilter = Zero_Web.Resources.Shared.NavFilter;
+@using NavMenu = Zero_Web.Resources.Shared.NavMenu;
+@using Zero_Web.Variable;
+
+<head>
+   <link href="~/Content/css/Zero/Nav.css" rel="stylesheet">
+</head>
+
+<nav class="navbar sticky-top">
+
+   <div class="NavBar container-fluid">
+
+      <div class="row container-fluid">
+
+         <div class="col-auto">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="61.004" height="51.06" viewBox="0 0 61.004 28.00">
+               <defs>
+                  <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+                     <stop offset="0" stop-color="red" />
+                     <stop offset="1" stop-color="#ff5e00" />
+                  </linearGradient>
+                  <filter id="Differenzmenge_198" x="0" y="0" width="61.004" height="51.06" filterUnits="userSpaceOnUse">
+                     <feOffset dx="5" dy="15" input="SourceAlpha" />
+                     <feGaussianBlur stdDeviation="3" result="blur" />
+                     <feFlood flood-opacity="0.161" />
+                     <feComposite operator="in" in2="blur" />
+                     <feComposite in2="SourceGraphic" />
+                  </filter>
+               </defs>
+               <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Differenzmenge_198)">
+                  <path id="Differenzmenge_198-2" data-name="Differenzmenge 198" d="M8,20.411a7.9,7.9,0,0,1-2.984-.585A8.025,8.025,0,0,1,.612,9.407L2.2,5.46a8.042,8.042,0,0,1,.946-1.715A7.779,7.779,0,0,1,9.824,0H30.419A7.828,7.828,0,0,1,37.76,5.111c.053.114.106.239.159.37l1.608,4a7.9,7.9,0,0,1-4.337,10.26,7.776,7.776,0,0,1-2.937.576,7.855,7.855,0,0,1-7.166-4.666h-9.8A7.973,7.973,0,0,1,8,20.411ZM9.914,6.706a1.118,1.118,0,0,0,0,2.236h2.658v2.593a1.133,1.133,0,1,0,2.265,0V8.942h2.658a1.118,1.118,0,0,0,0-2.236H14.837V4.112a1.133,1.133,0,0,0-2.265,0V6.706ZM27.294,2.98A4.844,4.844,0,1,0,32.2,7.824,4.882,4.882,0,0,0,27.294,2.98Zm0,7.731a2.887,2.887,0,1,1,2.927-2.887A2.91,2.91,0,0,1,27.294,10.711Z" transform="translate(3.97 6.96) rotate(-10)" fill="url(#linear-gradient)" />
+               </g>
+            </svg>
+         </div>
+
+         <div class="LeftNavSide col">
+
+            <!-- SmalMenuButton -->
+            <div id="menu-toggle" class="SmalMenuButton">
+               <span class="sr">Toggle Navigation</span>
+               <span class="menu-bar bar1"></span>
+               <span class="menu-bar bar2"></span>
+               <span class="menu-bar bar3"></span>
             </div>
-    </div>
+            <!--
+            <div class="col-sm-4">
+                    <a href="Url.Action("Index", "Client", new { area = "Client" })">Client</a>
+                    <a href="Url.Action("Index", "Home", new { area = "RestAPI" })">RestAPI</a>
+                    <a href="Url.Action("Index", "Docs", new { area = "Docs" })">Docs</a>
+                        nav-link
+                    -->
+
+            <div class="NavLinks container-fluid">
+
+               <div class="row">
+
+                  <a class="Store col-auto nav-link" href="@Url.Action("Index", "Store")">@Nav.LanguageHandler.loadDBValue("StartPage")</a>
+                  <a class="Charts col-auto nav-link" href="@Url.Action("Charts", "Store")">@Nav.LanguageHandler.loadDBValue("Charts")</a>
+                  <a class="ZeroPlus col-auto nav-link" href="@Url.Action("ZeroPlus", "Store")">@Nav.LanguageHandler.loadDBValue("ZeroPlus")</a>
+                  <a class="Sale col-auto nav-link" href="@Url.Action("Sale", "Store")">@Nav.LanguageHandler.loadDBValue("Sale")</a>
+                  <a class="Free col-auto nav-link" href="@Url.Action("Free", "Store")">@Nav.LanguageHandler.loadDBValue("Free")</a>
+                  <a class="DropDown col-auto nav-link" onclick="showFilterDropdown()">
+                     @Nav.LanguageHandler.loadDBValue("Filter")
+                  <img class="DropDownIcon img-fluid" src="@ImageSource.SVG.DropDown" />
+               </a>
+            </div>
+
+         </div>
+
+      </div>
+
+      <div class="col-auto">
+         <div class="RightNavSide container-fluid">
+            <div class="row">
+               <div class="Search col-auto">
+                  <div class="container-fluid">
+                     <div class="row">
+                        <img class="SearchIcon img-fluid col-auto" src="@ImageSource.SVG.Search" />
+                        <input class="SearchBar col-auto" placeholder="@Nav.LanguageHandler.loadDBValue("Search")" />
+                     </div>
+                  </div>
+               </div>
+               <div class="ShoppingCard col-auto">
+                  <div class="container-fluid">
+                     <div class="row">
+                        <p class="ShoppingCardAmmount pr-2">0</p>
+                        <img class="ShoppingCardIcon img-fluid mb-3" src="@ImageSource.SVG.ShoppingCard" />
+                     </div>
+                  </div>
+               </div>
+               <div class="MenuIcon col-auto">
+                  <a></a>
+                  <svg onclick="showMenu()" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25">
+                     <g id="Gruppe_1983" data-name="Gruppe 1983" transform="translate(-1828.715 -31.715)" opacity="0.7">
+                        <rect id="Rechteck_1913" data-name="Rechteck 1913" width="6" height="6" rx="2" transform="translate(1828.715 31.715)" fill="#fff" />
+                        <rect id="Rechteck_1916" data-name="Rechteck 1916" width="7" height="7" rx="2" transform="translate(1838.715 41.715)" fill="#fff" />
+                        <rect id="Rechteck_1920" data-name="Rechteck 1920" width="6" height="6" rx="2" transform="translate(1839.715 50.715)" fill="#fff" />
+                        <rect id="Rechteck_1921" data-name="Rechteck 1921" width="6" height="6" rx="2" transform="translate(1847.715 42.715)" fill="#fff" />
+                        <rect id="Rechteck_1914" data-name="Rechteck 1914" width="7" height="7" rx="2" transform="translate(1836.715 31.715)" fill="#fff" />
+                        <rect id="Rechteck_1915" data-name="Rechteck 1915" width="7" height="7" rx="2" transform="translate(1828.715 39.715)" fill="#fff" />
+                        <rect id="Rechteck_1917" data-name="Rechteck 1917" width="8" height="7" rx="2" transform="translate(1828.715 49.715)" fill="#fff" />
+                        <rect id="Rechteck_1919" data-name="Rechteck 1919" width="5" height="5" rx="2" transform="translate(1848.715 51.715)" fill="#fff" />
+                        <rect id="Rechteck_1918" data-name="Rechteck 1918" width="7" height="8" rx="2" transform="translate(1846.715 31.715)" fill="#fff" />
+                     </g>
+                  </svg>
+                  <!--<img class="MenuIcon img-fluid" src="~/Content/images/Zero/Menu.svg" />-->
+               </div>
+
+               @{
+                  if (!User.Identity.IsAuthenticated)
+                  {
+                     <div class="Login col-auto">
+                        <a href="@Url.Action("Login", "Authentification")" class="LoginText">@Nav.LanguageHandler.loadDBValue("Login")</a>
+                     </div>
+                  }
+               }
+            </div>
+
+
+         </div>
+      </div>
+
+   </div>
+
+</div>
 
 </nav>
 
-<link href="~/Content/css/Zero/Nav.css" rel="stylesheet">
+<!-- Filter DropDown -->
+<div id="FilterNav" class="container-fluid pt-5 pb-5">
+
+   <div class="row pl-5 pr-5">
+
+      <div class="Filter Price_Filter col-md-2">
+         <p class="FilterHeading">@NavFilter.LanguageHandler.loadDBValue("Price")</p>
+         <p><input type="checkbox" />@NavFilter.LanguageHandler.loadDBValue("Free")</p>
+         <p><input type="checkbox" />@NavFilter.LanguageHandler.loadDBValue("Under_10_Euro")</p>
+         <p><input type="checkbox" />@NavFilter.LanguageHandler.loadDBValue("Reduced")</p>
+         <p class="FilterHeading">@NavFilter.LanguageHandler.loadDBValue("PriceRange")</p>
+         <input type="number" min="0" max="10000" step="0.1">
+      </div>
+
+      <div class="Filter Sort_Filter col-md-2">
+         <p class="FilterHeading">@NavFilter.LanguageHandler.loadDBValue("List_Downwards")</p>
+         <p><input type="checkbox" />@NavFilter.LanguageHandler.loadDBValue("UserReview")</p>
+         <p><input type="checkbox" />@NavFilter.LanguageHandler.loadDBValue("CuratorReview")</p>
+         <p><input type="checkbox" />@NavFilter.LanguageHandler.loadDBValue("Downloads")</p>
+         <p><input type="checkbox" />@NavFilter.LanguageHandler.loadDBValue("Rating")</p>
+      </div>
+
+      <div class="Filter Genre_Filter col-md-5">
+
+         <div class="container-fluid">
+            <div class="row">
+
+               <div class="Genre1 col">
+                  <p class="FilterHeading">@NavFilter.LanguageHandler.loadDBValue("Genres")</p>
+                  <p><input type="checkbox" />@NavFilter.LanguageHandler.loadDBValue("Action")</p>
+                  <p><input type="checkbox" />@NavFilter.LanguageHandler.loadDBValue("Adventure")</p>
+                  <p><input type="checkbox" />@NavFilter.LanguageHandler.loadDBValue("MMO")</p>
+                  <p><input type="checkbox" />@NavFilter.LanguageHandler.loadDBValue("Opportunity")</p>
+                  <p><input type="checkbox" />@NavFilter.LanguageHandler.loadDBValue("India")</p>
+                  <p><input type="checkbox" />@NavFilter.LanguageHandler.loadDBValue("RPG")</p>
+               </div>
+               <div class="Genre2 col">
+                  <p><input type="checkbox" />@NavFilter.LanguageHandler.loadDBValue("Simulation")</p>
+                  <p><input type="checkbox" />@NavFilter.LanguageHandler.loadDBValue("Sport")</p>
+                  <p><input type="checkbox" />@NavFilter.LanguageHandler.loadDBValue("Strategy")</p>
+                  <p><input type="checkbox" />@NavFilter.LanguageHandler.loadDBValue("Story")</p>
+                  <p><input type="checkbox" />@NavFilter.LanguageHandler.loadDBValue("Shooter")</p>
+                  <p><input type="checkbox" />@NavFilter.LanguageHandler.loadDBValue("Battle_Royal")</p>
+               </div>
+               <div class="Genre3 col">
+                  <p><input type="checkbox" />@NavFilter.LanguageHandler.loadDBValue("Car_Racing")</p>
+                  <p><input type="checkbox" />@NavFilter.LanguageHandler.loadDBValue("JumpAndRun")</p>
+                  <p><input type="checkbox" />@NavFilter.LanguageHandler.loadDBValue("VR")</p>
+                  <p><input type="checkbox" />@NavFilter.LanguageHandler.loadDBValue("Atmosphere")</p>
+                  <p><input type="checkbox" />@NavFilter.LanguageHandler.loadDBValue("SinglePlayer")</p>
+                  <p><input type="checkbox" />@NavFilter.LanguageHandler.loadDBValue("MultiPlayer")</p>
+               </div>
+
+            </div>
+         </div>
+
+      </div>
+
+      <div class="Filter Date_Filter col-md-2">
+         <p class="FilterHeading">@NavFilter.LanguageHandler.loadDBValue("ReleaseDate")</p>
+         <p><input type="checkbox" />@NavFilter.LanguageHandler.loadDBValue("NewGames")</p>
+         <p><input type="checkbox" />@NavFilter.LanguageHandler.loadDBValue("TotalPeriod")</p>
+         <p class="FilterHeading">@NavFilter.LanguageHandler.loadDBValue("SetPeriod")</p>
+      </div>
+
+   </div>
+
+</div>
+
+<!-- Zero Menu -->
+<div id="NavMenu" class="container pt-5 pb-5">
+
+   <div class="container-fluid">
+
+      <div class="row pl-5 pr-5 pb-3">
+         <div class="MenuHover col pt-2">
+            <div class="container-fluid">
+               <a href="#">
+                  <div class="row justify-content-center">
+                     <img class="" src="@ImageSource.SVG.Logo" />
+                  </div>
+                  <div class="row justify-content-center">
+                     <p class="NavMenuMarked">@NavMenu.LanguageHandler.loadDBValue("Zero")</p>
+                  </div>
+               </a>
+            </div>
+         </div>
+         <div class="MenuHover col pt-2">
+            <div class="container-fluid">
+               <a href="#">
+                  <div class="row justify-content-center">
+                     <img class="" src="@ImageSource.SVG.Code" />
+                  </div>
+                  <div class="row justify-content-center">
+                     <p class="NavMenuMarked">@NavMenu.LanguageHandler.loadDBValue("ZeroWorks")</p>
+                  </div>
+               </a>
+            </div>
+         </div>
+         <div class="MenuHover col pt-2">
+            <div class="container-fluid">
+               <a href="#">
+                  <div class="row justify-content-center">
+                     <img class="" src="@ImageSource.SVG.Store" />
+                  </div>
+                  <div class="row justify-content-center">
+                     <p class="NavMenuMarked">@NavMenu.LanguageHandler.loadDBValue("Store")</p>
+                  </div>
+               </a>
+            </div>
+         </div>
+      </div>
+
+      <div class="row pl-5 pr-5 pb-3">
+         <div class="MenuHover col pt-2">
+            <div class="container-fluid">
+               <a href="#">
+                  <div class="row justify-content-center">
+                     <img class="" src="@ImageSource.SVG.Settings" />
+                  </div>
+                  <div class="row justify-content-center">
+                     <p class="IconText">@NavMenu.LanguageHandler.loadDBValue("Settings")</p>
+                  </div>
+               </a>
+            </div>
+         </div>
+         <div class="MenuHover col pt-2">
+            <div class="container-fluid">
+               <a href="#">
+                  <div class="row justify-content-center">
+                     <img class="" src="@ImageSource.SVG.Theme" />
+                  </div>
+                  <div class="row justify-content-center">
+                     <p class="IconText">@NavMenu.LanguageHandler.loadDBValue("Theme")</p>
+                  </div>
+               </a>
+            </div>
+         </div>
+         <div class="MenuHover col pt-2">
+            <div class="container-fluid">
+               <a href="#">
+                  <div class="row justify-content-center">
+                     <img class="" src="@ImageSource.SVG.Profile" />
+                  </div>
+                  <div class="row justify-content-center">
+                     <p class="IconText">@NavMenu.LanguageHandler.loadDBValue("Account")</p>
+                  </div>
+               </a>
+            </div>
+         </div>
+      </div>
+
+   </div>
+
+   <hr class="Spacer">
+
+   <div class="container-fluid pt-3">
+
+      <div class="row pl-5 pr-5">
+         <a href="" class="MenuLink col">@NavMenu.LanguageHandler.loadDBValue("Privacy_policy")</a>
+         <a href="" class="MenuLink col">@NavMenu.LanguageHandler.loadDBValue("Imprint")</a>
+      </div>
+
+      <div class="row pl-5 pr-5">
+         <a href="" class="MenuLink col">@NavMenu.LanguageHandler.loadDBValue("Terms_of_Use")</a>
+         @{
+            if (User.Identity.IsAuthenticated)
+            {
+               <a href="" class="MenuLink col">@NavMenu.LanguageHandler.loadDBValue("Logout")</a>
+            }
+         }
+      </div>
+
+   </div>
+
+</div>
+
+<!-- Filter DropDown Script -->
+<script>
+   function showFilterDropdown() {
+      //console.log("JasonJT");
+      var x = document.getElementById("FilterNav");
+      if (x.className.indexOf(" DropdonwNavShow") == -1) {
+         x.className += " DropdonwNavShow";
+      } else {
+         x.className = x.className.replace(" DropdonwNavShow", "");
+      }
+   }
+</script>
+
+<!-- Zero Menu Script -->
+<script>
+   function showMenu() {
+      var x = document.getElementById("NavMenu");
+      if (x.className.indexOf(" Show") == -1) {
+         x.className += " Show";
+      } else {
+         x.className = x.className.replace(" Show", "");
+      }
+   }
+</script>
+
+<!-- SmalMenu Script -->
+<script>
+   var menu = document.getElementById('menu-toggle'),
+      toggled = false;
+
+   menu.addEventListener('click', function () {
+      if (!toggled) {
+         this.className += " toggled";
+         toggled = true;
+      } else {
+         this.className = this.className.replace(/\b\stoggled\b/, "");
+         toggled = false;
+      }
+   }, false);
+</script>

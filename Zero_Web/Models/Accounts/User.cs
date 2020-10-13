@@ -1,12 +1,5 @@
-﻿using Com.CloudRail.SI.ServiceCode.Commands;
-using MongoDB.Bson.Serialization.Attributes;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using MongoDB.Bson.Serialization.Attributes;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
 
 namespace Zero_Web.Models
 {
@@ -17,7 +10,7 @@ namespace Zero_Web.Models
         public string ID { get; set; }
 
         [Display(Name = "NickName")]
-        [Required(ErrorMessage ="Please provide NickName", AllowEmptyStrings =false)]
+        [Required(ErrorMessage = "Please provide NickName", AllowEmptyStrings = false)]
         public string NickName { get; set; }
 
         [Display(Name = "First Name")]
@@ -62,11 +55,11 @@ namespace Zero_Web.Models
 
         [Display(Name = "Password")]
         [DataType(DataType.Password)]
-        [StringLength(50,MinimumLength =8, ErrorMessage ="Password must be 8 Char long.")]
+        [StringLength(50, MinimumLength = 8, ErrorMessage = "Password must be 8 Char long.")]
         public string Password { get; set; }
 
         [Display(Name = "Confirm Password")]
-        [Compare("Password", ErrorMessage ="Confirm password does not match.")]
+        [Compare("Password", ErrorMessage = "Confirm password does not match.")]
         [DataType(DataType.Password)]
         public string ConfirmPassword { get; set; }
 
@@ -86,13 +79,14 @@ namespace Zero_Web.Models
             {
                 NickName = "",
                 FirstName = "",
-                Role = new Roles() {
+                Role = new Roles()
+                {
                     UserRoles = new RoleType[] {
                         RoleType.Administrator,
                         RoleType.Developer
-                    } 
+                    }
                 }
-                
+
             };
         }
 

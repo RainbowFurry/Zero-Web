@@ -1,0 +1,23 @@
+﻿@using Zero_Web.Variable;
+
+<head>
+    <link href="~/Content/css/Store/Part/TopGameImage.css" rel="stylesheet">
+</head>
+
+<div class="TopGame container-fluid">
+    <div class="container-fluid TopImageContainer">
+        <img class="TopGameImage img-fluid w-100" src="@ImageSource.SVG.TopGame" />
+        <img class="TopGameBlurrImage img-fluid w-100" src="@ImageSource.SVG.TopImageBlur" />
+    </div>
+    <img class="TopGameBlurrImage2 img-fluid w-100" src="@ImageSource.SVG.TopGameBlurr" />
+    <div class="GameDescription">
+        <p>Gesponsorter Inhalt</p>
+        <h1><b>The Last Of Us 2</b></h1>
+        <p id="description">"Atmosphärisch, gigantisch und mit einer hinreißenden Story"</p>
+        <button class="BuyTopGame">Kaufen</button>
+        <div class="AddToWishCard">
+            <img class="img-responsive" src="@ImageSource.SVG.Add" />
+            <p>Auf die Wunschliste</p>
+        </div>
+    </div>
+</div>

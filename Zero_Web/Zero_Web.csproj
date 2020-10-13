@@ -322,6 +322,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>German.resx</DependentUpon>
     </Compile>
+    <Compile Include="Resources\Login\English.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>English.resx</DependentUpon>
+    </Compile>
     <Compile Include="Resources\Login\German.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -340,6 +345,28 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ProjektResources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Resources\Shared\NavFilter\English.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>English.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Shared\NavFilter\German.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>German.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Shared\NavFilter\LanguageHandler.cs" />
+    <Compile Include="Resources\Shared\NavMenu\English.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>English.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Shared\NavMenu\German.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>German.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Shared\NavMenu\LanguageHandler.cs" />
     <Compile Include="Resources\Shared\Nav\English.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -353,6 +380,7 @@
     <Compile Include="Resources\Shared\Nav\LanguageHandler.cs">
       <Generator>ResXFileCodeGenerator</Generator>
     </Compile>
+    <Compile Include="Variable\ImageSource.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Changelog.txt" />
@@ -400,6 +428,12 @@
     <Content Include="Content\css\Store\Charts.min.css">
       <DependentUpon>Charts.css</DependentUpon>
     </Content>
+    <Content Include="Content\css\Store\Free.css">
+      <DependentUpon>Free.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Store\Free.min.css">
+      <DependentUpon>Free.css</DependentUpon>
+    </Content>
     <Content Include="Content\css\Store\Index.css">
       <DependentUpon>Index.less</DependentUpon>
     </Content>
@@ -430,6 +464,12 @@
     <Content Include="Content\css\Store\Part\ProductScrollList.min.css">
       <DependentUpon>ProductScrollList.css</DependentUpon>
     </Content>
+    <Content Include="Content\css\Store\Part\TopGameImage.css">
+      <DependentUpon>TopGameImage.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Store\Part\TopGameImage.min.css">
+      <DependentUpon>TopGameImage.css</DependentUpon>
+    </Content>
     <Content Include="Content\css\Store\Sale.css">
       <DependentUpon>Sale.less</DependentUpon>
     </Content>
@@ -448,6 +488,7 @@
     <Content Include="Content\css\Zero\Nav.min.css">
       <DependentUpon>Nav.css</DependentUpon>
     </Content>
+    <Content Include="Content\images\icons\Logo.ico" />
     <Content Include="Content\images\Zero\Add.svg" />
     <Content Include="Content\images\Zero\AlertBackground.svg" />
     <Content Include="Content\images\Zero\AlertBackgroundBlur.svg" />
@@ -458,10 +499,18 @@
     <Content Include="Content\images\Zero\DropDown.svg" />
     <Content Include="Content\images\Zero\ExampleProduct.svg" />
     <Content Include="Content\images\Zero\Like.svg" />
+    <Content Include="Content\images\Zero\Login_Background.svg" />
+    <Content Include="Content\images\Zero\Logo_White.svg" />
     <Content Include="Content\images\Zero\Menu.svg" />
+    <Content Include="Content\images\Zero\NavMenu\Code.svg" />
+    <Content Include="Content\images\Zero\NavMenu\Logo.svg" />
+    <Content Include="Content\images\Zero\NavMenu\Profile.svg" />
+    <Content Include="Content\images\Zero\NavMenu\Settings.svg" />
+    <Content Include="Content\images\Zero\NavMenu\Store.svg" />
+    <Content Include="Content\images\Zero\NavMenu\Theme.svg" />
     <Content Include="Content\images\Zero\ProductDescription.svg" />
     <Content Include="Content\images\Zero\ProductListLarge.svg" />
-    <Content Include="Content\images\Zero\Seach.svg" />
+    <Content Include="Content\images\Zero\Search.svg" />
     <Content Include="Content\images\Zero\Store.svg" />
     <Content Include="Content\images\Zero\TopGame.svg" />
     <Content Include="Content\images\Zero\TopGameBlurr.svg" />
@@ -620,6 +669,8 @@
     <Content Include="Content\css\CSI\Index.less" />
     <Content Include="Content\bootstrap.min.css.map" />
     <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\css\Store\Free.less" />
+    <Content Include="Content\css\Store\Part\TopGameImage.less" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -711,6 +762,7 @@
     <Content Include="Views\Store\Part\ProductScrollList.cshtml" />
     <Content Include="Views\Store\Part\ProductListLarge.cshtml" />
     <Content Include="Views\Store\Alert\Opinion.cshtml" />
+    <Content Include="Views\Store\Part\TopGameImage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -752,6 +804,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>German.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Login\English.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>English.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\Login\German.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>German.Designer.cs</LastGenOutput>
@@ -764,6 +820,22 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>ProjektResources.Designer.cs</LastGenOutput>
       <CustomToolNamespace>Zero.Web.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Shared\NavFilter\English.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>English.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Shared\NavFilter\German.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>German.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Shared\NavMenu\English.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>English.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Shared\NavMenu\German.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>German.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Shared\Nav\English.resx">
       <Generator>ResXFileCodeGenerator</Generator>

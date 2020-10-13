@@ -49,7 +49,7 @@ namespace Zero_Web.Controllers
             //Clear all Registration Fields entered in the View
             ModelState.Clear();
 
-            return View("Registration");
+            return View("Registration");//RedirectToAction("LogIn", "Account", new { area = "Admin" });
         }
 
         public ActionResult Login()

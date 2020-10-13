@@ -10,9 +10,19 @@ namespace Zero_Web.Controllers
         public ActionResult Index()
         {
 
+
+            if (User.Identity.IsAuthenticated)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Index", "Store");
+            }
+
+
             //System.Diagnostics.Debug.WriteLine("SomeText");
             //System.Diagnostics.Debug.WriteLine("Message:" + e.Message + "\nSource" + e.Source + "\nData:" + e.Data + "\nStackTrace:" + e.StackTrace + "\n");
-            return View();
         }
 
 

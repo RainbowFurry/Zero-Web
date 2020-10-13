@@ -4,7 +4,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/x-icon" href="~/Content/images/icons/Logo.ico">
+    @*<link rel="icon" type="image/x-icon" href="favicon.ico">*@
 
     @* Manifest *@
     <link rel="manifest" href="/manifest.json">
@@ -15,6 +16,10 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     @* ToolTip CSS *@
     <link href="~/Content/css/Zero/ZeroTooltip.css" rel="stylesheet">
+    @* Main Rules *@
+    <link href="~/Content/css/Zero/Zero.css" rel="stylesheet">
+    @* Import Bootstrap *@
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet">
 
     @* Using Resource Files in HTML *@
     @using ZeroResources = Zero.Web.Resources.ProjektResources;
@@ -29,6 +34,11 @@
     @* Secure File share between Client/Server *@
     @Html.AntiForgeryToken()
 
+    @* SplashScreen *@
+    @{
+        Html.RenderPartial("SplashScreen");
+    }
+
     @* Code CopyRight *@
     @{
         Html.RenderPartial("CopyRight");
@@ -42,7 +52,7 @@
         Html.RenderPartial("Nav");
     }
 
-    <div class="container body-content">
+    <div class="container-fluid BodyContent">
         @RenderBody()
 
         <!--GEHT NICHT-->
@@ -108,7 +118,6 @@
     <script type="text/javascript" src="~/Scripts/qrcode.js"></script>
     <script type="text/javascript" src="~/Scripts/Zero/Barcode.js"></script>
     -->
-
     @* Zero Style *@
     <link href="~/Content/css/Zero/Zero.css" rel="stylesheet">
 

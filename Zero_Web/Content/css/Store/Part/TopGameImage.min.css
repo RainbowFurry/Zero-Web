@@ -1,0 +1,1 @@
+﻿@keyframes slide-right{from{margin-left:-100%;}to{margin-left:0%;}}img.TopGameBlurrImage{position:relative;z-index:1;}img.TopGameImage{position:absolute;}img.TopGameBlurrImage2{position:relative;z-index:2;animation:slide-right 1.5s;margin-top:0%;overflow:hidden;}.TopImageContainer{position:absolute;}
