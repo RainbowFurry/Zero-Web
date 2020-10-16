@@ -9,9 +9,6 @@
 img.TopGameBlurrImage {
   position: relative;
   z-index: 1;
-  /*    animation: slide-right 2s;
-    margin-top: 0%;
-    overflow: hidden;*/
 }
 img.TopGameImage {
   position: absolute;
@@ -26,3 +23,11 @@ img.TopGameBlurrImage2 {
 .TopImageContainer {
   position: absolute;
 }
+/*.TopGameLargeContainer{
+    position: absolute;
+}
+
+.GameDescription{
+    position: relative;
+    z-index: 10;
+}*/

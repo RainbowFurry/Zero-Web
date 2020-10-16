@@ -62,12 +62,7 @@ namespace Zero_Web.Controllers
             return View();
         }
 
-        public ActionResult NewPassword()
-        {
-            return View();
-        }
-
-        public ActionResult ConfirmRegistratin()
+        public ActionResult ConfirmRegistration()
         {
             return View();
         }

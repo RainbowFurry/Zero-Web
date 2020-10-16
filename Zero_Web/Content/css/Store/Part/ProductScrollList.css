@@ -37,3 +37,6 @@ img.Arrow {
   position: relative;
   transform: rotate(-90deg);
 }
+.Combind {
+  max-width: 1920px;
+}

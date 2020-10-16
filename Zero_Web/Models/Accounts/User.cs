@@ -10,55 +10,68 @@ namespace Zero_Web.Models
         public string ID { get; set; }
 
         [Display(Name = "NickName")]
+        [StringLength(100, ErrorMessage = "To many charts")]
         [Required(ErrorMessage = "Please provide NickName", AllowEmptyStrings = false)]
         public string NickName { get; set; }
 
         [Display(Name = "First Name")]
+        [StringLength(100, ErrorMessage = "To many charts")]
         public string FirstName { get; set; }
 
         [Display(Name = "Last Name")]
+        [StringLength(100, ErrorMessage = "To many charts")]
         public string LastName { get; set; }
 
         [Display(Name = "Street")]
+        [StringLength(100, ErrorMessage = "To many charts")]
         public string Street { get; set; }
 
         [Display(Name = "House Number")]
+        [StringLength(100, ErrorMessage = "To many charts")]
         public string HouseNumber { get; set; }
 
         [Display(Name = "Postcode")]
+        [StringLength(100, ErrorMessage = "To many charts")]
         public string Postcode { get; set; }
 
         [Display(Name = "City")]
+        [StringLength(100, ErrorMessage = "To many charts")]
         public string City { get; set; }
 
         [Display(Name = "Phonenumber")]
+        [StringLength(100, ErrorMessage = "To many charts")]
         [DataType(DataType.PhoneNumber)]
         public string PhoneNumber { get; set; }
 
         [Display(Name = "Language")]
+        [StringLength(100, ErrorMessage = "To many charts")]
         [Required(ErrorMessage = "Please provide Language", AllowEmptyStrings = false)]
         public string Language { get; set; }
 
         [Display(Name = "Email")]
+        [StringLength(100, ErrorMessage = "To many charts")]
         [DataType(DataType.EmailAddress)]
         [Required(ErrorMessage = "Please provide Email", AllowEmptyStrings = false)]
         public string Email { get; set; }
 
         [Display(Name = "Birthday")]
+        [StringLength(100, ErrorMessage = "To many charts")]
         [DataType(DataType.Date)]
         public string Age { get; set; }
 
         [Display(Name = "Gender")]
+        [StringLength(100, ErrorMessage = "To many charts")]
         public string Gender { get; set; }
         public string FirstJoin { get; set; }
         public string ProfilePicture { get; set; }
 
         [Display(Name = "Password")]
         [DataType(DataType.Password)]
-        [StringLength(50, MinimumLength = 8, ErrorMessage = "Password must be 8 Char long.")]
+        [StringLength(100, MinimumLength = 8, ErrorMessage = "Password must be 8 Char long.")]
         public string Password { get; set; }
 
         [Display(Name = "Confirm Password")]
+        [StringLength(100, ErrorMessage = "To many charts")]
         [Compare("Password", ErrorMessage = "Confirm password does not match.")]
         [DataType(DataType.Password)]
         public string ConfirmPassword { get; set; }

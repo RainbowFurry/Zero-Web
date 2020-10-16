@@ -130,5 +130,13 @@
   {
     "outputFile": "Content/css/Store/Part/TopGameImage.css",
     "inputFile": "Content/css/Store/Part/TopGameImage.less"
+  },
+  {
+    "outputFile": "Content/css/Authentification/Registration.css",
+    "inputFile": "Content/css/Authentification/Registration.less"
+  },
+  {
+    "outputFile": "Content/css/Authentification/ConfirmRegistration.css",
+    "inputFile": "Content/css/Authentification/ConfirmRegistration.less"
   }
 ]

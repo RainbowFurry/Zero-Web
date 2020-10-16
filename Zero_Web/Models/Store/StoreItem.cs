@@ -14,24 +14,31 @@ namespace Zero_Web.Models.Store
         public string ID { get; set; }
 
         [Display(Name = "Name")]
+        [StringLength(100, ErrorMessage = "To many charts")]
         public string Name { get; set; }
 
         [Display(Name = "Icon")]
+        [StringLength(10000, ErrorMessage = "To many charts")]
         public string Icon { get; set; }
 
         [Display(Name = "PreviewIcons")]
+        [StringLength(10000, ErrorMessage = "To many charts")]
         public string PreviewIcons { get; set; }//[]
 
         [Display(Name = "Version")]
+        [StringLength(100, ErrorMessage = "To many charts")]
         public string Version { get; set; }
 
         [Display(Name = "Company")]
+        [StringLength(100, ErrorMessage = "To many charts")]
         public string Company { get; set; }
 
         [Display(Name = "Author")]
+        [StringLength(100, ErrorMessage = "To many charts")]
         public string Author { get; set; }
 
         [Display(Name = "Price")]
+        [StringLength(100, ErrorMessage = "To many charts")]
         public double Price { get; set; }
 
         //TestTime (Test Vor Kauf)
@@ -39,12 +46,15 @@ namespace Zero_Web.Models.Store
         public DiscountOptions Discount { get; set; }//Rabat
 
         [Display(Name = "LongDescription")]
+        [StringLength(10000, ErrorMessage = "To many charts")]
         public string LongDescription { get; set; }
 
         [Display(Name = "ShortDescription")]
+        [StringLength(10000, ErrorMessage = "To many charts")]
         public string ShortDescription { get; set; }
 
         [Display(Name = "TargetCompanyUrl")]
+        [StringLength(10000, ErrorMessage = "To many charts")]
         public string TargetCompanyUrl { get; set; }
 
         [Display(Name = "SystemEnviromentMinimal")]

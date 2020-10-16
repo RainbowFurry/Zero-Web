@@ -5,19 +5,27 @@
 </head>
 
 <div class="TopGame container-fluid">
+
+    @*<div class="TopGameLargeContainer">*@
     <div class="container-fluid TopImageContainer">
-        <img class="TopGameImage img-fluid w-100" src="@ImageSource.SVG.TopGame" />
-        <img class="TopGameBlurrImage img-fluid w-100" src="@ImageSource.SVG.TopImageBlur" />
+        <img class="TopGameImage img-responsive w-100" src="@ImageSource.SVG.TopGame" />
+        <img class="TopGameBlurrImage img-responsive w-100" src="@ImageSource.SVG.TopImageBlur" />
     </div>
+
     <img class="TopGameBlurrImage2 img-fluid w-100" src="@ImageSource.SVG.TopGameBlurr" />
-    <div class="GameDescription">
+    @*  </div>*@
+
+    <div class="GameDescription container-fluid">
         <p>Gesponsorter Inhalt</p>
         <h1><b>The Last Of Us 2</b></h1>
         <p id="description">"Atmosphärisch, gigantisch und mit einer hinreißenden Story"</p>
-        <button class="BuyTopGame">Kaufen</button>
-        <div class="AddToWishCard">
-            <img class="img-responsive" src="@ImageSource.SVG.Add" />
-            <p>Auf die Wunschliste</p>
+        <div class="row">
+            <button class="BuyTopGame col-auto">Kaufen</button>
+            <div class="AddToWishCard col-auto row">
+                <img class="img-responsive col-auto" src="@ImageSource.SVG.Add" />
+                <p class="col-auto">Auf die Wunschliste</p>
+            </div>
         </div>
     </div>
+
 </div>

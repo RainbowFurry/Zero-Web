@@ -33,3 +33,40 @@ nav {
 footer {
     display: none !important;
 }
+
+::placeholder { /* Firefox */
+    color: var(--TextColor);
+    opacity: 0.2;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: var(--TextColor);
+    opacity: 0.2;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: var(--TextColor);
+    opacity: 0.2;
+}
+
+input {
+    font-family: "Proxima Nova";
+    font-size: 20px;
+    height: 65px;
+    background-color: #292929;
+    border: none;
+    border-radius: 10px 10px 10px 10px;
+}
+
+input[type=submit] {
+    background: var(--Gradiant);
+    color: var(--TextColor);
+}
+
+input[type=date] {
+    color: var(--TextColor);
+}
+
+body {
+    max-width: 1920px !important;
+}

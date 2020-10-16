@@ -1,4 +1,4 @@
-﻿.Registration {
+﻿.ConfirmRegistration {
   background-color: var(--DarkTheme);
   position: static;
   width: 30%;
@@ -9,10 +9,10 @@
 p.col {
   text-align: center;
 }
-.RegistrationBackground {
+.ConfirmRegistrationBackground {
   position: absolute;
   max-width: 1920px !important;
 }
-.Registration {
+.ConfirmRegistration {
   position: relative;
 }

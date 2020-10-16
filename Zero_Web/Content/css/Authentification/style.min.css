@@ -1,1 +1,1 @@
-﻿nav{display:none !important;}footer{display:none !important;}
+﻿nav{display:none !important;}footer{display:none !important;}::placeholder{color:var(--TextColor);opacity:.2;}:-ms-input-placeholder{color:var(--TextColor);opacity:.2;}::-ms-input-placeholder{color:var(--TextColor);opacity:.2;}input{font-family:"Proxima Nova";font-size:20px;height:65px;background-color:#292929;border:none;border-radius:10px 10px 10px 10px;}input[type=submit]{background:var(--Gradiant);color:var(--TextColor);}input[type=date]{color:var(--TextColor);}body{max-width:1920px !important;}

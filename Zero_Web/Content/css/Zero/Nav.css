@@ -3,6 +3,7 @@
   --WhiteTheme: #fff;
   --DarkTheme: #12161B;
   --TextColor: #fff;
+  --Gradiant: linear-gradient(36deg, #fcb045 0%, #fd1d1d 100%);
 }
 /*Scrollbar*/
 ::-webkit-scrollbar {

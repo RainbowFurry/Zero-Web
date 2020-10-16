@@ -1,4 +1,6 @@
 ﻿@model  Zero_Web.Models.User
+@using Zero_Web.Variable;
+@using Zero_Web.Resources.Login;
 
 <head>
     <link href="~/Content/css/Authentification/Registration.css" rel="stylesheet">
@@ -9,58 +11,64 @@
     ViewBag.Title = "Registration";
 }
 
-<div class="Zero Registration">
+<div class="RegistrationBackground container-fluid">
+    <img class="img-fluid w-100" src="@ImageSource.SVG.Login_Background" />
+</div>
 
-    <h2>Zero Registration</h2>
-    <img src="~/Content/images/icons/icon-144x144.png" />
+<div class="RegistrationNav container-fluid d-flex flex-row-reverse pt-5">
+    <div class="row float-right pr-5">
+        <div class="row">
+            <a href="@Url.Action("Login", "Authentification")" class="col-auto">@LanguageHandler.loadDBValueSettings("Login")</a>
+            <img class="img-fluid col-md-3" src="~/Content/images/Zero/Logo_White.svg" />
+        </div>
+        <a href="#">@LanguageHandler.loadDBValueSettings("Back")</a>
+    </div>
+</div>
 
-    <div>
+<div class="Registration container-fluid pt-5">
+
+    <div class="pb-5 pl-3 pr-3">
+        <div class="row justify-content-center">
+            <img class="col-auto" src="@ImageSource.SVG.Logo_White" />
+        </div>
+        <div class="row justify-content-center">
+            <p class="col">@LanguageHandler.loadDBValueSettings("Register_Heading")</p>
+        </div>
+
         @using (Html.BeginForm())
         {
-            @Html.NameFor(model => model.NickName)
-            @Html.EditorFor(model => model.NickName)
-            @Html.ValidationMessageFor(model => model.NickName)
 
-            @Html.NameFor(model => model.FirstName)
-            @Html.EditorFor(model => model.FirstName)
+            <div class="row pl-5 pr-5 pt-3">
+                @Html.EditorFor(model => model.NickName, new { htmlAttributes = new { placeholder = @Html.NameFor(model => model.NickName), maxlength = "100", @class = "col justify-content-center" } })
+                @*@Html.ValidationMessageFor(model => model.Email)*@
+            </div>
 
-            @Html.NameFor(model => model.LastName)
-            @Html.EditorFor(model => model.LastName)
+            <div class="row pl-5 pr-5 pt-3">
+                @Html.EditorFor(model => model.Age, new { htmlAttributes = new { placeholder = @Html.NameFor(model => model.Age), maxlength = "100", @class = "col justify-content-center" } })
+                @*@Html.ValidationMessageFor(model => model.Password)*@
+            </div>
 
-            @Html.NameFor(model => model.Street)
-            @Html.EditorFor(model => model.Street)
+            <div class="row pl-5 pr-5 pt-3">
+                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { placeholder = @Html.NameFor(model => model.Email), maxlength = "100", @class = "col justify-content-center" } })
+                @*@Html.ValidationMessageFor(model => model.Password)*@
+            </div>
 
-            @Html.NameFor(model => model.HouseNumber)
-            @Html.EditorFor(model => model.HouseNumber)
+            <div class="row pl-5 pr-5 pt-3">
+                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { placeholder = @Html.NameFor(model => model.Password), maxlength = "100", @class = "col justify-content-center" } })
+                @*@Html.ValidationMessageFor(model => model.Password)*@
+            </div>
 
-            @Html.NameFor(model => model.City)
-            @Html.EditorFor(model => model.City)
+            <div class="row pl-5 pr-5 pt-3">
+                @Html.EditorFor(model => model.ConfirmPassword, new { htmlAttributes = new { placeholder = @Html.NameFor(model => model.ConfirmPassword), maxlength = "100", @class = "col justify-content-center" } })
+                @*@Html.ValidationMessageFor(model => model.Password)*@
+            </div>
 
-            @Html.NameFor(model => model.Postcode)
-            @Html.EditorFor(model => model.Postcode)
+            <div class="row justify-content-center pt-3 pl-5 pr-5">
+                <input class="col" type="submit" value="@LanguageHandler.loadDBValueSettings("CreateAccount")">
+            </div>
 
-            @Html.NameFor(model => model.Age)
-            @Html.EditorFor(model => model.Age)
-
-            @Html.NameFor(model => model.Email)
-            @Html.EditorFor(model => model.Email)
-            @Html.ValidationMessageFor(model => model.Email)
-
-            @Html.NameFor(model => model.PhoneNumber)
-            @Html.EditorFor(model => model.PhoneNumber)
-
-            @Html.NameFor(model => model.Password)
-            @Html.EditorFor(model => model.Password)
-            @Html.ValidationMessageFor(model => model.Password)
-
-            @Html.NameFor(model => model.ConfirmPassword)
-            @Html.EditorFor(model => model.ConfirmPassword)
-            @Html.ValidationMessageFor(model => model.ConfirmPassword)
-
-            <input type="submit" value="Registrieren">
         }
 
-        <p>Abbrechen und zum @Html.ActionLink("Login", "Login", "Authentification")</p>
-
     </div>
+
 </div>
