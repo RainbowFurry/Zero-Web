@@ -1,6 +1,7 @@
 ﻿using MongoDB.Bson;
 using System;
 using System.Web.Mvc;
+using Zero_Web.database;
 using Zero_Web.Models.Store;
 
 namespace Zero_Web.Controllers
@@ -20,8 +21,8 @@ namespace Zero_Web.Controllers
             storeItem.ID = Guid.NewGuid().ToString();
 
             //Store Product Data in the DB
-            database.MongoDBManager db = new database.MongoDBManager();
-            db.createEntry("Product", storeItem.ToBsonDocument());
+
+            MongoDBManager.Instance.CreateEntry("Product", storeItem.ToBsonDocument());
 
             //Clear all Registration Fields entered in the View
             ModelState.Clear();

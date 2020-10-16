@@ -275,7 +275,7 @@
     <Compile Include="Controllers\GuidelinesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InformationController.cs" />
-    <Compile Include="Controllers\AuthentificationController.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\PaymentsController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\SetupController.cs" />
@@ -287,6 +287,7 @@
     <Compile Include="Models\Accounts\Account.cs" />
     <Compile Include="Models\Accounts\Credential.cs" />
     <Compile Include="Models\Accounts\Payment.cs" />
+    <Compile Include="Models\Accounts\UserModel.cs" />
     <Compile Include="Models\Bewerbung\Bewerbung.cs" />
     <Compile Include="Models\Payments\Payment.cs" />
     <Compile Include="Models\PluginStore\PluginData.cs" />
@@ -380,6 +381,9 @@
     <Compile Include="Resources\Shared\Nav\LanguageHandler.cs">
       <Generator>ResXFileCodeGenerator</Generator>
     </Compile>
+    <Compile Include="Security\CustomAuthorizeAttribute.cs" />
+    <Compile Include="Security\CustomPrincipal.cs" />
+    <Compile Include="Security\SessionPersister.cs" />
     <Compile Include="Variable\ImageSource.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -722,12 +726,12 @@
     <Content Include="Views\Shared\BrowserToast.cshtml" />
     <Content Include="Views\Payments\PayPal.cshtml" />
     <Content Include="Views\Shared\Socials.cshtml" />
-    <Content Include="Views\Authentification\Index.cshtml" />
-    <Content Include="Views\Authentification\Login.cshtml" />
-    <Content Include="Views\Authentification\Registration.cshtml" />
+    <Content Include="Views\Account\Index.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Registration.cshtml" />
     <Content Include="Views\Error\Unauthorized.cshtml" />
-    <Content Include="Views\Authentification\ForgotPassword.cshtml" />
-    <Content Include="Views\Authentification\NewPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\NewPassword.cshtml" />
     <Content Include="Views\Company\About.cshtml" />
     <Content Include="Views\Company\Jobs.cshtml" />
     <Content Include="Views\Company\Branding.cshtml" />
@@ -747,7 +751,7 @@
     <Content Include="Views\Product\WhyZero.cshtml" />
     <Content Include="Views\Product\Index.cshtml" />
     <Content Include="Views\Product\Status.cshtml" />
-    <Content Include="Views\Authentification\ConfirmRegistration.cshtml" />
+    <Content Include="Views\Account\ConfirmRegistration.cshtml" />
     <Content Include="Tools\kantu\kantu.ps1" />
     <Content Include="Views\CSI\Index.cshtml" />
     <Content Include="Views\CSI\EditStoreItem.cshtml" />

@@ -1,6 +1,6 @@
-﻿using Microsoft.AspNetCore.Cryptography.KeyDerivation;
-using System;
+﻿using System;
 using System.Security.Cryptography;
+using System.Text;
 
 namespace Zero_Web.Content.csharp.Zero
 {
@@ -12,26 +12,17 @@ namespace Zero_Web.Content.csharp.Zero
         /// </summary>
         /// <param name="password"></param>
         /// <returns></returns>
-        public string createHash(string password)
+
+        public string CreateHash(string text)
         {
-
-            // generate a 128-bit salt using a secure PRNG
-            byte[] salt = new byte[128 / 8];
-            using (var rng = RandomNumberGenerator.Create())
+            // SHA512 is disposable by inheritance.
+            using (var sha256 = SHA256.Create())
             {
-                rng.GetBytes(salt);
+                // Send a sample text to hash.
+                var hashedBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(text));
+                // Get the hashed string.
+                return BitConverter.ToString(hashedBytes).Replace("-", "").ToLower();
             }
-
-            // derive a 256-bit subkey (use HMACSHA1 with 10,000 iterations)
-            string hashed = Convert.ToBase64String(KeyDerivation.Pbkdf2(
-                password: password,
-                salt: salt,
-                prf: KeyDerivationPrf.HMACSHA1,
-                iterationCount: 10000,
-                numBytesRequested: 256 / 8));
-
-            return hashed;
-
         }
 
     }
