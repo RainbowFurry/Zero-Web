@@ -1,12 +1,13 @@
 ﻿using System.Security.Claims;
 using System.Web.Mvc;
+using Zero_Web.Security;
 
 namespace Zero_Web.Controllers
 {
     public class HomeController : Controller
     {
 
-        //[AllowAnonymous]
+        [AllowAnonymous]
         public ActionResult Index()
         {
 
@@ -27,7 +28,7 @@ namespace Zero_Web.Controllers
 
 
         //Secure Page Acces with Roles
-        [Authorize]//Geht Nicht!
+        [CustomAuthorize(Roles = "Administrator")]//Geht Nicht!
         //[Authorize(Roles = "Administrator")]
         public ActionResult About()
         {

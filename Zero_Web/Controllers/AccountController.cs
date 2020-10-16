@@ -6,55 +6,75 @@ using System;
 using System.Web;
 using System.Web.Mvc;
 using Zero_Web.Content.csharp.Zero;
+using Zero_Web.database;
 using Zero_Web.Models;
+using Zero_Web.Security;
 
 namespace Zero_Web.Controllers
 {
-    public class AuthentificationController : Controller
+    public class AccountController : Controller
     {
 
-        public ActionResult Index()
-        {
-            return View();
-        }
+        private readonly HashPassword hashPassword = new HashPassword();
 
-        [HttpGet]
         public ActionResult Registration()
         {
             return View();
         }
 
         [HttpPost]
-        public ActionResult Registration(User user)
+        public ActionResult Registration(User viewUser)
         {
+            if (string.IsNullOrEmpty(viewUser.Email) ||
+                string.IsNullOrEmpty(viewUser.NickName) ||
+                string.IsNullOrEmpty(viewUser.Password) ||
+                string.IsNullOrEmpty(viewUser.ConfirmPassword))
+            {
+                ViewBag.Error = "Registration failed.";
+                return RedirectToAction("Registration", "Account");
+            }
+            viewUser.ID = Guid.NewGuid().ToString();
+            viewUser.Password = hashPassword.CreateHash(viewUser.Password);
+            viewUser.ConfirmPassword = hashPassword.CreateHash(viewUser.ConfirmPassword);
 
-            /*ToDo:
-             Filter einbauen ob pw übereinstimmt..
-            ob bereits account... somit kein 2.
-            DBs aufteilen
-             */
-
-            //Create a Random UID for the User
-            user.ID = Guid.NewGuid().ToString();
-
-            //Hash Password
-            HashPassword hashPassword = new HashPassword();
-            user.Password = hashPassword.createHash(user.Password);
-            user.ConfirmPassword = hashPassword.createHash(user.ConfirmPassword);
-
-            //Store User Data in the DB
-            database.MongoDBManager db = new database.MongoDBManager();
-            db.createEntry("User", user.ToBsonDocument());
-
-            //Clear all Registration Fields entered in the View
-            ModelState.Clear();
-
-            return View("Registration");//RedirectToAction("LogIn", "Account", new { area = "Admin" });
+            if (MongoDBManager.Instance.CreateEntry("User", viewUser.ToBsonDocument()))
+            {
+                return RedirectToAction("Login", "Account");
+            }
+            else
+            {
+                ViewBag.Error = "Registration failed. (System side)";
+                return RedirectToAction("Registration", "Account");
+            }
         }
-
         public ActionResult Login()
         {
             return View();
+        }
+
+        public ActionResult Success()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Login(Account account)
+        {
+            if (string.IsNullOrEmpty(account.LoginName) ||
+                string.IsNullOrEmpty(account.LoginPassword) ||
+                MongoDBManager.Instance.UserModel.Login(account.LoginName, hashPassword.CreateHash(account.LoginPassword)) == null)
+            {
+                ViewBag.Error = "Login failed.";
+                return RedirectToAction("Login", "Account");
+            }
+            SessionPersister.Username = account.LoginName;
+            return RedirectToAction("Success", "Account");
+        }
+
+        public ActionResult Logout()
+        {
+            SessionPersister.Username = string.Empty;
+            return RedirectToAction("Login", "Account");
         }
 
         public ActionResult ForgotPassword()
