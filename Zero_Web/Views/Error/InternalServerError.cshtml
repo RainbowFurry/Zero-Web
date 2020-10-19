@@ -1,10 +1,10 @@
 ﻿<head>
-    <link href="~/Content/css/Error/Forbidden.css" rel="stylesheet">
+    <link href="~/Content/css/Error/ÍnternalServerError.css" rel="stylesheet">
     <link href="~/Content/css/Error/style.css" rel="stylesheet">
 </head>
 
 @{
-    ViewBag.Title = "Zero - Error 403 Forbidden";
+    ViewBag.Title = "Zero - Error 500 InternalServerError";
 }
 
 <div class="ErrorBackgroundImage container-fluid">
@@ -15,13 +15,15 @@
 
     <div class="container-fluid">
 
-        <b class="ErrorCode">403</b>
-        <p class="ErrorPageHeading">Forbidden...</p>
+        <b class="ErrorCode">500</b>
+        <p class="ErrorPageHeading">A Internal Server Error occured!</p>
 
-        <p class="ErrorDescription">Description text lorem ipsum ....</p>
+        <p class="ErrorDescription">
+            The Server hat an uncaught Internal ERROR or misconfiguration and was unable to cpmplete your request.
+            We're working hard to resolve this issue. Please Check back shortly.
+        </p>
 
         <div class="row">
-
             <a href="#" class="RedirectStart col-auto rounded">
                 <p>Back To Home</p>
             </a>

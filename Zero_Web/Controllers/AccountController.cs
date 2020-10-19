@@ -68,7 +68,7 @@ namespace Zero_Web.Controllers
                 return RedirectToAction("Login", "Account");
             }
             SessionPersister.Username = account.LoginName;
-            return RedirectToAction("Success", "Account");
+            return RedirectToAction("Index", "Home");
         }
 
         public ActionResult Logout()

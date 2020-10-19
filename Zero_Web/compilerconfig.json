@@ -138,5 +138,33 @@
   {
     "outputFile": "Content/css/Authentification/ConfirmRegistration.css",
     "inputFile": "Content/css/Authentification/ConfirmRegistration.less"
+  },
+  {
+    "outputFile": "Content/css/Error/style.css",
+    "inputFile": "Content/css/Error/style.less"
+  },
+  {
+    "outputFile": "Content/css/Error/BadRequest.css",
+    "inputFile": "Content/css/Error/BadRequest.less"
+  },
+  {
+    "outputFile": "Content/css/Error/Forbidden.css",
+    "inputFile": "Content/css/Error/Forbidden.less"
+  },
+  {
+    "outputFile": "Content/css/Error/NotFound.css",
+    "inputFile": "Content/css/Error/NotFound.less"
+  },
+  {
+    "outputFile": "Content/css/Error/Unauthorized.css",
+    "inputFile": "Content/css/Error/Unauthorized.less"
+  },
+  {
+    "outputFile": "Content/css/Error/Index.css",
+    "inputFile": "Content/css/Error/Index.less"
+  },
+  {
+    "outputFile": "Content/css/Error/InternalServerError.css",
+    "inputFile": "Content/css/Error/InternalServerError.less"
   }
 ]

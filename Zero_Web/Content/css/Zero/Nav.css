@@ -122,10 +122,6 @@ nav.navbar.sticky-top {
   background-color: #12161B;
   margin-bottom: 0 !important;
 }
-div#FilterNav {
-  display: none;
-  visibility: hidden;
-}
 .DropdonwNavShow {
   display: block !important;
   visibility: visible !important;
@@ -221,10 +217,6 @@ input[type=checkbox]:focus {
 input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
-a.Store {
-  border-bottom: solid 3px var(--MainColor);
-  border-radius: 3%;
-}
 a.LoginText {
   color: var(--MainColor);
 }
@@ -255,16 +247,13 @@ hr.Spacer {
   height: 2px;
   background-color: #fff;
 }
-div#NavMenu {
-  display: none;
-}
 .Show {
   display: block !important;
 }
 .SmalMenuButton {
   display: none;
   position: relative;
-  width: 40px;
+  hiddwidth: 40px;
   height: 40px;
   border-radius: 3px;
   background: #313539;
@@ -385,5 +374,55 @@ div#NavMenu {
   100% {
     bottom: 0;
     -webkit-transform: rotate(0);
+  }
+}
+/* NavMenu */
+.NavMenu {
+  -webkit-animation: Nav-slide-bot 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: Nav-slide-bot 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+div.NavMenu.Hide {
+  -webkit-animation: Nav-slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: Nav-slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+/* Filter Nav */
+.FilterNav {
+  display: block !important;
+  visibility: visible !important;
+  position: fixed;
+  z-index: 998;
+  box-shadow: 0px 0.5px #333;
+  background-color: #12161B;
+}
+div.FilterNav.Hide {
+  -webkit-animation: Nav-slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: Nav-slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+div.FilterNav.Show {
+  -webkit-animation: Nav-slide-bot 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: Nav-slide-bot 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+@-webkit-keyframes Nav-slide-bot {
+  0% {
+    display: none;
+    -webkit-transform: translateY(-200%);
+    transform: translateY(-200%);
+  }
+  100% {
+    display: block;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes Nav-slide-top {
+  0% {
+    display: block;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    display: none;
+    -webkit-transform: translateY(-200%);
+    transform: translateY(-200%);
   }
 }

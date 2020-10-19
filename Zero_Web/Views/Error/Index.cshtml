@@ -1,7 +1,44 @@
-﻿
+﻿<head>
+    <link href="~/Content/css/Error/Index.css" rel="stylesheet">
+    <link href="~/Content/css/Error/style.css" rel="stylesheet">
+</head>
+
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Zero - Error";
 }
 
-<h2>Index</h2>
+<div class="ErrorBackgroundImage container-fluid">
+
+</div>
+
+<div class="ErrorContent container-fluid">
+
+    <div class="container-fluid">
+
+        @*<b class="ErrorCode">500</b>
+        <p class="ErrorPageHeading">A Internal Server Error occured!</p>
+
+        <p class="ErrorDescription">
+            The Server hat an uncaught Internal ERROR or misconfiguration and was unable to cpmplete your request.
+            We're working hard to resolve this issue. Please Check back shortly.
+        </p>*@
+
+        <div class="Exeption rounded">
+            @Server.GetLastError()
+        </div>
+
+        <div class="row">
+            <a href="#" class="RedirectStart col-auto rounded">
+                <p>Back To Home</p>
+            </a>
+
+            <a href="#" class="OtherAction col-auto rounded">
+                <p>Contact Us</p>
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
 

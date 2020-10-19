@@ -3,8 +3,8 @@
 @using Zero_Web.Resources.Login;
 
 <head>
-    <link href="~/Content/css/Authentification/Registration.css" rel="stylesheet">
-    <link href="~/Content/css/Authentification/style.css" rel="stylesheet">
+    <link href="~/Content/css/Account/Registration.css" rel="stylesheet">
+    <link href="~/Content/css/Account/style.css" rel="stylesheet">
 </head>
 
 @{
@@ -18,7 +18,7 @@
 <div class="RegistrationNav container-fluid d-flex flex-row-reverse pt-5">
     <div class="row float-right pr-5">
         <div class="row">
-            <a href="@Url.Action("Login", "Authentification")" class="col-auto">@LanguageHandler.loadDBValueSettings("Login")</a>
+            <a href="@Url.Action("Login", "Account")" class="col-auto">@LanguageHandler.loadDBValueSettings("Login")</a>
             <img class="img-fluid col-md-3" src="~/Content/images/Zero/Logo_White.svg" />
         </div>
         <a href="#">@LanguageHandler.loadDBValueSettings("Back")</a>

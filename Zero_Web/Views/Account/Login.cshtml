@@ -1,15 +1,17 @@
-﻿@model  Zero_Web.Models.User
+﻿@model  Zero_Web.Models.Account
 @using Zero_Web.Variable;
 @using Zero_Web.Resources.Login;
 
 <head>
-    <link href="~/Content/css/Authentification/Login.css" rel="stylesheet">
-    <link href="~/Content/css/Authentification/style.css" rel="stylesheet">
+    <link href="~/Content/css/Account/Login.css" rel="stylesheet">
+    <link href="~/Content/css/Account/style.css" rel="stylesheet">
 </head>
 
 @{
     ViewBag.Title = "Login";
 }
+
+@ViewBag.Error
 
 <div class="LoginBackground container-fluid">
     <img class="img-fluid w-100" src="@ImageSource.SVG.Login_Background" />
@@ -18,7 +20,7 @@
 <div class="LoginNav container-fluid d-flex flex-row-reverse pt-5">
     <div class="row float-right pr-5">
         <a href="#" class="col-auto">@LanguageHandler.loadDBValueSettings("Problem_Login")</a>
-        <a href="@Url.Action("Registration", "Authentification")" class="col-auto">@LanguageHandler.loadDBValueSettings("Register")</a>
+        <a href="@Url.Action("Registration", "Account")" class="col-auto">@LanguageHandler.loadDBValueSettings("Register")</a>
     </div>
 </div>
 
@@ -36,12 +38,12 @@
         {
 
             <div class="row pl-5 pr-5 pt-3">
-                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { placeholder = @Html.NameFor(model => model.Email), maxlength = "100", @class = "col justify-content-center" } })
+                @Html.EditorFor(model => model.LoginName, new { htmlAttributes = new { placeholder = @Html.NameFor(model => model.LoginName), maxlength = "100", @class = "col justify-content-center" } })
                 @*@Html.ValidationMessageFor(model => model.Email)*@
             </div>
 
             <div class="row pl-5 pr-5 pt-3">
-                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { placeholder = @Html.NameFor(model => model.Password), maxlength = "100", @class = "col justify-content-center" } })
+                @Html.EditorFor(model => model.LoginPassword, new { htmlAttributes = new { placeholder = @Html.NameFor(model => model.LoginPassword), maxlength = "100", @class = "col justify-content-center" } })
                 @*@Html.ValidationMessageFor(model => model.Password)*@
             </div>
 

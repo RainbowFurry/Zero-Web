@@ -1,9 +1,36 @@
-﻿
+﻿<head>
+    <link href="~/Content/css/Error/NotFound.css" rel="stylesheet">
+    <link href="~/Content/css/Error/style.css" rel="stylesheet">
+</head>
+
 @{
-    ViewBag.Title = "NotFound";
+    ViewBag.Title = "Zero - Error 404 NotFound";
 }
 
-<h2>NotFound</h2>
+<div class="ErrorBackgroundImage container-fluid">
 
-@Html.ActionLink("Back to previous page", null, null, null, new { href = Request.UrlReferrer })
-<a href="@Url.Action("Index", "Home")">Startseite</a>
+</div>
+
+<div class="ErrorContent container-fluid">
+
+    <div class="container-fluid">
+
+        <b class="ErrorCode">404</b>
+        <p class="ErrorPageHeading">Sorry Page was not Found!</p>
+
+        <p class="ErrorDescription">Description text lorem ipsum ....</p>
+
+        <div class="row">
+
+            <a href="#" class="RedirectStart col-auto rounded">
+                <p>Back To Home</p>
+            </a>
+
+            <a href="#" class="OtherAction col-auto rounded">
+                <p>Contact Us</p>
+            </a>
+        </div>
+
+    </div>
+
+</div>

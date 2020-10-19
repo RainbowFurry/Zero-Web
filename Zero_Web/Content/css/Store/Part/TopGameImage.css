@@ -23,6 +23,12 @@ img.TopGameBlurrImage2 {
 .TopImageContainer {
   position: absolute;
 }
+b.GameDescriptionGameName {
+  font-size: 60px;
+}
+p.description {
+  font-size: 60px;
+}
 /*.TopGameLargeContainer{
     position: absolute;
 }
