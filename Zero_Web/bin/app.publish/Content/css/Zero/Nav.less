@@ -8,10 +8,9 @@
         display: block !important;
     }
 
-    .NavLinks{
+    .NavLinks {
         display: none !important;
     }
-
 }
 
 @media only screen and (max-width: 720px) {
@@ -19,7 +18,6 @@
     .RightNavSide {
         display: none !important;
     }
-
 }
 
 @keyframes example {
@@ -57,11 +55,6 @@ nav.navbar.sticky-top {
     box-shadow: 0px 0.5px #333;
     background-color: #12161B;
     margin-bottom: 0 !important;
-}
-
-div#FilterNav {
-    display: none;
-    visibility: hidden;
 }
 
 .DropdonwNavShow {
@@ -176,11 +169,6 @@ input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
 
-a.Store {
-    border-bottom: solid 3px var(--MainColor);
-    border-radius: 3%;
-}
-
 a.LoginText {
     color: var(--MainColor);
 }
@@ -217,10 +205,6 @@ hr.Spacer {
     background-color: #fff;
 }
 
-div#NavMenu {
-    display: none;
-}
-
 .Show {
     display: block !important;
 }
@@ -228,7 +212,7 @@ div#NavMenu {
 .SmalMenuButton {
     display: none;
     position: relative;
-    width: 40px;
+    hidd width: 40px;
     height: 40px;
     border-radius: 3px;
     background: #313539;
@@ -374,5 +358,65 @@ div#NavMenu {
     100% {
         bottom: 0;
         -webkit-transform: rotate(0);
+    }
+}
+
+/* NavMenu */
+.NavMenu {
+    -webkit-animation: Nav-slide-bot 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: Nav-slide-bot 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+div.NavMenu.Hide {
+    -webkit-animation: Nav-slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: Nav-slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+/* Filter Nav */
+.FilterNav {
+    display: block !important;
+    visibility: visible !important;
+    position: fixed;
+    z-index: 998;
+    box-shadow: 0px 0.5px #333;
+    background-color: #12161B;
+}
+
+div.FilterNav.Hide {
+    -webkit-animation: Nav-slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: Nav-slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+div.FilterNav.Show {
+    -webkit-animation: Nav-slide-bot 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: Nav-slide-bot 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+//Slide Down Animation
+@-webkit-keyframes Nav-slide-bot {
+    0% {
+        display: none;
+        -webkit-transform: translateY(-200%);
+        transform: translateY(-200%);
+    }
+
+    100% {
+        display: block;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes Nav-slide-top {
+    0% {
+        display: block;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    100% {
+        display: none;
+        -webkit-transform: translateY(-200%);
+        transform: translateY(-200%);
     }
 }

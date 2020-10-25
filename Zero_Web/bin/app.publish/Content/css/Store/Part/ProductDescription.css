@@ -34,6 +34,9 @@ img.Dislike {
 img.Dislike:hover {
   cursor: pointer;
 }
+.Combind {
+  max-width: 1920px;
+}
 @media only screen and (max-width: 767px) {
   img.Like {
     padding-top: 15px;

@@ -5,50 +5,50 @@
 </head>
 
 <div class="ProductScrollList container-fluid pt-5 pb-5">
+    <div class="Combind container-fluid">
+        <div class="List row pl-5 pr-5">
 
-    <div class="List row pl-5 pr-5">
-
-        <div class="ListSide col">
-            <div class="row">
-                <b class="Description">Multiplayer Actionspiele, die auch deine Freunde Spielen</b>
-                <div class="container-fluid">
-                    <div class="row">
-                        <p class="ViewAll">Alle ansehen</p>
-                        <img class="Arrow img-fluid" src="@ImageSource.SVG.DropDown" />
+            <div class="ListSide col">
+                <div class="row">
+                    <b class="Description">Multiplayer Actionspiele, die auch deine Freunde Spielen</b>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <p class="ViewAll">Alle ansehen</p>
+                            <img class="Arrow img-fluid" src="@ImageSource.SVG.DropDown" />
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        @{
-            bool sale = true;
+            @{
+                bool sale = true;
 
-            for (int i = 0; i < 5; i++)
-            {
-                if (!sale)
+                for (int i = 0; i < 5; i++)
                 {
-                    <div class="ScrollItem col">
-                        <img class="ProductIcon img-fluid" src="@ImageSource.SVG.ExampleProduct" />
-                        <p class="ProductName pt-3">Minecraft Story Mode</p>
-                        <p class="Price">9,99€</p>
-                    </div>
-                }
-                else
-                {
-                    <div class="ScrollItem col">
-                        <img class="ProductIcon img-fluid" src="@ImageSource.SVG.ExampleProduct" />
-                        <p class="ProductName pt-3">Minecraft Story Mode</p>
-                        <div class="PriceGroup container-fluid">
-                            <div class="row">
-                                <s class="OldPrice col-auto">13,99€</s>
-                                <p class="NewPrice col-auto">6,99€</p>
-                                <p class="Discount col-auto">-50%</p>
+                    if (!sale)
+                    {
+                        <div class="ScrollItem col">
+                            <img class="ProductIcon img-fluid" src="@ImageSource.SVG.ExampleProduct" />
+                            <p class="ProductName pt-3">Minecraft Story Mode</p>
+                            <p class="Price">9,99€</p>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="ScrollItem col">
+                            <img class="ProductIcon img-fluid" src="@ImageSource.SVG.ExampleProduct" />
+                            <p class="ProductName pt-3">Minecraft Story Mode</p>
+                            <div class="PriceGroup container-fluid">
+                                <div class="row">
+                                    <s class="OldPrice col-auto">13,99€</s>
+                                    <p class="NewPrice col-auto">6,99€</p>
+                                    <p class="Discount col-auto">-50%</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    }
                 }
             }
-        }
+        </div>
     </div>
-
 </div>

@@ -1,33 +1,31 @@
 ﻿@using Zero_Web.Variable;
 
 <head>
-   <link href="~/Content/css/Store/Part/ProductDescription.css" rel="stylesheet">
+    <link href="~/Content/css/Store/Part/ProductDescription.css" rel="stylesheet">
 </head>
 
 <div class="ProductDescription container-fluid pt-5 pb-5">
-
-   <div class="row pl-5 pr-5">
-      <div class="LeftImage col">
-         <img class="DisplayImage w-100 img-fluid" src="@ImageSource.SVG.ProductDescription" />
-      </div>
-
-      <div class="SideDescription col-auto pt-4">
-         <p class="DescriptionInfo">Für dich empfohlen</p>
-         <b class="AppName">Resident Evil 7</b>
-         <p class="CompanyName">Capcom</p>
-         <p class="AppDescription">
-            Resident Evil 7: Biohazard is a survival horror video game developed and published by Capcom, released in January 2017 for Microsoft Windows, PlayStation 4, Xbox One and in May 2018 for the Nintendo Switch in Japan
-         </p>
-         <div class="BottomBar container-fluid pt-5">
-            <div class="row">
-               <button class="GetApp col-md-6">Early Access testen</button>
-               <div id="center">
-                  <img class="Like col-auto img-fluid pr-5 pl-5" src="@ImageSource.SVG.Like" />
-                  <img class="Dislike col-auto img-fluid" src="@ImageSource.SVG.Dislike" />
-               </div>
+    <div class="Combind container-fluid">
+        <div class="row pl-5 pr-5">
+            <div class="LeftImage col-auto col-md-6">
+                <img class="DisplayImage w-100 img-fluid" src="@ImageSource.SVG.ProductDescription" />
             </div>
-         </div>
-      </div>
-   </div>
 
+            <div class="SideDescription col-auto col-md-6 pt-4">
+                <p class="DescriptionInfo">Für dich empfohlen</p>
+                <b class="AppName">Resident Evil 7</b>
+                <p class="CompanyName">Capcom</p>
+                <p class="AppDescription">
+                    Resident Evil 7: Biohazard is a survival horror video game developed and published by Capcom, released in January 2017 for Microsoft Windows, PlayStation 4, Xbox One and in May 2018 for the Nintendo Switch in Japan
+                </p>
+                <div class="BottomBar container-fluid pt-5">
+                    <div class="row">
+                        <button class="GetApp col-auto col-md-6">Early Access testen</button>
+                        <img class="Like col-auto col-md-2 img-fluid" src="@ImageSource.SVG.Like" />
+                        <img class="Dislike col-auto col-md-2 img-fluid" src="@ImageSource.SVG.Dislike" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

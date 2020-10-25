@@ -1,0 +1,66 @@
+﻿/*.Zero.Login {
+    color: white;
+    position: relative;
+    z-index: 1;
+    background: #333;
+    max-width: 560px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+img {
+    height: 32px;
+    width: 32px;
+}
+
+input {
+    color: black;
+    display: block;
+    //margin: 9px 0 0 0;
+}
+
+button {
+    margin-top: 15px;
+    margin-left: 44px;
+}*/
+nav {
+  display: none !important;
+}
+footer {
+  display: none !important;
+}
+::placeholder {
+  /* Firefox */
+  color: var(--TextColor);
+  opacity: 0.2;
+}
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: var(--TextColor);
+  opacity: 0.2;
+}
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: var(--TextColor);
+  opacity: 0.2;
+}
+input {
+  font-family: "Proxima Nova";
+  font-size: 20px;
+  height: 65px;
+  background-color: #292929;
+  border: none;
+  border-radius: 10px 10px 10px 10px;
+}
+input[type=submit] {
+  background: var(--Gradiant);
+  color: var(--TextColor);
+}
+input[type=date] {
+  color: var(--TextColor);
+}
+body {
+  max-width: 1920px !important;
+}

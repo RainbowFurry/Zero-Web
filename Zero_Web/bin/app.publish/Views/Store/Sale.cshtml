@@ -10,30 +10,11 @@
 
 <div class="Sale">
 
-    @*<div class="TopImage container-fluid">
-           <div class="container-fluid TopContainer">
-              <img class="TopGameImage img-fluid w-100" src="@ImageSource.SVG.TopGame" />
-              <img class="TopGameBlurrImage img-fluid w-100" src="@ImageSource.SVG.TopImageBlur" />
-           </div>
-           <img class="TopGameBlurrImage2 img-fluid w-100" src="@ImageSource.SVG.TopGameBlurr" />
-           <div class="GameDescription">
-              <p class="BrandNew">Brandneu erschienen</p>
-              <p class="Sponsored">Gesponsorter Inhalt</p>
-              <b class="SaleName">The Last Of Us 2</b>
-              <p class="SaleDescription">"Atmosphärisch, gigantisch und mit einer hinreißenden Story"</p>
-              <button class="BuyTopGame">19,99€</button>
-              <div class="AddToWishCard">
-                 <img class="img-fluid" src="@ImageSource.SVG.Add" />
-                 <p>Auf die Wunschliste</p>
-              </div>
-           </div>
-        </div>*@
-
     @{
         @Html.Partial("/Views/Store/Part/TopGameImage.cshtml")
     }
 
-    <div class="FilterNav container-fluid">
+    <div class="SaleFilterNav container-fluid">
         <div class="row">
             <p class="FilterItem Action col-auto">Action</p>
             <p class="FilterItem col-auto">Shooter</p>

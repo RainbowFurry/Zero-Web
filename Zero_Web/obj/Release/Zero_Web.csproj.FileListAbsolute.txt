@@ -348,3 +348,4 @@ C:\Users\DarkS\Source\Repos\Zero-Web\Zero_Web\obj\Release\Zero_Web.Resources.Sha
 C:\Users\DarkS\Source\Repos\Zero-Web\Zero_Web\obj\Release\Zero_Web.Resources.Shared.NavFilter.German.resources
 C:\Users\DarkS\Source\Repos\Zero-Web\Zero_Web\obj\Release\Zero_Web.Resources.Shared.NavMenu.English.resources
 C:\Users\DarkS\Source\Repos\Zero-Web\Zero_Web\obj\Release\Zero_Web.Resources.Shared.NavMenu.German.resources
+C:\Users\DarkS\Source\Repos\Zero-Web\Zero_Web\obj\Release\Zero_Web.Resources.Error.English.resources

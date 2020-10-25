@@ -160,7 +160,6 @@ C:\Users\DarkS\source\repos\Zero_Web\Zero_Web\obj\Debug\Zero_Web.csproj.CoreComp
 C:\Users\DarkS\source\repos\Zero_Web\Zero_Web\obj\Debug\Zero_Web.csproj.CopyComplete
 C:\Users\DarkS\source\repos\Zero_Web\Zero_Web\obj\Debug\Zero_Web.dll
 C:\Users\DarkS\source\repos\Zero_Web\Zero_Web\obj\Debug\Zero_Web.pdb
-C:\Users\DarkS\Source\Repos\Zero-Web\Zero_Web\obj\Debug\Zero_Web.csprojAssemblyReference.cache
 C:\Users\DarkS\Source\Repos\Zero-Web\Zero_Web\obj\Debug\Zero_Web.Resources.Company.German.resources
 C:\Users\DarkS\Source\Repos\Zero-Web\Zero_Web\obj\Debug\Zero_Web.Resources.Error.German.resources
 C:\Users\DarkS\Source\Repos\Zero-Web\Zero_Web\obj\Debug\Zero_Web.Resources.Guidelines.German.resources
@@ -536,3 +535,5 @@ C:\Users\DarkS\Source\Repos\Zero-Web\Zero_Web\obj\Debug\Zero_Web.Resources.Share
 C:\Users\DarkS\Source\Repos\Zero-Web\Zero_Web\obj\Debug\Zero_Web.Resources.Shared.NavFilter.German.resources
 C:\Users\DarkS\Source\Repos\Zero-Web\Zero_Web\obj\Debug\Zero_Web.Resources.Shared.NavMenu.English.resources
 C:\Users\DarkS\Source\Repos\Zero-Web\Zero_Web\obj\Debug\Zero_Web.Resources.Shared.NavMenu.German.resources
+C:\Users\DarkS\Source\Repos\Zero-Web\Zero_Web\obj\Debug\Zero_Web.csprojAssemblyReference.cache
+C:\Users\DarkS\Source\Repos\Zero-Web\Zero_Web\obj\Debug\Zero_Web.Resources.Error.English.resources

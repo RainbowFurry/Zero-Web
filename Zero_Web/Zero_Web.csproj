@@ -270,7 +270,6 @@
     <Compile Include="Content\css\Guidelines\Class1.cs" />
     <Compile Include="Controllers\CompanyController.cs" />
     <Compile Include="Controllers\CookiesController.cs" />
-    <Compile Include="Controllers\CSIController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\GuidelinesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -295,6 +294,9 @@
     <Compile Include="Models\Accounts\Settings.cs" />
     <Compile Include="Models\Accounts\User.cs" />
     <Compile Include="Models\Store\StoreItem.cs" />
+    <Compile Include="Models\Store\StoreItemDLC.cs" />
+    <Compile Include="Models\Store\StoreItemLanguage.cs" />
+    <Compile Include="Models\Store\StoreItemPrice.cs" />
     <Compile Include="Payments\BitCoin.cs" />
     <Compile Include="Payments\DirectPay.cs" />
     <Compile Include="Payments\MasterCard.cs" />
@@ -308,11 +310,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>German.resx</DependentUpon>
     </Compile>
+    <Compile Include="Resources\Error\English.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>English.resx</DependentUpon>
+    </Compile>
     <Compile Include="Resources\Error\German.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>German.resx</DependentUpon>
     </Compile>
+    <Compile Include="Resources\Error\LanguageHandler.cs" />
     <Compile Include="Resources\Guidelines\German.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -390,29 +398,71 @@
     <Content Include="Changelog.txt" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\css\Authentification\Login.css">
+    <Content Include="Content\css\Account\ConfirmRegistration.css">
+      <DependentUpon>ConfirmRegistration.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Account\ConfirmRegistration.min.css">
+      <DependentUpon>ConfirmRegistration.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Account\Login.css">
       <DependentUpon>Login.less</DependentUpon>
     </Content>
-    <Content Include="Content\css\Authentification\Login.min.css">
+    <Content Include="Content\css\Account\Login.min.css">
       <DependentUpon>Login.css</DependentUpon>
     </Content>
-    <Content Include="Content\css\Authentification\Registration.css">
+    <Content Include="Content\css\Account\Registration.css">
       <DependentUpon>Registration.less</DependentUpon>
     </Content>
-    <Content Include="Content\css\Authentification\Registration.min.css">
+    <Content Include="Content\css\Account\Registration.min.css">
       <DependentUpon>Registration.css</DependentUpon>
     </Content>
-    <Content Include="Content\css\Authentification\style.css">
+    <Content Include="Content\css\Account\style.css">
       <DependentUpon>style.less</DependentUpon>
     </Content>
-    <Content Include="Content\css\Authentification\style.min.css">
+    <Content Include="Content\css\Account\style.min.css">
       <DependentUpon>style.css</DependentUpon>
     </Content>
-    <Content Include="Content\css\CSI\Index.css">
+    <Content Include="Content\css\Error\BadRequest.css">
+      <DependentUpon>BadRequest.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Error\BadRequest.min.css">
+      <DependentUpon>BadRequest.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Error\Forbidden.css">
+      <DependentUpon>Forbidden.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Error\Forbidden.min.css">
+      <DependentUpon>Forbidden.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Error\Index.css">
       <DependentUpon>Index.less</DependentUpon>
     </Content>
-    <Content Include="Content\css\CSI\Index.min.css">
+    <Content Include="Content\css\Error\Index.min.css">
       <DependentUpon>Index.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Error\InternalServerError.css">
+      <DependentUpon>InternalServerError.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Error\InternalServerError.min.css">
+      <DependentUpon>InternalServerError.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Error\NotFound.css">
+      <DependentUpon>NotFound.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Error\NotFound.min.css">
+      <DependentUpon>NotFound.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Error\style.css">
+      <DependentUpon>style.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Error\style.min.css">
+      <DependentUpon>style.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Error\Unauthorized.css">
+      <DependentUpon>Unauthorized.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Error\Unauthorized.min.css">
+      <DependentUpon>Unauthorized.css</DependentUpon>
     </Content>
     <Content Include="Content\css\Home\Index.css">
       <DependentUpon>Index.less</DependentUpon>
@@ -637,9 +687,9 @@
     <Content Include="Content\css\Zero\Footer.less" />
     <Content Include="Content\css\Zero\Socials.less" />
     <Content Include="Content\css\Zero\Nav.less" />
-    <Content Include="Content\css\Authentification\Login.less" />
-    <Content Include="Content\css\Authentification\Registration.less" />
-    <Content Include="Content\css\Authentification\style.less" />
+    <Content Include="Content\css\Account\Login.less" />
+    <Content Include="Content\css\Account\Registration.less" />
+    <Content Include="Content\css\Account\style.less" />
     <Content Include="Content\css\Error\style.less" />
     <Content Include="Content\css\Error\BadRequest.less" />
     <Content Include="Content\css\Error\NotFound.less" />
@@ -654,8 +704,7 @@
     <Content Include="Content\css\Information\style.less" />
     <Content Include="Content\css\Information\Feedback.less" />
     <Content Include="Content\css\Information\Blog.less" />
-    <Content Include="Content\css\Authentification\ForgotPassword.less" />
-    <Content Include="Content\css\Authentification\NewPassword.less" />
+    <Content Include="Content\css\Account\ForgotPassword.less" />
     <Content Include="Content\css\Product\Download.less" />
     <Content Include="Content\css\Product\Status.less" />
     <Content Include="Content\css\Product\WhyZero.less" />
@@ -670,11 +719,13 @@
     <Content Include="Content\css\Store\Charts.less" />
     <Content Include="Content\css\Store\Sale.less" />
     <Content Include="Content\css\Store\ZeroPlus.less" />
-    <Content Include="Content\css\CSI\Index.less" />
     <Content Include="Content\bootstrap.min.css.map" />
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\css\Store\Free.less" />
     <Content Include="Content\css\Store\Part\TopGameImage.less" />
+    <Content Include="Content\css\Account\ConfirmRegistration.less" />
+    <Content Include="Content\css\Error\Index.less" />
+    <Content Include="Content\css\Error\InternalServerError.less" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -731,7 +782,6 @@
     <Content Include="Views\Account\Registration.cshtml" />
     <Content Include="Views\Error\Unauthorized.cshtml" />
     <Content Include="Views\Account\ForgotPassword.cshtml" />
-    <Content Include="Views\Account\NewPassword.cshtml" />
     <Content Include="Views\Company\About.cshtml" />
     <Content Include="Views\Company\Jobs.cshtml" />
     <Content Include="Views\Company\Branding.cshtml" />
@@ -753,8 +803,6 @@
     <Content Include="Views\Product\Status.cshtml" />
     <Content Include="Views\Account\ConfirmRegistration.cshtml" />
     <Content Include="Tools\kantu\kantu.ps1" />
-    <Content Include="Views\CSI\Index.cshtml" />
-    <Content Include="Views\CSI\EditStoreItem.cshtml" />
     <Content Include="Views\Store\Index.cshtml" />
     <Content Include="Views\Store\Charts.cshtml" />
     <Content Include="Views\Store\ZeroPlus.cshtml" />
@@ -767,6 +815,7 @@
     <Content Include="Views\Store\Part\ProductListLarge.cshtml" />
     <Content Include="Views\Store\Alert\Opinion.cshtml" />
     <Content Include="Views\Store\Part\TopGameImage.cshtml" />
+    <Content Include="Views\Error\InternalServerError.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -795,6 +844,10 @@
     <EmbeddedResource Include="Resources\Company\German.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>German.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Error\English.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>English.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Error\German.resx">
       <Generator>ResXFileCodeGenerator</Generator>

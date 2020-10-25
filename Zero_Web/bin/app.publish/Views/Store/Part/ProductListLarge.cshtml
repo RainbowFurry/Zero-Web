@@ -5,34 +5,34 @@
 </head>
 
 <div class="ProductListLarge container-fluid pt-5 pb-5">
+    <div class="Combind container-fluid">
+        <p class="ProductListLargeDescription pl-5">Die erfolgreichsten <b>Battle Royale</b> Spiele</p>
 
-   <p class="ProductListLargeDescription pl-5">Die erfolgreichsten <b>Battle Royale</b> Spiele</p>
+        <div class="LargeItem row pl-5 pr-5">
 
-   <div class="LargeItem row pl-5 pr-5">
+            @{
+                for (int i = 0; i < 2; i++)
+                {
+                    <div class="LargeItem col-md-6">
 
-      @{
-         for (int i = 0; i < 2; i++)
-         {
-            <div class="LargeItem col-md-6">
+                        <img class="AppIconLarge w-100 img-fluid" src="@ImageSource.SVG.ProductListLarge" />
 
-               <img class="AppIconLarge w-100 img-fluid" src="@ImageSource.SVG.ProductListLarge" />
+                        <p class="AppName pt-3">Fortnite: Battle Royale</p>
 
-               <p class="AppName pt-3">Fortnite: Battle Royale</p>
+                        <div class="BottomPriceBar col-auto">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <s class="OldPrice col-auto">13,99€</s>
+                                    <p class="NewPrice col-auto">6,99€</p>
+                                    <p class="Discount col-auto">-50%</p>
+                                </div>
+                            </div>
+                        </div>
 
-               <div class="BottomPriceBar col-auto">
-                  <div class="container-fluid">
-                     <div class="row">
-                        <s class="OldPrice col-auto">13,99€</s>
-                        <p class="NewPrice col-auto">6,99€</p>
-                        <p class="Discount col-auto">-50%</p>
-                     </div>
-                  </div>
-               </div>
+                    </div>
+                }
+            };
 
-            </div>
-         }
-      };
-
-   </div>
-
+        </div>
+    </div>
 </div>

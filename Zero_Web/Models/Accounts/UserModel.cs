@@ -28,6 +28,7 @@ namespace Zero_Web.Models.Accounts
 
         public User Login(string identifier, string password)
         {
+            UpdateAccountList();
             User user = listAccounts.Where(acc => acc.NickName.Equals(identifier) && acc.Password.Equals(password)).FirstOrDefault();
             if (user == null)
                 user = listAccounts.Where(acc => acc.Email.Equals(identifier) && acc.Password.Equals(password)).FirstOrDefault();

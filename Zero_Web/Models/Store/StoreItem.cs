@@ -5,115 +5,40 @@ namespace Zero_Web.Models.Store
 {
     public class StoreItem
     {
-        //VIDEO Presentation?
-        //FSK
-        //Trend Platz
-        //Zeit erscheinung
-
         [BsonId]
         public string ID { get; set; }
-
-        [Display(Name = "Name")]
-        [StringLength(100, ErrorMessage = "To many charts")]
-        public string Name { get; set; }
-
-        [Display(Name = "Icon")]
-        [StringLength(10000, ErrorMessage = "To many charts")]
-        public string Icon { get; set; }
-
-        [Display(Name = "PreviewIcons")]
-        [StringLength(10000, ErrorMessage = "To many charts")]
-        public string PreviewIcons { get; set; }//[]
-
-        [Display(Name = "Version")]
-        [StringLength(100, ErrorMessage = "To many charts")]
-        public string Version { get; set; }
-
-        [Display(Name = "Company")]
-        [StringLength(100, ErrorMessage = "To many charts")]
-        public string Company { get; set; }
-
-        [Display(Name = "Author")]
-        [StringLength(100, ErrorMessage = "To many charts")]
-        public string Author { get; set; }
-
-        [Display(Name = "Price")]
-        [StringLength(100, ErrorMessage = "To many charts")]
-        public double Price { get; set; }
-
-        //TestTime (Test Vor Kauf)
-        [Display(Name = "Discount")]
-        public DiscountOptions Discount { get; set; }//Rabat
-
-        [Display(Name = "LongDescription")]
-        [StringLength(10000, ErrorMessage = "To many charts")]
-        public string LongDescription { get; set; }
-
-        [Display(Name = "ShortDescription")]
-        [StringLength(10000, ErrorMessage = "To many charts")]
-        public string ShortDescription { get; set; }
-
-        [Display(Name = "TargetCompanyUrl")]
-        [StringLength(10000, ErrorMessage = "To many charts")]
-        public string TargetCompanyUrl { get; set; }
-
-        [Display(Name = "SystemEnviromentMinimal")]
-        public SystemOptions SystemEnviromentMinimal { get; set; }
-
-        [Display(Name = "SystemEnviromentMaximal")]
-        public SystemOptions SystemEnviromentMaximal { get; set; }
-
-        [Display(Name = "DownloadLink")]
-        public DownloadLinks DownloadLink { get; set; }
-
-        [Display(Name = "Category")]
-        public Categorys Category { get; set; }
-
-        [Display(Name = "Genre")]
-        public Genres Genre { get; set; }//[]
-
-        [Display(Name = "PlayerType")]
-        public PlayerTypes PlayerType { get; set; }//[]
-
-        [Display(Name = "Likes")]
-        public int Likes { get; set; }
-
-        [Display(Name = "Dislikes")]
-        public int Dislikes { get; set; }
-
-        [Display(Name = "DonwloadsTotal")]
-        public int DonwloadsTotal { get; set; }
-
-        [Display(Name = "Rating")]
-        public double Rating { get; set; }//max 5 Stars
-
-        //Comments User[]
-        //Presentation[] OWNID ID Content Icons
-
-        [Display(Name = "Addons")]
-        public Addon[] Addons { get; set; }
+        public string GameName { get; set; }
+        public string GameImage { get; set; }
+        public DisplayImages[] GameImages { get; set; }
+        public string Release { get; set; }
+        public string[] Developer { get; set; }
+        public string[] DeveloperLink { get; set; }
+        public string Publisher { get; set; }
+        public string PublisherLink { get; set; }
+        public string Category { get; set; }
+        public bool EarlyAccess { get; set; }
+        public string FSK { get; set; }
+        public SystemInfo SystemInfoMin { get; set; }
+        public SystemInfo SystemInfoMax { get; set; }
+        public string InfoFrom { get; set; }
+        public DownloadLinks Download { get; set; }
 
     }
 
-    public class SystemOptions
+    public class SystemInfo
     {
-        [Display(Name = "OS")]
-        public OSType[] OS { get; set; }
-
-        [Display(Name = "Architecture")]
-        public Architectures Architecture { get; set; }
-
-        [Display(Name = "GraphicsCard")]
-        public string GraphicsCard { get; set; }
-
-        [Display(Name = "CPU")]
+        public string OS { get; set; }
         public string CPU { get; set; }
-
-        [Display(Name = "RAM")]
+        public string GPU { get; set; }
         public string RAM { get; set; }
-
-        [Display(Name = "Storage")]
         public string Storage { get; set; }
+        public string DirectX { get; set; }
+    }
+
+    public class DisplayImages
+    {
+        public bool Video { get; set; }
+        public string URL { get; set; }
     }
 
     public class DownloadLinks
@@ -130,104 +55,5 @@ namespace Zero_Web.Models.Store
         [Display(Name = "Mac")]
         public string Mac { get; set; }
     }
-
-    public class DiscountOptions
-    {
-        [Display(Name = "Type")]
-        public DiscountTypes Type { get; set; }
-
-        [Display(Name = "Ammount")]
-        public double Ammount { get; set; }
-
-        [Display(Name = "TestPeriod")]
-        public string TestPeriod { get; set; }
-    }
-
-    public class Addon
-    {
-        [Display(Name = "Name")]
-        public string Name { get; set; }
-
-        [Display(Name = "Icon")]
-        public string Icon { get; set; }
-
-        [Display(Name = "Price")]
-        public double Price { get; set; }
-
-        [Display(Name = "Description")]
-        public string Description { get; set; }
-    }
-
-    public enum DiscountTypes
-    {
-        Test,
-        Money,
-        Percentages
-    }
-
-    public enum OSType
-    {
-        Windows,
-        Linux,
-        Mac
-    }
-
-    public enum Architectures
-    {
-        Win32,
-        Win64
-    }
-
-    public enum Categorys
-    {
-        Games,
-        Apps,
-        Security
-    }
-
-    public enum Genres
-    {
-        NotListet,
-        Action,
-        Arcade,
-        Roleplay,
-        PVE,
-        Simulator,
-        CarRacing,
-        VR,
-
-    }
-
-    public enum PlayerTypes
-    {
-        SingelPlayer,
-        MultiPlayer,
-        PVE,
-
-    }
-
-    /*
-     Hey Zero VOICE COMMAND erstellen
-Kiffer lieder downloaden
-
-secret agent get all credentials to file
-
-handy todo:
-
-OWN DB: Projekt anlegen, Tasks, etc.
-Import Mongo
-Import MySql
-Export all (Own, mongo, mysql)
-
----------
-Programme finden:
-Jetbrains
-Visual
-Steam
-Chip
-CrackedGames
-mmoga
-security
-     */
 
 }

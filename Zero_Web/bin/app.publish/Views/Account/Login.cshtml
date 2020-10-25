@@ -1,0 +1,68 @@
+﻿@model  Zero_Web.Models.Account
+@using Zero_Web.Variable;
+@using Zero_Web.Resources.Login;
+
+<head>
+    <link href="~/Content/css/Account/Login.css" rel="stylesheet">
+    <link href="~/Content/css/Account/style.css" rel="stylesheet">
+</head>
+
+@{
+    ViewBag.Title = "Login";
+}
+
+@ViewBag.Error
+
+<div class="LoginBackground container-fluid">
+    <img class="img-fluid w-100" src="@ImageSource.SVG.Login_Background" />
+</div>
+
+<div class="LoginNav container-fluid d-flex flex-row-reverse pt-5">
+    <div class="row float-right pr-5">
+        <a href="#" class="col-auto">@LanguageHandler.loadDBValueSettings("Problem_Login")</a>
+        <a href="@Url.Action("Registration", "Account")" class="col-auto">@LanguageHandler.loadDBValueSettings("Register")</a>
+    </div>
+</div>
+
+<div class="Login container-fluid pt-5">
+
+    <div class="pb-5 pl-3 pr-3">
+        <div class="row justify-content-center">
+            <img class="col-auto" src="@ImageSource.SVG.Logo_White" />
+        </div>
+        <div class="row justify-content-center">
+            <p class="col">@LanguageHandler.loadDBValueSettings("Login_Heading")</p>
+        </div>
+
+        @using (Html.BeginForm())
+        {
+
+            <div class="row pl-5 pr-5 pt-3">
+                @Html.EditorFor(model => model.LoginName, new { htmlAttributes = new { placeholder = @Html.NameFor(model => model.LoginName), maxlength = "100", @class = "col justify-content-center" } })
+                @*@Html.ValidationMessageFor(model => model.Email)*@
+            </div>
+
+            <div class="row pl-5 pr-5 pt-3">
+                @Html.EditorFor(model => model.LoginPassword, new { htmlAttributes = new { placeholder = @Html.NameFor(model => model.LoginPassword), maxlength = "100", @class = "col justify-content-center" } })
+                @*@Html.ValidationMessageFor(model => model.Password)*@
+            </div>
+
+            <div class="row justify-content-center pt-3 pl-5 pr-5">
+                <input class="col" type="submit" value="@LanguageHandler.loadDBValueSettings("Login")">
+            </div>
+
+        }
+
+        <div class="row justify-content-center">
+            <p class="col">@LanguageHandler.loadDBValueSettings("SignIn_with")</p>
+        </div>
+
+        <div class="row justify-content-center">
+            <img class="img-fluid col-md-2" src="~/Content/images/Zero/Logo_White.svg" />
+            <img class="img-fluid col-md-2" src="~/Content/images/Zero/Logo_White.svg" />
+            <img class="img-fluid col-md-2" src="~/Content/images/Zero/Logo_White.svg" />
+        </div>
+
+    </div>
+
+</div>
