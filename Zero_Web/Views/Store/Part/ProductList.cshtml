@@ -1,7 +1,8 @@
-﻿@using Zero_Web.Variable;
+﻿@using Zero_Web.database;
+@using Zero_Web.Controllers;
 
 <head>
-   <link href="~/Content/css/Store/Part/ProductList.css" rel="stylesheet">
+    <link href="~/Content/css/Store/Part/ProductList.css" rel="stylesheet">
 </head>
 
 <div class="ProductList container-fluid pt-5 pb-5">
@@ -15,27 +16,37 @@
 
         <div class="List row pl-5 pr-5">
             @{
-                bool sale = true;
 
                 for (int i = 0; i < 6; i++)
                 {
+                    var storeItem = MongoDBManager.Instance.GetRandomStoreItem();
+                    <!--while (StoreController.GetAlreadyShown().Contains(storeItem.GameName))
+                    {
+                        System.Threading.Thread.Sleep(500);
+                        storeItem = MongoDBManager.Instance.GetRandomStoreItem();
+                    }-->
+                    StoreController.GetAlreadyShown().Add(storeItem.GameName);
+
+                    var storeItemPrice = MongoDBManager.Instance.GetStoreItemPrice(storeItem);
+                    bool sale = storeItemPrice.price[0].GamePrice == null;
+
                     if (!sale)
                     {
                         <div class="Item col-6 col-md-2">
-                            <img class="ProductIcon img-fluid" src="@ImageSource.SVG.ExampleProduct" />
-                            <p class="ProductName pt-3">Minecraft Story Mode</p>
-                            <p class="Price">9,99€</p>
+                            <img class="ProductIcon img-fluid" src="@storeItem.GameImage" />
+                            <p class="ProductName pt-3">@storeItem.GameName</p>
+                            <p class="Price">@storeItemPrice.price[0].GamePrice</p>
                         </div>
                     }
                     else
                     {
                         <div class="Item col-6 col-md-2">
-                            <img class="ProductIcon img-fluid" src="@ImageSource.SVG.ExampleProduct" />
-                            <p class="ProductName pt-3">Minecraft Story Mode</p>
+                            <img class="ProductIcon img-fluid" src="@storeItem.GameImage" />
+                            <p class="ProductName pt-3">@storeItem.GameName</p>
                             <div class="row">
-                                <s class="OldPrice col-auto">13,99€</s>
-                                <p class="NewPrice col-auto">6,99€</p>
-                                <p class="Discount col-auto">-50%</p>
+                                <p class="OldPrice col-auto">@storeItemPrice.price[0].PriceOld</p>
+                                <p class="NewPrice col-auto">@storeItemPrice.price[0].PriceNew</p>
+                                <p class="Discount col-auto">@storeItemPrice.price[0].Reduced</p>
                             </div>
                         </div>
                     }

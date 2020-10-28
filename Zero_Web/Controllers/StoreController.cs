@@ -1,12 +1,16 @@
-﻿using System.Web.Mvc;
+﻿using System.Collections;
+using System.Web.Mvc;
 
 namespace Zero_Web.Controllers
 {
     public class StoreController : Controller
     {
 
+        private static ArrayList alreadyShown;
+
         public ActionResult Index()
         {
+            alreadyShown = new ArrayList();
             return View();
         }
 
@@ -28,6 +32,11 @@ namespace Zero_Web.Controllers
         public ActionResult ZeroPlus()
         {
             return View();
+        }
+
+        public static ArrayList GetAlreadyShown()
+        {
+            return alreadyShown;
         }
 
     }

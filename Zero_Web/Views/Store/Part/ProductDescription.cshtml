@@ -1,4 +1,6 @@
 ﻿@using Zero_Web.Variable;
+@using Zero_Web.database;
+@using Zero_Web.Controllers;
 
 <head>
     <link href="~/Content/css/Store/Part/ProductDescription.css" rel="stylesheet">
@@ -7,25 +9,48 @@
 <div class="ProductDescription container-fluid pt-5 pb-5">
     <div class="Combind container-fluid">
         <div class="row pl-5 pr-5">
-            <div class="LeftImage col-auto col-md-6">
-                <img class="DisplayImage w-100 img-fluid" src="@ImageSource.SVG.ProductDescription" />
-            </div>
+            @{
+                var storeItem = MongoDBManager.Instance.GetRandomStoreItem();
+                <!--while (StoreController.GetAlreadyShown().Contains(storeItem.GameName))
+                {
+                    System.Threading.Thread.Sleep(500);
+                    storeItem = MongoDBManager.Instance.GetRandomStoreItem();
+                }-->
+                StoreController.GetAlreadyShown().Add(storeItem.GameName);
 
-            <div class="SideDescription col-auto col-md-6 pt-4">
-                <p class="DescriptionInfo">Für dich empfohlen</p>
-                <b class="AppName">Resident Evil 7</b>
-                <p class="CompanyName">Capcom</p>
-                <p class="AppDescription">
-                    Resident Evil 7: Biohazard is a survival horror video game developed and published by Capcom, released in January 2017 for Microsoft Windows, PlayStation 4, Xbox One and in May 2018 for the Nintendo Switch in Japan
-                </p>
-                <div class="BottomBar container-fluid pt-5">
-                    <div class="row">
-                        <button class="GetApp col-auto col-md-6">Early Access testen</button>
-                        <img class="Like col-auto col-md-2 img-fluid" src="@ImageSource.SVG.Like" />
-                        <img class="Dislike col-auto col-md-2 img-fluid" src="@ImageSource.SVG.Dislike" />
+                var storeItemPrice = MongoDBManager.Instance.GetStoreItemPrice(storeItem);
+                var storeItemLanguage = MongoDBManager.Instance.GetStoreItemLanguage(storeItem);
+
+                bool sale = storeItemPrice.price[0].GamePrice == null;
+
+                <div class="LeftImage col-auto col-md-6">
+                    <img class="DisplayImage w-100 img-fluid" src="@storeItem.GameImage" />
+                </div>
+
+
+                <div class="SideDescription col-auto col-md-6 pt-4">
+                    <p class="DescriptionInfo">Für dich empfohlen</p>
+                    <b class="AppName">@storeItem.GameName</b>
+                    <p class="CompanyName">@storeItem.Publisher</p>
+                    <p class="AppDescription">
+                        @storeItemLanguage.language[0].ShortDescription
+                    </p>
+                    <div class="BottomBar container-fluid pt-5">
+                        <div class="row">
+                            @if (!sale)
+                            {
+                                <button class="GetApp col-auto col-md-6">@storeItemPrice.price[0].GamePrice</button>
+                            }
+                            else
+                            {
+                                <button class="GetApp col-auto col-md-6">@storeItemPrice.price[0].PriceOld | @storeItemPrice.price[0].PriceNew | @storeItemPrice.price[0].Reduced</button>
+                            }
+                            <img class="Like col-auto col-md-2 img-fluid" src="@ImageSource.SVG.Like" />
+                            <img class="Dislike col-auto col-md-2 img-fluid" src="@ImageSource.SVG.Dislike" />
+                        </div>
                     </div>
                 </div>
-            </div>
+            }
         </div>
     </div>
 </div>

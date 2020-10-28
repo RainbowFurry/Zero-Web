@@ -1,7 +1,8 @@
-﻿@using Zero_Web.Variable;
+﻿@using Zero_Web.database;
+@using Zero_Web.Controllers;
 
 <head>
-   <link href="~/Content/css/Store/Part/ProductListLarge.css" rel="stylesheet">
+    <link href="~/Content/css/Store/Part/ProductListLarge.css" rel="stylesheet">
 </head>
 
 <div class="ProductListLarge container-fluid pt-5 pb-5">
@@ -13,26 +14,51 @@
             @{
                 for (int i = 0; i < 2; i++)
                 {
+                    var storeItem = MongoDBManager.Instance.GetRandomStoreItem();
+                    <!--while (StoreController.GetAlreadyShown().Contains(storeItem.GameName))
+                    {
+                        System.Threading.Thread.Sleep(500);
+                        storeItem = MongoDBManager.Instance.GetRandomStoreItem();
+                    }-->
+                    StoreController.GetAlreadyShown().Add(storeItem.GameName);
+
+                    var storeItemPrice = MongoDBManager.Instance.GetStoreItemPrice(storeItem);
+
+                    bool sale = storeItemPrice.price[0].GamePrice == null;
+
                     <div class="LargeItem col-md-6">
 
-                        <img class="AppIconLarge w-100 img-fluid" src="@ImageSource.SVG.ProductListLarge" />
+                        <img class="AppIconLarge w-100 img-fluid" src="@storeItem.GameImage" />
 
-                        <p class="AppName pt-3">Fortnite: Battle Royale</p>
+                        <p class="AppName pt-3">@storeItem.GameName</p>
 
-                        <div class="BottomPriceBar col-auto">
-                            <div class="container-fluid">
-                                <div class="row">
-                                    <s class="OldPrice col-auto">13,99€</s>
-                                    <p class="NewPrice col-auto">6,99€</p>
-                                    <p class="Discount col-auto">-50%</p>
+                        @{
+                            if (!sale)
+                            {
+                                <div class="BottomPriceBar col-auto">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <s class="Price col-auto">@storeItemPrice.price[0].GamePrice</s>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-
+                            }
+                            else
+                            {
+                                <div class="BottomPriceBar col-auto">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <s class="OldPrice col-auto">@storeItemPrice.price[0].PriceOld</s>
+                                            <p class="NewPrice col-auto">@storeItemPrice.price[0].PriceNew</p>
+                                            <p class="Discount col-auto">@storeItemPrice.price[0].Reduced</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        }
                     </div>
                 }
             };
-
         </div>
     </div>
 </div>

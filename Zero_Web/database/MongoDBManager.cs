@@ -3,30 +3,24 @@ using MongoDB.Driver;
 using System;
 using System.Configuration;
 using Zero_Web.Models.Accounts;
+using Zero_Web.Models.Store;
 
 namespace Zero_Web.database
 {
     public class MongoDBManager
     {
-#if DEBUG
-        private static protected readonly string user = ConfigurationManager.AppSettings["MongoDB_User_Debug"];
-        private static protected readonly string password = ConfigurationManager.AppSettings["MongoDB_Password_Debug"];
-        private static protected readonly string host = ConfigurationManager.AppSettings["MongoDB_Host_Debug"];
-        private static protected readonly string port = ConfigurationManager.AppSettings["MongoDB_Port_Debug"];
-        private static protected readonly string database = ConfigurationManager.AppSettings["MongoDB_Database_Debug"];
-#else
- private static protected readonly string user = ConfigurationManager.AppSettings["MongoDB_User"];
+
+        private static protected readonly string user = ConfigurationManager.AppSettings["MongoDB_User"];
         private static protected readonly string password = ConfigurationManager.AppSettings["MongoDB_Password"];
         private static protected readonly string host = ConfigurationManager.AppSettings["MongoDB_Host"];
         private static protected readonly string port = ConfigurationManager.AppSettings["MongoDB_Port"];
         private static protected readonly string database = ConfigurationManager.AppSettings["MongoDB_Database"];
-#endif
 
         public static MongoDBManager Instance { get; set; }
         public UserModel UserModel { get; set; }
         private readonly MongoClient client;
         private readonly IMongoDatabase db;
-        private static protected readonly string connectionString = "mongodb://" + user + ":" + password + "@" + host + ":" + port + "/" + database;
+        private protected readonly string connectionString = "mongodb://" + user + ":" + password + "@" + host + ":" + port + "/" + database;
 
         public MongoDBManager()
         {
@@ -34,30 +28,6 @@ namespace Zero_Web.database
             client = new MongoClient(connectionString);
             db = client.GetDatabase(database);
             UserModel = new UserModel();
-        }
-
-        /// <summary>
-        /// Create a new MongoDB Table Value
-        /// </summary>
-        /// <param name="searchWord"></param>
-        /// <param name="result"></param>
-        public bool CreateEntry(string table, string searchWord, string result)
-        {
-            try
-            {
-                var things = db.GetCollection<BsonDocument>(table);
-
-                BsonDocument bDocument = new BsonDocument(searchWord, result);
-                things.InsertOne(bDocument);
-
-                System.Diagnostics.Debug.WriteLine("MongoDB Entry created successfull!");
-                return true;
-            }
-            catch (Exception)
-            {
-                System.Diagnostics.Debug.WriteLine("MongoDB Entry created Error!");
-                return false;
-            }
         }
 
         /// <summary>
@@ -79,6 +49,37 @@ namespace Zero_Web.database
                 System.Diagnostics.Debug.WriteLine("MongoDB Entry created Error!");
                 return false;
             }
+        }
+
+        public IMongoCollection<StoreItem> GetStoreItemCollection()
+        {
+            return db.GetCollection<StoreItem>("StoreItemTEMP");
+        }
+
+        public IMongoCollection<StoreItemPrice> GetStoreItemPriceCollection()
+        {
+            return db.GetCollection<StoreItemPrice>("StoreItemPriceTEMP");
+        }
+
+        public StoreItem GetRandomStoreItem()
+        {
+            var listOfDocuments = GetStoreItemCollection().Find(Builders<StoreItem>.Filter.Empty).ToList();
+            return listOfDocuments[new Random().Next(0, listOfDocuments.Count - 1)];
+        }
+
+        public StoreItemPrice GetStoreItemPrice(StoreItem storeItem)
+        {
+            return GetStoreItemPriceCollection().Find(item => item.ID == storeItem.ID).First();
+        }
+
+        public IMongoCollection<StoreItemLanguage> GetStoreItemLanguageCollection()
+        {
+            return db.GetCollection<StoreItemLanguage>("StoreItemLanguageTEMP");
+        }
+
+        public StoreItemLanguage GetStoreItemLanguage(StoreItem storeItem)
+        {
+            return GetStoreItemLanguageCollection().Find(item => item.ID == storeItem.ID).First();
         }
 
         /// <summary>
