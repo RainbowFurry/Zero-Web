@@ -1,0 +1,121 @@
+﻿[Zero-Tooltip] {
+  position: relative;
+}
+[Zero-Tooltip]:after {
+  position: absolute;
+  font-size: 13px;
+  border-radius: 0.4rem;
+  content: attr(Zero-Tooltip);
+  padding: 12.8px;
+  padding: 0.8rem;
+  background-color: rgba(17, 17, 17, 0.8);
+  -webkit-box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  line-height: 20px;
+  line-height: 1.25rem;
+  text-align: left;
+  z-index: 1;
+  pointer-events: none;
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  bottom: 100%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 10px);
+  transform: translate(-50%, 10px);
+  white-space: pre;
+  width: auto;
+}
+[Zero-Tooltip]:after {
+  opacity: 0;
+}
+[Zero-Tooltip]:hover {
+  overflow: visible;
+}
+[Zero-Tooltip]:hover:after {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate(-50%, -10px);
+  transform: translate(-50%, -10px);
+}
+[Zero-Tooltip].Zero--bottom:after,
+[Zero-Tooltip][Zero-Tooltip-pos="bottom"]:after {
+  bottom: auto;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -10px);
+  transform: translate(-50%, -10px);
+}
+[Zero-Tooltip].Zero--bottom:hover:after,
+[Zero-Tooltip][Zero-Tooltip-pos="bottom"]:hover:after {
+  -webkit-transform: translate(-50%, 10px);
+  transform: translate(-50%, 10px);
+}
+[Zero-Tooltip].Zero--left:after,
+[Zero-Tooltip][Zero-Tooltip-pos="left"]:after {
+  bottom: auto;
+  left: auto;
+  top: 50%;
+  right: 100%;
+  -webkit-transform: translate(10px, -50%);
+  transform: translate(10px, -50%);
+}
+[Zero-Tooltip].Zero--left:hover:after,
+[Zero-Tooltip][Zero-Tooltip-pos="left"]:hover:after {
+  -webkit-transform: translate(-10px, -50%);
+  transform: translate(-10px, -50%);
+}
+[Zero-Tooltip].Zero--right:after,
+[Zero-Tooltip][Zero-Tooltip-pos="right"]:after {
+  bottom: auto;
+  top: 50%;
+  left: 100%;
+  -webkit-transform: translate(-10px, -50%);
+  transform: translate(-10px, -50%);
+}
+[Zero-Tooltip].Zero--right:hover:after,
+[Zero-Tooltip][Zero-Tooltip-pos="right"]:hover:after {
+  -webkit-transform: translate(10px, -50%);
+  transform: translate(10px, -50%);
+}
+[Zero-Tooltip][Zero-Tooltip-length="small"]:after,
+[Zero-Tooltip].Zero-length--small:after {
+  white-space: normal;
+  width: 80px;
+}
+[Zero-Tooltip][Zero-Tooltip-length="medium"]:after,
+[Zero-Tooltip].Zero-length--medium:after {
+  white-space: normal;
+  width: 150px;
+}
+[Zero-Tooltip][Zero-Tooltip-length="large"]:after,
+[Zero-Tooltip].Zero-length--large:after {
+  white-space: normal;
+  width: 260px;
+}
+[Zero-Tooltip][Zero-Tooltip-length="fit"]:after,
+[Zero-Tooltip].Zero-length--fit:after {
+  white-space: normal;
+  width: 100%;
+}
+[Zero-Tooltip][Zero-Tooltip-align="right"]:after,
+[Zero-Tooltip].Zero-align--right:after {
+  text-align: right;
+}
+[Zero-Tooltip][Zero-Tooltip-align="center"]:after,
+[Zero-Tooltip].Zero-align--center:after {
+  text-align: center;
+}
+[Zero-Tooltip=""]:after {
+  visibility: hidden !important;
+}
+/*
+a[title]:hover:after{
+    content: attr(title);
+    position: absolute;
+    }
+*/

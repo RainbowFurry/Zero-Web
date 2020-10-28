@@ -1,0 +1,36 @@
+﻿.Panel-Loading-BG {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 8010;
+}
+#Panel-Loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -22px;
+  margin-left: -22px;
+  background-position: 0 -108px;
+  opacity: 0.8;
+  cursor: pointer;
+  z-index: 8060;
+}
+#Panel-Loading div {
+  width: 44px;
+  height: 44px;
+}
+.divLoading.container {
+  z-index: 9999;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #1D1D1D;
+}
+.LoadingImage {
+  z-index: 9999;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}

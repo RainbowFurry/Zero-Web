@@ -120,7 +120,19 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Content\csharp\Zero\CookieManager.cs" />
+    <Compile Include="Content\csharp\Zero\HashPassword.cs" />
+    <Compile Include="Content\csharp\Zero\LogManager.cs" />
+    <Compile Include="Content\csharp\Zero\MailManager.cs" />
+    <Compile Include="Content\csharp\Zero\RoleManagement.cs" />
+    <Compile Include="Content\csharp\Zero\SendApplyEmail.cs" />
+    <Compile Include="Content\csharp\Zero\SessionManager.cs" />
+    <Compile Include="Content\csharp\Zero\UserTagGenerator.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CookiesController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SetupController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -131,12 +143,124 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\Error\BadRequest.css">
+      <DependentUpon>BadRequest.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Error\BadRequest.min.css">
+      <DependentUpon>BadRequest.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Error\Forbidden.css">
+      <DependentUpon>Forbidden.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Error\Forbidden.min.css">
+      <DependentUpon>Forbidden.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Error\Index.css">
+      <DependentUpon>Index.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Error\Index.min.css">
+      <DependentUpon>Index.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Error\InternalServerError.css">
+      <DependentUpon>InternalServerError.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Error\InternalServerError.min.css">
+      <DependentUpon>InternalServerError.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Error\NotFound.css">
+      <DependentUpon>NotFound.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Error\NotFound.min.css">
+      <DependentUpon>NotFound.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Error\style.css">
+      <DependentUpon>style.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Error\style.min.css">
+      <DependentUpon>style.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Error\Unauthorized.css">
+      <DependentUpon>Unauthorized.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Error\Unauthorized.min.css">
+      <DependentUpon>Unauthorized.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Zero\AlertWindow.css">
+      <DependentUpon>AlertWindow.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Zero\AlertWindow.min.css">
+      <DependentUpon>AlertWindow.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Zero\BrowserToast.css">
+      <DependentUpon>BrowserToast.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Zero\BrowserToast.min.css">
+      <DependentUpon>BrowserToast.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Zero\ContextMenu.css">
+      <DependentUpon>ContextMenu.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Zero\ContextMenu.min.css">
+      <DependentUpon>ContextMenu.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Zero\Footer.css">
+      <DependentUpon>Footer.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Zero\Footer.min.css">
+      <DependentUpon>Footer.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Zero\Nav.css">
+      <DependentUpon>Nav.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Zero\Nav.min.css">
+      <DependentUpon>Nav.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Zero\Socials.css">
+      <DependentUpon>Socials.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Zero\Socials.min.css">
+      <DependentUpon>Socials.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Zero\SplashScreen.css">
+      <DependentUpon>SplashScreen.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Zero\SplashScreen.min.css">
+      <DependentUpon>SplashScreen.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Zero\Zero.css">
+      <DependentUpon>Zero.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Zero\Zero.min.css">
+      <DependentUpon>Zero.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Zero\ZeroTooltip.css">
+      <DependentUpon>ZeroTooltip.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Zero\ZeroTooltip.min.css">
+      <DependentUpon>ZeroTooltip.css</DependentUpon>
+    </Content>
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\css\Error\BadRequest.less" />
+    <Content Include="Content\css\Error\Forbidden.less" />
+    <Content Include="Content\css\Error\Index.less" />
+    <Content Include="Content\css\Error\InternalServerError.less" />
+    <Content Include="Content\css\Error\NotFound.less" />
+    <Content Include="Content\css\Error\style.less" />
+    <Content Include="Content\css\Error\Unauthorized.less" />
+    <Content Include="Content\css\Zero\AlertWindow.less" />
+    <Content Include="Content\css\Zero\BrowserToast.less" />
+    <Content Include="Content\css\Zero\ContextMenu.less" />
+    <Content Include="Content\css\Zero\Footer.less" />
+    <Content Include="Content\css\Zero\Nav.less" />
+    <Content Include="Content\css\Zero\Socials.less" />
+    <Content Include="Content\css\Zero\SplashScreen.less" />
+    <Content Include="Content\css\Zero\Zero.less" />
+    <Content Include="Content\css\Zero\ZeroTooltip.less" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -157,14 +281,25 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Error\BadRequest.cshtml" />
+    <Content Include="Views\Error\Forbidden.cshtml" />
+    <Content Include="Views\Error\Index.cshtml" />
+    <Content Include="Views\Error\InternalServerError.cshtml" />
+    <Content Include="Views\Error\NotFound.cshtml" />
+    <Content Include="Views\Error\Unauthorized.cshtml" />
+    <Content Include="Views\Shared\BrowserToast.cshtml" />
+    <Content Include="Views\Shared\ContextMenu.cshtml" />
+    <Content Include="Views\Shared\CopyRight.cshtml" />
+    <Content Include="Views\Shared\Footer.cshtml" />
+    <Content Include="Views\Shared\Nav.cshtml" />
+    <Content Include="Views\Shared\NoScript.cshtml" />
+    <Content Include="Views\Shared\SplashScreen.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\images\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
