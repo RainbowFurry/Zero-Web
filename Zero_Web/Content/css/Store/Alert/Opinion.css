@@ -1,5 +1,5 @@
 ﻿.Opinion {
-  background-color: #1D1D1D;
+  background-color: var(--DarkTheme);
 }
 p.Question {
   opacity: 1;

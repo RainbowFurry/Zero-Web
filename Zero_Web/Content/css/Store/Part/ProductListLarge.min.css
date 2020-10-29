@@ -1,1 +1,1 @@
-﻿.ProductListLarge{background-color:#1d1d1d;}p.ProductListLargeDescription{opacity:1;font-size:25px;}p.AppName{opacity:.8;}s.OldPrice{font-size:20px;opacity:.2;}.Combind{max-width:1920px;}
+﻿.ProductListLarge{background-color:var(--DarkTheme);}p.ProductListLargeDescription{opacity:1;font-size:25px;}p.AppName{opacity:.8;}s.OldPrice{font-size:20px;opacity:.2;}.Combind{max-width:1920px;}

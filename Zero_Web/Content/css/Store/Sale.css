@@ -21,7 +21,7 @@ p.SaleDescription {
 }
 /* Sale Filter Bar */
 .SaleFilterNav {
-  background-color: #1D1D1D;
+  background-color: var(--DarkTheme);
   height: 8.3vh;
   padding-top: 2.5vh;
   border-bottom: solid 1px var(--MainColor);

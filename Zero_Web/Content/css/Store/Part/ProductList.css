@@ -28,7 +28,7 @@ p.ProductName {
   font-size: 20px;
 }
 .ProductList {
-  background-color: #1D1D1D;
+  background-color: var(--DarkTheme);
   width: 100%;
   height: auto;
 }

@@ -10,7 +10,7 @@
   font-size: 16px;
 }
 .ProductScrollList {
-  background-color: #1D1D1D;
+  background-color: var(--DarkTheme);
 }
 .ProductScrollList b {
   font-size: 25px;
