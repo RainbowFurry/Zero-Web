@@ -11,6 +11,7 @@ namespace Zero_Web.Models.Store
         public string GameImage { get; set; }
         public DisplayImages[] GameImages { get; set; }
         public string Release { get; set; }
+        public string InfoFromURL { get; set; }
         public string[] Developer { get; set; }
         public string[] DeveloperLink { get; set; }
         public string Publisher { get; set; }

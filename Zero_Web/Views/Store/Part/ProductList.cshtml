@@ -16,10 +16,12 @@
 
         <div class="List row pl-5 pr-5">
             @{
-
                 for (int i = 0; i < 6; i++)
                 {
                     var storeItem = MongoDBManager.Instance.GetRandomStoreItem();
+                    if (storeItem.ID == null) {
+                        continue;
+                    }
                     <!--while (StoreController.GetAlreadyShown().Contains(storeItem.GameName))
                     {
                         System.Threading.Thread.Sleep(500);

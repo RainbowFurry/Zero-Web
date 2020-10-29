@@ -1,7 +1,11 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Driver;
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Configuration;
+using System.Linq;
+using Zero_Web.Controllers;
 using Zero_Web.Models.Accounts;
 using Zero_Web.Models.Store;
 
@@ -61,14 +65,47 @@ namespace Zero_Web.database
             return db.GetCollection<StoreItemPrice>("StoreItemPriceTEMP");
         }
 
+        public List<StoreItem> GetAllStoreItems()
+        {
+            return GetStoreItemCollection().Find(Builders<StoreItem>.Filter.Empty).ToList();
+        }
+
+        public ArrayList GetFreeStoreItems()
+        {
+            var tempList = new ArrayList();
+            var listOfDocuments = GetStoreItemPriceCollection().Find(Builders<StoreItemPrice>.Filter.Eq<bool>("Free", true)).ToList();
+            listOfDocuments.ForEach(document =>
+            {
+                if (document.price[0].Free == true)
+                    tempList.Add(GetStoreItemCollection().Find(item => item.ID == document.ID).ToList().First());
+            });
+            return tempList;
+        }
+
+        public ArrayList GetSaleStoreItems()
+        {
+            var tempList = new ArrayList();
+            var listOfDocuments = GetStoreItemPriceCollection().Find(Builders<StoreItemPrice>.Filter.Eq<string>("GamePrice", null)).ToList();
+            listOfDocuments.ForEach(document =>
+            {
+                if (document.price[0].GamePrice == null)
+                    tempList.Add(GetStoreItemCollection().Find(item => item.ID == document.ID).ToList().First());
+            });
+            return tempList;
+        }
+
         public StoreItem GetRandomStoreItem()
         {
-            var listOfDocuments = GetStoreItemCollection().Find(Builders<StoreItem>.Filter.Empty).ToList();
-            return listOfDocuments[new Random().Next(0, listOfDocuments.Count - 1)];
+            var listOfDocuments = StoreController.GetContent();
+            if (listOfDocuments.Count == 0)
+                return new StoreItem();
+            return listOfDocuments[new Random().Next(0, listOfDocuments.Count - 1)] as StoreItem;
         }
 
         public StoreItemPrice GetStoreItemPrice(StoreItem storeItem)
         {
+            if (storeItem.ID == null)
+                return new StoreItemPrice();
             return GetStoreItemPriceCollection().Find(item => item.ID == storeItem.ID).First();
         }
 
