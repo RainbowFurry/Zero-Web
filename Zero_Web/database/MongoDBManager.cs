@@ -4,7 +4,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Configuration;
-using System.Diagnostics;
 using System.Linq;
 using Zero_Web.Controllers;
 using Zero_Web.Models.Accounts;
@@ -77,7 +76,8 @@ namespace Zero_Web.database
             var listOfDocuments = GetStoreItemPriceCollection().Find(Builders<StoreItemPrice>.Filter.Eq<bool>("Free", true)).ToList();
             listOfDocuments.ForEach(document =>
             {
-                tempList.Add(GetStoreItemCollection().Find(item => item.ID == document.ID).ToList().First());
+                if (document.price[0].Free == true)
+                    tempList.Add(GetStoreItemCollection().Find(item => item.ID == document.ID).ToList().First());
             });
             return tempList;
         }
@@ -88,7 +88,6 @@ namespace Zero_Web.database
             var listOfDocuments = GetStoreItemPriceCollection().Find(Builders<StoreItemPrice>.Filter.Eq<string>("GamePrice", null)).ToList();
             listOfDocuments.ForEach(document =>
             {
-                Debug.WriteLine(document.price[0].GamePrice);
                 if (document.price[0].GamePrice == null)
                     tempList.Add(GetStoreItemCollection().Find(item => item.ID == document.ID).ToList().First());
             });
