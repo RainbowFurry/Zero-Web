@@ -261,6 +261,7 @@
     <Content Include="Content\css\Zero\SplashScreen.less" />
     <Content Include="Content\css\Zero\Zero.less" />
     <Content Include="Content\css\Zero\ZeroTooltip.less" />
+    <Content Include="manifest.json" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -272,6 +273,20 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\Zero\AlertWindow.js" />
+    <Content Include="Scripts\Zero\AlertWindowConfig.js" />
+    <Content Include="Scripts\Zero\Barcode.js" />
+    <Content Include="Scripts\Zero\BrowserToast.js" />
+    <Content Include="Scripts\Zero\BrowserToastConfig.js" />
+    <Content Include="Scripts\Zero\ContextMenu.js" />
+    <Content Include="Scripts\Zero\Cookie.js" />
+    <Content Include="Scripts\Zero\CookieRequest.js" />
+    <Content Include="Scripts\Zero\DeviceInfo.js" />
+    <Content Include="Scripts\Zero\DevicePermissionRequest.js" />
+    <Content Include="Scripts\Zero\PushNotification.js" />
+    <Content Include="Scripts\Zero\ShortCuts.js" />
+    <Content Include="Scripts\Zero\SplashScreen.js" />
+    <Content Include="serviceworker.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

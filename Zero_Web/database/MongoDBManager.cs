@@ -73,11 +73,10 @@ namespace Zero_Web.database
         public ArrayList GetFreeStoreItems()
         {
             var tempList = new ArrayList();
-            var listOfDocuments = GetStoreItemPriceCollection().Find(Builders<StoreItemPrice>.Filter.Eq<bool>("Free", true)).ToList();
+            var listOfDocuments = GetStoreItemPriceCollection().Find(item => item.price[0].Free).ToList();
             listOfDocuments.ForEach(document =>
             {
-                if (document.price[0].Free == true)
-                    tempList.Add(GetStoreItemCollection().Find(item => item.ID == document.ID).ToList().First());
+                tempList.Add(GetStoreItemCollection().Find(item => item.ID == document.ID).ToList().First());
             });
             return tempList;
         }
@@ -88,8 +87,7 @@ namespace Zero_Web.database
             var listOfDocuments = GetStoreItemPriceCollection().Find(item => item.price[0].GamePrice == "").ToList();
             listOfDocuments.ForEach(document =>
             {
-                if (document.price[0].GamePrice == null)
-                    tempList.Add(GetStoreItemCollection().Find(item => item.ID == document.ID).ToList().First());
+                tempList.Add(GetStoreItemCollection().Find(item => item.ID == document.ID).ToList().First());
             });
             return tempList;
         }

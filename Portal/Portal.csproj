@@ -128,15 +128,27 @@
     <Compile Include="Content\csharp\Zero\SendApplyEmail.cs" />
     <Compile Include="Content\csharp\Zero\SessionManager.cs" />
     <Compile Include="Content\csharp\Zero\UserTagGenerator.cs" />
-    <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\CookiesController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\SetupController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Store\StoreItem.cs" />
+    <Compile Include="Models\Store\StoreItemDLC.cs" />
+    <Compile Include="Models\Store\StoreItemLanguage.cs" />
+    <Compile Include="Models\Store\StoreItemPrice.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Index\English.Designer.cs">
+      <DependentUpon>English.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Index\German.Designer.cs">
+      <DependentUpon>German.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Index\LanguageHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -239,6 +251,18 @@
     <Content Include="Content\css\Zero\ZeroTooltip.min.css">
       <DependentUpon>ZeroTooltip.css</DependentUpon>
     </Content>
+    <Content Include="Content\images\FSK\FSK_0.svg" />
+    <Content Include="Content\images\FSK\FSK_12.svg" />
+    <Content Include="Content\images\FSK\FSK_16.svg" />
+    <Content Include="Content\images\FSK\FSK_18.svg" />
+    <Content Include="Content\images\FSK\FSK_6.svg" />
+    <Content Include="Content\images\icons\Search.svg" />
+    <Content Include="Content\images\Zero\Logo.ico" />
+    <Content Include="Content\images\Zero\Logo_Filled.svg" />
+    <Content Include="Content\images\icons\Menu.svg" />
+    <Content Include="Content\images\icons\Save.svg" />
+    <Content Include="Content\images\icons\Settings.svg" />
+    <Content Include="Content\images\Zero\Logo_White_Filled.svg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -261,6 +285,7 @@
     <Content Include="Content\css\Zero\SplashScreen.less" />
     <Content Include="Content\css\Zero\Zero.less" />
     <Content Include="Content\css\Zero\ZeroTooltip.less" />
+    <Content Include="manifest.json" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -272,6 +297,20 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\Zero\AlertWindow.js" />
+    <Content Include="Scripts\Zero\AlertWindowConfig.js" />
+    <Content Include="Scripts\Zero\Barcode.js" />
+    <Content Include="Scripts\Zero\BrowserToast.js" />
+    <Content Include="Scripts\Zero\BrowserToastConfig.js" />
+    <Content Include="Scripts\Zero\ContextMenu.js" />
+    <Content Include="Scripts\Zero\Cookie.js" />
+    <Content Include="Scripts\Zero\CookieRequest.js" />
+    <Content Include="Scripts\Zero\DeviceInfo.js" />
+    <Content Include="Scripts\Zero\DevicePermissionRequest.js" />
+    <Content Include="Scripts\Zero\PushNotification.js" />
+    <Content Include="Scripts\Zero\ShortCuts.js" />
+    <Content Include="Scripts\Zero\SplashScreen.js" />
+    <Content Include="serviceworker.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -282,7 +321,6 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Nav.cshtml" />
     <Content Include="Views\Shared\Footer.cshtml" />
     <Content Include="Views\Shared\NoScript.cshtml" />
@@ -296,11 +334,12 @@
     <Content Include="Views\Error\InternalServerError.cshtml" />
     <Content Include="Views\Error\NotFound.cshtml" />
     <Content Include="Views\Error\Unauthorized.cshtml" />
+    <Content Include="Views\Home\Dashboard.cshtml" />
+    <Content Include="Views\Home\Products.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\images\" />
-    <Folder Include="Models\" />
+    <Folder Include="Resources\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -314,6 +353,16 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Index\English.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>English.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Index\German.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>German.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

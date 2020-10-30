@@ -542,6 +542,17 @@
     <Content Include="Content\css\Zero\Nav.min.css">
       <DependentUpon>Nav.css</DependentUpon>
     </Content>
+    <Content Include="Content\images\Dealer\Epic.svg" />
+    <Content Include="Content\images\Dealer\GOG.svg" />
+    <Content Include="Content\images\Dealer\InstandGaming.svg" />
+    <Content Include="Content\images\Dealer\MMOGA.png" />
+    <Content Include="Content\images\Dealer\PikPng.com_steam-icon-png_1158055.png" />
+    <Content Include="Content\images\Dealer\Ubisoft.svg" />
+    <Content Include="Content\images\FSK\FSK_0.svg" />
+    <Content Include="Content\images\FSK\FSK_12.svg" />
+    <Content Include="Content\images\FSK\FSK_16.svg" />
+    <Content Include="Content\images\FSK\FSK_18.svg" />
+    <Content Include="Content\images\FSK\FSK_6.svg" />
     <Content Include="Content\images\icons\Logo.ico" />
     <Content Include="Content\images\Zero\Add.svg" />
     <Content Include="Content\images\Zero\AlertBackground.svg" />
@@ -705,10 +716,10 @@
     <Content Include="Content\css\Information\Feedback.less" />
     <Content Include="Content\css\Information\Blog.less" />
     <Content Include="Content\css\Account\ForgotPassword.less" />
-    <Content Include="Content\css\Product\Download.less" />
-    <Content Include="Content\css\Product\Status.less" />
-    <Content Include="Content\css\Product\WhyZero.less" />
-    <Content Include="Content\css\Product\style.less" />
+    <Content Include="Content\css\Home\Download.less" />
+    <Content Include="Content\css\Home\Status.less" />
+    <Content Include="Content\css\Home\WhyZero.less" />
+    <Content Include="Content\css\Product\Index.less" />
     <Content Include="Content\css\Home\Index.less" />
     <Content Include="Content\css\Store\Index.less" />
     <Content Include="Content\css\Store\Part\ProductDescription.less" />
@@ -797,10 +808,9 @@
     <Content Include="Views\Information\Feedback.cshtml" />
     <Content Include="Views\Information\Developer.cshtml" />
     <Content Include="Views\Information\Index.cshtml" />
-    <Content Include="Views\Product\Download.cshtml" />
-    <Content Include="Views\Product\WhyZero.cshtml" />
-    <Content Include="Views\Product\Index.cshtml" />
-    <Content Include="Views\Product\Status.cshtml" />
+    <Content Include="Views\Home\Download.cshtml" />
+    <Content Include="Views\Home\WhyZero.cshtml" />
+    <Content Include="Views\Home\Status.cshtml" />
     <Content Include="Views\Account\ConfirmRegistration.cshtml" />
     <Content Include="Tools\kantu\kantu.ps1" />
     <Content Include="Views\Store\Index.cshtml" />
@@ -816,6 +826,19 @@
     <Content Include="Views\Store\Alert\Opinion.cshtml" />
     <Content Include="Views\Store\Part\TopGameImage.cshtml" />
     <Content Include="Views\Error\InternalServerError.cshtml" />
+    <Content Include="Views\Product\TopImages.cshtml" />
+    <Content Include="Views\Product\Description.cshtml" />
+    <Content Include="Views\Product\FSK.cshtml" />
+    <Content Include="Views\Product\Add_4.cshtml" />
+    <Content Include="Views\Product\Price.cshtml" />
+    <Content Include="Views\Product\Bundle.cshtml" />
+    <Content Include="Views\Product\Addons.cshtml" />
+    <Content Include="Views\Product\Add_2.cshtml" />
+    <Content Include="Views\Product\Dealer.cshtml" />
+    <Content Include="Views\Product\Hardware.cshtml" />
+    <Content Include="Views\Product\LargeDescription.cshtml" />
+    <Content Include="Views\Product\GameDetails.cshtml" />
+    <Content Include="Views\Product\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
