@@ -84,7 +84,7 @@ namespace Zero_Web.database
         public ArrayList GetSaleStoreItems()
         {
             var tempList = new ArrayList();
-            var listOfDocuments = GetStoreItemPriceCollection().Find(item => item.price[0].GamePrice == "").ToList();
+            var listOfDocuments = GetStoreItemPriceCollection().Find(item => item.price[0].GamePrice == "" && !item.price[0].Free).ToList();
             listOfDocuments.ForEach(document =>
             {
                 tempList.Add(GetStoreItemCollection().Find(item => item.ID == document.ID).ToList().First());
