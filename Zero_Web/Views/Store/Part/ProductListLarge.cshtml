@@ -28,7 +28,7 @@
 
                     var storeItemPrice = MongoDBManager.Instance.GetStoreItemPrice(storeItem);
 
-                    bool sale = storeItemPrice.price[0].GamePrice == null;
+                    bool sale = storeItemPrice.price[0].GamePrice == "";
 
                     <div class="LargeItem col-md-6">
 

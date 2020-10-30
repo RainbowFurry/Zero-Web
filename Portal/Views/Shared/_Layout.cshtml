@@ -1,43 +1,77 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Meine ASP.NET-Anwendung</title>
+    <link rel="icon" type="image/x-icon" href="~/Content/images/Zero/Logo.ico">
+    @* Manifest *@
+    <link rel="manifest" href="/manifest.json">
+    @* FontAwesome Icons *@
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="~/Content/font-awesome-4.7.0/css/font-awesome.min.css">
+    @* Material Icons *@
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    @* Main Rules *@
+    <link href="~/Content/css/Zero/Zero.css" rel="stylesheet">
+    @* Import Bootstrap *@
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet">
+    @* Zero Style *@
+    <link href="~/Content/css/Zero/Zero.css" rel="stylesheet">
+
+    <title>ZeroWorks - Portal</title>
+
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
-<body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Anwendungsname", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Startseite", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Informationen", "About", "Home")</li>
-                    <li>@Html.ActionLink("Kontakt", "Contact", "Home")</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="container body-content">
+<body contextmenu="return false">
+
+    @* Secure File share between Client/Server *@
+    @Html.AntiForgeryToken()
+
+    @* SplashScreen *@
+    @{
+        Html.RenderPartial("SplashScreen");
+    }
+
+    @* Code CopyRight *@
+    @{
+        Html.RenderPartial("CopyRight");
+    }
+
+    @{
+        Html.RenderPartial("NoScript");
+    }
+
+    @{
+        Html.RenderPartial("Nav");
+    }
+
+    <div class="container-fluid BodyContent">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Meine ASP.NET-Anwendung</p>
-        </footer>
     </div>
+
+    @{
+        Html.RenderPartial("Footer");
+    }
+
+    @{
+        Html.RenderPartial("ContextMenu");
+    }
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+
+
+    @* Register Installation ServiceWorker *@
+    <script async>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker
+                .register('/serviceworker.js')
+                .then(function () { console.log('Service Worker Registered'); });
+        }
+    </script>
+
 </body>
 </html>

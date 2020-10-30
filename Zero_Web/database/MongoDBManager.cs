@@ -85,7 +85,7 @@ namespace Zero_Web.database
         public ArrayList GetSaleStoreItems()
         {
             var tempList = new ArrayList();
-            var listOfDocuments = GetStoreItemPriceCollection().Find(Builders<StoreItemPrice>.Filter.Eq<string>("GamePrice", null)).ToList();
+            var listOfDocuments = GetStoreItemPriceCollection().Find(item => item.price[0].GamePrice == "").ToList();
             listOfDocuments.ForEach(document =>
             {
                 if (document.price[0].GamePrice == null)

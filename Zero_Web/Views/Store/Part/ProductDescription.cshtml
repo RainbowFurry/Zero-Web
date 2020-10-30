@@ -25,7 +25,7 @@
                 var storeItemPrice = MongoDBManager.Instance.GetStoreItemPrice(storeItem);
                 var storeItemLanguage = MongoDBManager.Instance.GetStoreItemLanguage(storeItem);
 
-                bool sale = storeItemPrice.price[0].GamePrice == null;
+                bool sale = storeItemPrice.price[0].GamePrice == "";
 
                 <div class="LeftImage col-auto col-md-6">
                     <img class="DisplayImage w-100 img-fluid" src="@storeItem.GameImage" />
