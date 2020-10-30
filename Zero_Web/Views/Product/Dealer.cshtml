@@ -1,0 +1,33 @@
+﻿@using Zero_Web.Controllers;
+@using Zero_Web.Models.Store;
+
+@{
+    StoreItem storeItem = ProductController.storeItem;
+
+    <div class="Game-Dealers container-fluid">
+
+        <p>GameName ist bei folgenden Händlern verfügbar</p>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    @if (storeItem.InfoFromURL.StartsWith("https://www.steam.de/"))
+                    {
+                        <img src="~/Content/images/Dealer/Steam.png" />
+                    }
+                    else if (storeItem.InfoFromURL.StartsWith("https://www.microsoft.de/"))
+                    {
+                        <img src="~/Content/images/Dealer/Steam.png" />
+                    }
+                </div>
+                <a href="@storeItem.InfoFromURL">
+                    <div class="col-md-6">
+                        <p>Preis</p>
+                        <p>@storeItem.InfoFrom</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+    </div>
+}

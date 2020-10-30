@@ -22,7 +22,6 @@ namespace Zero_Web.Models.Store
         public SystemInfo SystemInfoMin { get; set; }
         public SystemInfo SystemInfoMax { get; set; }
         public string InfoFrom { get; set; }
-        public string InfoFromURL { get; set; }
         public DownloadLinks Download { get; set; }
 
     }

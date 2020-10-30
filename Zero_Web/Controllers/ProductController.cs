@@ -1,26 +1,15 @@
 ﻿using System.Web.Mvc;
+using Zero_Web.Models.Store;
 
 namespace Zero_Web.Controllers
 {
     public class ProductController : Controller
     {
+
+        public static StoreItem storeItem;
+
         // GET: Product
         public ActionResult Index()
-        {
-            return View();
-        }
-
-        public ActionResult Status()
-        {
-            return View();
-        }
-
-        public ActionResult Download()
-        {
-            return View();
-        }
-
-        public ActionResult WhyZero()
         {
             return View();
         }
