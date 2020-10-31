@@ -7,7 +7,8 @@
 :root {
     --MainColor: #FF5E00; //#0089ff//#ff5e00
     --WhiteTheme: #fff;
-    --DarkTheme: #12161B;
+    --DarkTheme: #202124;
+    --DarkTheme2: rgba(0,0,0,0.05);
     --TextColor: #fff; //#9b9b9f
     --Gradiant: linear-gradient(36deg, rgba(252,176,69,1) 0%, rgba(253,29,29,1) 100%);
 }
@@ -52,7 +53,7 @@ body {
     padding-bottom: 0px !important;
     /*overflow-x: hidden;*/
     overflow-x: visible !important;
-    background-color: @DarkTheme;
+    background-color: var(--DarkTheme);
 }
 
 .body-content {
@@ -72,21 +73,21 @@ body {
 
 //Text Decoration
 p {
-   color: var(--TextColor);
-   font-family: "Proxima Nova";
+    color: var(--TextColor);
+    font-family: "Proxima Nova";
 }
 
 a {
-   color: var(--TextColor);
-   font-family: "Proxima Nova";
+    color: var(--TextColor);
+    font-family: "Proxima Nova";
 }
 
 h1 {
-   color: var(--TextColor);
-   font-family: "Proxima Nova";
+    color: var(--TextColor);
+    font-family: "Proxima Nova";
 }
 
 b {
-   color: var(--TextColor);
-   font-family: "Proxima Nova";
+    color: var(--TextColor);
+    font-family: "Proxima Nova";
 }

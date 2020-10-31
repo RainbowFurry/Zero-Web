@@ -7,7 +7,7 @@ namespace Zero_Web.Content.csharp.Zero
     public class LogManager
     {
 
-        protected static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+        //protected static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         private static protected readonly string logPath = Assembly.GetExecutingAssembly().Location + @"\logs\";
         private static protected readonly string logFile = logPath + DateTime.Now.ToLongDateString() + ".txt";
         private static protected readonly string logFormat = "[" + DateTime.Now.ToLongDateString() + "][" + DateTime.Now.ToLongTimeString() + "][%prio%] ";
@@ -19,7 +19,7 @@ namespace Zero_Web.Content.csharp.Zero
         public static void addLogEntrence(String logContent)
         {
 
-            log.Info(logContent);
+            // log.Info(logContent);
             System.Diagnostics.Debug.WriteLine(logContent);
 
         }

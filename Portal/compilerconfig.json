@@ -1,0 +1,10 @@
+﻿[
+  {
+    "outputFile": "Content/css/Zero/Nav.css",
+    "inputFile": "Content/css/Zero/Nav.less"
+  },
+  {
+    "outputFile": "Content/css/Zero/Zero.css",
+    "inputFile": "Content/css/Zero/Zero.less"
+  }
+]

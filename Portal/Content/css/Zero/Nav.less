@@ -1,6 +1,4 @@
-﻿@import "Zero.less";
-
-@import url('https://fonts.googleapis.com/css?family=Proxima+Nova:400,700');
+﻿@import url('https://fonts.googleapis.com/css?family=Proxima+Nova:400,700');
 
 @media only screen and (max-width: 1290px) {
 
@@ -53,7 +51,7 @@ nav.navbar.sticky-top {
     top: 0;
     z-index: 999;
     box-shadow: 0px 0.5px #333;
-    background-color: #12161B;
+    background-color: var(--DarkTheme);
     margin-bottom: 0 !important;
 }
 
@@ -63,11 +61,12 @@ nav.navbar.sticky-top {
     position: fixed;
     z-index: 15;
     box-shadow: 0px 0.5px #333;
-    background-color: #12161B;
+    background-color: var(--DarkTheme);
 }
 
 a {
     text-decoration: none;
+    color: #FFF;
     opacity: 0.7;
     font-size: 20px;
 }
@@ -84,7 +83,7 @@ p {
 
 input.SearchBar {
     opacity: 0.7;
-    background-color: #12161B;
+    background-color: var(--DarkTheme);
     border: none;
     font-size: 20px;
 }
@@ -142,7 +141,7 @@ input[type=checkbox] {
 input[type=checkbox]:checked {
     -webkit-appearance: none;
     -moz-appearance: none;
-    box-shadow: inset 0px 0px 0px 3px #12161B;
+    box-shadow: inset 0px 0px 0px 3px var(--DarkTheme);
     content: '';
     background: #FF5E00 !important;
     border-radius: 20%;
@@ -186,7 +185,7 @@ a.LoginText {
 
 div#NavMenu {
     width: 25%;
-    background-color: #12161B;
+    background-color: var(--DarkTheme);
     position: fixed;
     z-index: 99;
     border-radius: 10px 10px 10px 10px;
@@ -379,7 +378,7 @@ div.NavMenu.Hide {
     position: fixed;
     z-index: 998;
     box-shadow: 0px 0.5px #333;
-    background-color: #12161B;
+    background-color: var(--DarkTheme);
 }
 
 div.FilterNav.Hide {

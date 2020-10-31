@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using Portal.Resources.Index;
+using System;
 using System.Resources;
-using System.Web;
 
 namespace Zero_Web.Resources.Login
 {
@@ -18,10 +16,10 @@ namespace Zero_Web.Resources.Login
             {
                 resourceManager = new ResourceManager(typeof(German));
             }
-            //else if (language == "en-EN")
-            //{
-            //    resourceManager = new ResourceManager(typeof(English));
-            //}
+            else if (language == "en-EN")
+            {
+                resourceManager = new ResourceManager(typeof(English));
+            }
             //else if (language == "fr-FR")
             //{
             //    resourceManager = new ResourceManager(typeof(French));

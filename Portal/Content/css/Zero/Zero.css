@@ -1,7 +1,8 @@
 ﻿:root {
   --MainColor: #FF5E00;
   --WhiteTheme: #fff;
-  --DarkTheme: #12161B;
+  --DarkTheme: #202124;
+  --DarkTheme2: rgba(0, 0, 0, 0.05);
   --TextColor: #fff;
   --Gradiant: linear-gradient(36deg, #fcb045 0%, #fd1d1d 100%);
 }
